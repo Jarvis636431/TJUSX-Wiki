@@ -1,4 +1,4 @@
-# Team TeamName 2024 Wiki
+# Team TJUSX 2024 Wiki
 
 This repository uses `TypeScript` and `React` to manage the wikis.
 
@@ -19,8 +19,8 @@ for web development.
 
 1. Clone the repository:
    ```bash
-   git clone https://gitlab.igem.org/templates/wiki-react-vite
-   cd wiki-react-vite
+   git clone https://gitlab.igem.org/2024/tjusx
+   cd tjusx
    ```
 2. Install the dependencies:
 
