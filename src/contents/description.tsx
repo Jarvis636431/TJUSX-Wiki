@@ -31,7 +31,7 @@ export function Description() {
 
       <div className="row mt-4">
         <div className="col-lg-8">
-          <h2>Project Description</h2>
+          <h2>What should this page contain?</h2>
           <hr />
           <ul>
             <li>A clear and concise description of your project.</li>
@@ -51,7 +51,7 @@ export function Description() {
 
       <div className="row mt-4">
         <div className="col-lg-8">
-          <h2>What should this page contain?</h2>
+          <h2>Project Description</h2>
           <hr />
           <p>
           The probiotic microbiota holds great potential for treating and alleviating gastrointestinal and gut-brain axis-related diseases. However, its limited intestinal colonization ability and complex microbial interactions restrict its therapeutic application. To overcome these limitations, we have engineered a superhero—<strong>Microbe Spidey</strong>, comprising <i>Escherichia coli Nissle</i> 1917(EcN) and <i>Lactococcus lactis F44</i>. This includes a biotin-affinity based <strong>gut adhesion system</strong> and a quorum sensing-based <strong>interaction system</strong>, allowing the probiotics to <stong>"weave webs" </stong>and adhere the gut as well as Spider-man. We aim to design genetic circuits to control the expression of mucin binding protein in EcN and facilitate inter-probiotic adhesion to control Microbe Spidey's <strong>"spider silk"</strong> in the gut. Additionally, we plan to endow Microbe Spidey with enhanced superpowers, so we are developing cell factories in <i>Lactococcus lactis F44</i> to express various therapeutic agents. Microbe Spidey will challenge the disease “monsters”—<strong>Parkinson's Disease</strong> (PD) and <strong>Inflammatory Bowel Disease</strong> (IBD) to validate its efficacy.
