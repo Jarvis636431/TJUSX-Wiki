@@ -1,11 +1,11 @@
 import { Inspirations, InspirationLink } from "../components";
 
-export function Team() {
+export function Members() {
   const links: InspirationLink[] = [
-    { year: 2019, teamName: "CU", pageName: "Team" },
-    { year: 2019, teamName: "UANL", pageName: "Team" },
-    { year: 2019, teamName: "William_and_Mary", pageName: "Team" },
-    { year: 2020, teamName: "BOKU-Vienna", pageName: "Team" },
+    { year: 2019, teamName: "CU", pageName: "Members" },
+    { year: 2019, teamName: "UANL", pageName: "Members" },
+    { year: 2019, teamName: "William_and_Mary", pageName: "Members" },
+    { year: 2020, teamName: "BOKU-Vienna", pageName: "Members" },
     { year: 2020, teamName: "CAU_China", pageName: "Team_Member" },
     { year: 2020, teamName: "Lethbridge", pageName: "Members" },
   ];

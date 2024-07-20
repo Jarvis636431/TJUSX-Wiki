@@ -1,4 +1,4 @@
-# Team TJUSX 2024 Wiki
+# Members TJUSX 2024 Wiki
 
 This repository uses `TypeScript` and `React` to manage the wikis.
 

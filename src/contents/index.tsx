@@ -1,6 +1,6 @@
 export * from "./home.tsx";
-// Team
-export * from "./team.tsx";
+// Members
+export * from "./Members.tsx";
 export * from "./attributions.tsx";
 // Project
 export * from "./contribution.tsx";

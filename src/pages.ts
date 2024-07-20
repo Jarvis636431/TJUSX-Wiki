@@ -9,7 +9,7 @@ import {
   Notebook,
   Results,
   Safety,
-  Team,
+  Members,
   Education,
   Entrepreneurship,
   Hardware,
@@ -50,10 +50,10 @@ const Pages: (Page | Folder)[] = [
     name: "Team",
     folder: [
       {
-        name: "Team",
-        title: "Team",
-        path: "/team",
-        component: Team,
+        name: "Members",
+        title: "Members",
+        path: "/Members",
+        component: Members,
         lead: "On this page you can introduce your team members, instructors, and advisors.",
       },
       {
