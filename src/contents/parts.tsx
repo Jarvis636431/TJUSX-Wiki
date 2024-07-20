@@ -1,6 +1,6 @@
 import { Inspirations, InspirationLink } from "../components";
 
-export function Inclusivity() {
+export function Parts() {
   const links: InspirationLink[] = [
     { year: 2020, teamName: "Fudan", pageName: "Inclusion" },
     { year: 2020, teamName: "CCU_Taiwan", pageName: "Inclusion" },

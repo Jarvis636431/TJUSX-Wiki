@@ -1,13 +1,13 @@
 import { Inspirations, InspirationLink } from "../components";
 
-export function Education() {
+export function Design() {
   const links: InspirationLink[] = [
-    { year: 2020, teamName: "CCA_San_Diego", pageName: "Education" },
-    { year: 2020, teamName: "Lambert_GA", pageName: "Education" },
-    { year: 2020, teamName: "Stanford", pageName: "Education" },
-    { year: 2020, teamName: "Waseda", pageName: "Education" },
-    { year: 2020, teamName: "Fudan", pageName: "Education" },
-    { year: 2020, teamName: "Toulouse_INSA-UPS", pageName: "Education" },
+    { year: 2020, teamName: "CCA_San_Diego", pageName: "Design" },
+    { year: 2020, teamName: "Lambert_GA", pageName: "Design" },
+    { year: 2020, teamName: "Stanford", pageName: "Design" },
+    { year: 2020, teamName: "Waseda", pageName: "Design" },
+    { year: 2020, teamName: "Fudan", pageName: "Design" },
+    { year: 2020, teamName: "Toulouse_INSA-UPS", pageName: "Design" },
   ];
 
   return (

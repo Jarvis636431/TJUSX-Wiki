@@ -1,13 +1,13 @@
 import { Inspirations, InspirationLink } from "../components";
 
-export function Entrepreneurship() {
+export function Protcol() {
   const links: InspirationLink[] = [
-    { year: 2019, teamName: "UCopenhagen", pageName: "Entrepreneurship" },
-    { year: 2019, teamName: "Thessaly", pageName: "Entrepreneurship" },
-    { year: 2019, teamName: "NCKU_Tainan", pageName: "Entrepreneurship" },
-    { year: 2020, teamName: "TAS_Taipei", pageName: "Entrepreneurship" },
-    { year: 2020, teamName: "KCL_UK", pageName: "Entrepreneurship" },
-    { year: 2020, teamName: "Calgary", pageName: "Entrepreneurship" },
+    { year: 2019, teamName: "UCopenhagen", pageName: "Protcol" },
+    { year: 2019, teamName: "Thessaly", pageName: "Protcol" },
+    { year: 2019, teamName: "NCKU_Tainan", pageName: "Protcol" },
+    { year: 2020, teamName: "TAS_Taipei", pageName: "Protcol" },
+    { year: 2020, teamName: "KCL_UK", pageName: "Protcol" },
+    { year: 2020, teamName: "Calgary", pageName: "Protcol" },
   ];
 
   return (

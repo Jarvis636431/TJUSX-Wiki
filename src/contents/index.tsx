@@ -14,10 +14,10 @@ export * from "./safety.tsx";
 // Human Practices
 export * from "./human-practices.tsx";
 // Awards
-export * from "./education.tsx";
-export * from "./entrepreneurship.tsx";
+export * from "./Design.tsx";
+export * from "./Protcol.tsx";
 export * from "./hardware.tsx";
-export * from "./inclusivity.tsx";
+export * from "./parts.tsx";
 export * from "./measurement.tsx";
 export * from "./model.tsx";
 export * from "./plant.tsx";
