@@ -36,10 +36,10 @@ class Page implements Base {
 const Pages: (Page | Folder)[] = [
     {
         name: "Home",
-        title: "Home",
+        title: "",
         path: "/",
         component: Home,
-        lead: "Welcome to iGEM 2024! Your team has been approved and you are ready to start the iGEM season!",
+        lead:""
     },
     {
         name: "Team",
