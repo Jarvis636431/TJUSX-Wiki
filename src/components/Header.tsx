@@ -1,19 +1,12 @@
-interface HeaderProps {
-  title: string;
-  lead: string;
-}
-
-export function Header({ title, lead }: HeaderProps) {
+export function Header() {
   return (
-    <header className="">
-      <div className="container h-100">
-        <div className="row h-100 align-items-center">
-          <div className="col-lg-12">
-            <h1 className="display-4 text-white mt-5 mb-2">{title}</h1>
-            <p className="lead mb-5 text-white-50">{lead}</p>
+      <header className="">
+        <div className="container h-100">
+          <div className="row h-100 align-items-center">
+            {/* 空的 row，已删除内容 */}
           </div>
         </div>
-      </div>
-    </header>
+      </header>
   );
 }
+
