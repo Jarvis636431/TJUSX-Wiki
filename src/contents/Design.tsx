@@ -1,48 +1,51 @@
-import { Inspirations, InspirationLink } from "../components";
+import SidebarContent, {SidebarItem} from '../components/SidebarContent';
 
 export function Design() {
-  const links: InspirationLink[] = [
-    { year: 2020, teamName: "CCA_San_Diego", pageName: "Design" },
-    { year: 2020, teamName: "Lambert_GA", pageName: "Design" },
-    { year: 2020, teamName: "Stanford", pageName: "Design" },
-    { year: 2020, teamName: "Waseda", pageName: "Design" },
-    { year: 2020, teamName: "Fudan", pageName: "Design" },
-    { year: 2020, teamName: "Toulouse_INSA-UPS", pageName: "Design" },
-  ];
+    // 定义侧边栏的内容
+    const sidebarItems: SidebarItem[] = [
+        {
+            title: 'Part1. Metabolite database of probiotics—MDOP',
+            imageUrl: 'https://static.igem.wiki/teams/5376/overview.png',
+            text: '这是关于益生菌代谢物数据库 MDOP 的详细介绍。',
+        },
+        {
+            title: 'Part2. Software package—MDOP Tool',
+            imageUrl: 'https://static.igem.wiki/teams/5376/tool.png',
+            text: '这是关于 MDOP 工具包的软件部分的详细介绍。',
+        },
+        {
+            title: 'Reference',
+            imageUrl: 'https://static.igem.wiki/teams/5376/reference.png',
+            text: '这是参考文献部分的详细介绍。',
+        },
+    ];
 
-  return (
-    <>
-      <div className="row mt-4">
-        <div className="col">
-          <div className="bd-callout bd-callout-info">
-            <h4>Best Education</h4>
-            <p>
-              How have you developed new opportunities to include more people in
-              shaping synthetic biology? Innovative educational tools and
-              outreach activities have the ability to establish a two-way
-              dialogue with new communities by discussing public values and the
-              science behind synthetic biology. Document your approach and what
-              was learned by everyone involved to compete for this award.
-            </p>
-            <p>
-              To compete for the Best Education prize, select the prize on the{" "}
-              <a href="https://competition.igem.org/deliverables/judging-form">
-                judging form
-              </a>{" "}
-              and describe your work on this page.
-            </p>
-            <hr />
-            <p>
-              Please see the{" "}
-              <a href="https://competition.igem.org/judging/awards">
-                2024 Awards Page
-              </a>{" "}
-              for more information.
-            </p>
-          </div>
-        </div>
-      </div>
-      <Inspirations inspirationLinkList={links} />
-    </>
-  );
+    return (
+        <main style={{backgroundColor: '#FFF8F0', minHeight: '100vh'}}>
+            {/* 头部区域 */}
+            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px'}}>
+                <img
+                    src="https://static.igem.wiki/teams/5376/viruse1.png"
+                    alt="Left Image"
+                    style={{maxWidth: '100px', height: 'auto'}}
+                />
+
+                <img
+                    src="https://static.igem.wiki/teams/5376/design.png"
+                    alt="TITLE"
+                    style={{width: '400px', height: '110px', objectFit: 'cover'}}
+                />
+
+                <img
+                    src="https://static.igem.wiki/teams/5376/viruse2.png"
+                    alt="Right Image"
+                    style={{maxWidth: '100px', height: 'auto'}}
+                />
+            </div>
+
+            <SidebarContent items={sidebarItems}/>
+        </main>
+    );
 }
+
+export default Design;

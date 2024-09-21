@@ -24,7 +24,6 @@ const App = () => {
         <>
             {/* Navigation */}
             <Navbar />
-
             {/* Header and PageContent */}
             <Routes>
                 {Object.entries(pathMapping).map(
