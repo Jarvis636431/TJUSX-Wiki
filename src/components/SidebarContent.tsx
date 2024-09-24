@@ -27,30 +27,35 @@ const SidebarContent: React.FC<SidebarContentProps> = ({ items }) => {
     const styles = {
         container: {
             display: 'flex',
-            justifyContent: 'space-between',
+            justifyContent: 'space-around',
             padding: '20px',
             height: '600px',
         } as React.CSSProperties,
         sidebar: {
-            width: '30%',
+            top: '100',
+            bottom: '100',
+            width: '25%',
             backgroundColor: '#FFF4E6',
             padding: '20px',
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            borderRadius: '10px',
+            // position: 'fixed', // 固定定位
+            left: '0', // 确保侧边栏固定在左侧
+            borderRadius: '30px',
+            boxSizing: 'border-box', // 包括padding在内的宽度计算
         } as React.CSSProperties,
         sidebarTitle: (isActive: boolean) => ({
             fontSize: '28px',
             color: isActive ? '#FF7F50' : '#c67e38',
             fontWeight: 'bold',
             cursor: 'pointer',
-            marginBottom: '20px',
         }) as React.CSSProperties,
         sidebarList: {
             listStyleType: 'none',
             padding: '0',
+            margin: '0', // 移除默认的margin
         } as React.CSSProperties,
         sidebarItem: (isActive: boolean) => ({
             fontSize: '22px',
@@ -59,19 +64,25 @@ const SidebarContent: React.FC<SidebarContentProps> = ({ items }) => {
             marginBottom: '10px',
             cursor: 'pointer',
         }) as React.CSSProperties,
-        // 让内容从左上角开始布局
         mainContent: {
             width: '65%',
+            marginLeft: '5%', // 添加左外边距，避免覆盖
             padding: '20px',
-            backgroundImage: 'url(https://static.igem.wiki/teams/5376/textbox-background.png)',
+            backgroundColor: 'white',
+            borderRadius: '30px',
+            borderStyle: 'solid',
+            borderWidth: '15px',
+            borderColor: '#BC8C5B',
+            borderHeight: '100%',
             backgroundSize: 'cover',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'flex-start',  // 从左侧开始排列
             justifyContent: 'flex-start',  // 从顶部开始排列
             position: 'relative',  // 使用相对定位，便于调整
+            boxSizing: 'border-box', // 包括padding在内的宽度计算
+            height: '100%', // 确保主内容区域高度与容器一致
+            overflow: 'auto', // 如果内容过多，启用滚动
         } as React.CSSProperties,
-        // 图片显示在左上角
         image: {
             width: '400px',  // 调整图片宽度
             height: 'auto',
@@ -85,7 +96,7 @@ const SidebarContent: React.FC<SidebarContentProps> = ({ items }) => {
             padding: '10px',
             backgroundColor: 'transparent',  // 将背景颜色设置为透明
             borderRadius: '5px',
-            textAlign: 'start',
+            textAlign: 'start',  // 文本左对齐
             fontSize: '18px',
             color: '#333',
         } as React.CSSProperties,
@@ -93,7 +104,6 @@ const SidebarContent: React.FC<SidebarContentProps> = ({ items }) => {
 
     return (
         <div style={styles.container}>
-            {/* Overview 现在作为一个 SidebarItem */}
             <aside style={styles.sidebar}>
                 <h3
                     style={styles.sidebarTitle(selectedItem.title === 'Overview')}
@@ -102,9 +112,9 @@ const SidebarContent: React.FC<SidebarContentProps> = ({ items }) => {
                     Overview
                 </h3>
                 <ul style={styles.sidebarList}>
-                    {items.map((item, index) => (
+                    {items.map((item) => (
                         <li
-                            key={index}
+                            key={item.title} // 使用唯一的title作为key
                             onClick={() => handleItemClick(item)}
                             style={styles.sidebarItem(selectedItem.title === item.title)}
                         >
@@ -114,7 +124,6 @@ const SidebarContent: React.FC<SidebarContentProps> = ({ items }) => {
                 </ul>
             </aside>
 
-            {/* 右侧展示被选中的内容 */}
             <div style={styles.mainContent}>
                 <img src={selectedItem.imageUrl} alt={selectedItem.title} style={styles.image} />
                 <div style={styles.textBox}>{selectedItem.text}</div>

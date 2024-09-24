@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
-import { Footer, Navbar, NotFound } from "../../components";
+import { Footer, Navbar, NotFound} from "../../components";
 import { getPathMapping, stringToSlug } from "../../utils";
 import { useEffect } from "react";
 
@@ -25,6 +25,7 @@ const App = () => {
             {/* Navigation */}
             <Navbar />
             {/* Header and PageContent */}
+            {/*<Header/>*/}
             <Routes>
                 {Object.entries(pathMapping).map(
                     ([path, { component: Component }]) => (
@@ -40,7 +41,6 @@ const App = () => {
                     element={<NotFound />}
                 />
             </Routes>
-
             {/* Footer */}
             <Footer />
         </>

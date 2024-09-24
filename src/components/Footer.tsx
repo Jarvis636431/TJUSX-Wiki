@@ -1,80 +1,180 @@
-import { stringToSlug } from "../utils";
+// Footer.tsx
+import React, { useState, useEffect } from 'react';
 
-export function Footer() {
-  const teamYear = import.meta.env.VITE_TEAM_YEAR;
-  const teamName = import.meta.env.VITE_TEAM_NAME;
-  const teamSlug = stringToSlug(teamName);
+// 定义图片数据的接口
+interface ImageData {
+  src: string;
+  alt: string;
+}
+
+export function Footer(): JSX.Element {
+  // 右上角的图片
+  const topRightImage: ImageData = {
+    src: 'https://static.igem.wiki/teams/5376/icon.png', // 替换为实际图片URL
+    alt: 'Top Right Image',
+  };
+
+  // 左侧区域的图片数组，每个子数组代表一行
+  const leftSectionImages: ImageData[][] = [
+    // 第一行：一张图片
+    [{ src: 'https://via.placeholder.com/150', alt: 'Left Row 1 Image' }],
+    // 第二行：两张图片
+    [
+      { src: 'https://via.placeholder.com/150', alt: 'Left Row 2 Image 1' },
+      { src: 'https://via.placeholder.com/150', alt: 'Left Row 2 Image 2' },
+    ],
+    // 第三行：两张图片
+    [
+      { src: 'https://via.placeholder.com/150', alt: 'Left Row 3 Image 1' },
+      { src: 'https://via.placeholder.com/150', alt: 'Left Row 3 Image 2' },
+    ],
+  ];
+
+  // 右侧区域的图片数组，每个子数组代表一行
+  const rightSectionImages: ImageData[][] = [
+    // 第一行：一张图片
+    [{ src: 'https://via.placeholder.com/150', alt: 'Right Row 1 Image' }],
+    // 第二行：三张图片
+    [
+      { src: 'https://via.placeholder.com/150', alt: 'Right Row 2 Image 1' },
+      { src: 'https://via.placeholder.com/150', alt: 'Right Row 2 Image 2' },
+      { src: 'https://via.placeholder.com/150', alt: 'Right Row 2 Image 3' },
+    ],
+    // 第三行：两张图片
+    [
+      { src: 'https://via.placeholder.com/150', alt: 'Right Row 3 Image 1' },
+      { src: 'https://via.placeholder.com/150', alt: 'Right Row 3 Image 2' },
+    ],
+  ];
+
+  // 内联样式对象
+  const styles: { [key: string]: React.CSSProperties } = {
+    footer: {
+      position: 'relative',
+      backgroundColor: '#ffebd3',
+      padding: '40px 20px',
+      overflow: 'hidden',
+    },
+    topRightImage: {
+      position: 'absolute',
+      top: '20px',
+      right: '20px',
+    },
+    topRightImg: {
+      width: '100px',
+      height: 'auto',
+    },
+  };
+
+  // 响应式设计的状态
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // 初始化
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // 动态调整样式
+  const footerContentStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: isMobile ? 'column' : 'row',
+    justifyContent: 'space-between',
+    marginTop: '140px', // 确保右上角图片不会覆盖内容
+    alignItems: isMobile ? 'center' : 'flex-start',
+  };
+
+  const footerSectionStyle: React.CSSProperties = {
+    width: isMobile ? '100%' : '48%',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '20px',
+  };
+
+  const rowStyle: React.CSSProperties = {
+    display: 'flex',
+    gap: '10px',
+    flexWrap: isMobile ? 'wrap' : 'nowrap',
+    justifyContent: isMobile ? 'center' : 'flex-start',
+  };
+
+  const imageStyle: React.CSSProperties = {
+    width: isMobile ? '45%' : '100%',
+    height: 'auto',
+    borderRadius: '8px',
+  };
+
+  const leftSecondRowImgStyle: React.CSSProperties = {
+    width: isMobile ? '45%' : 'calc(50% - 5px)',
+  };
+
+  const rightSecondRowImgStyle: React.CSSProperties = {
+    width: isMobile ? '30%' : 'calc(33.33% - 6.66px)',
+  };
 
   return (
-    <footer className="pt-5 pb-5 footer py-5 mt-5 bg-dark text-white">
-      <div className="container">
-        <div className="row mb-4">
-          <div className="col-lg-6 col-xs-12">
-            <h4 className="mb-3">Heading</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
-              ante mollis quam tristique convallis
-            </p>
+      <footer style={styles.footer}>
+        {/* 右上角的图片 */}
+        <div style={styles.topRightImage}>
+          <img
+              src={topRightImage.src}
+              alt={topRightImage.alt}
+              style={styles.topRightImg}
+              loading="lazy"
+          />
+        </div>
+
+        {/* 主内容区域 */}
+        <div style={footerContentStyle}>
+          {/* 左侧区域 */}
+          <div style={footerSectionStyle}>
+            {leftSectionImages.map((row, rowIndex) => (
+                <div style={rowStyle} key={`left-row-${rowIndex}`}>
+                  {row.map((image, imgIndex) => (
+                      <img
+                          key={`left-row-${rowIndex}-img-${imgIndex}`}
+                          src={image.src}
+                          alt={image.alt}
+                          style={
+                            rowIndex === 1 || rowIndex === 2
+                                ? leftSecondRowImgStyle
+                                : imageStyle
+                          }
+                          loading="lazy"
+                      />
+                  ))}
+                </div>
+            ))}
           </div>
-          <div className="col-lg-3 col-xs-12">
-            <h4 className="mt-lg-0 mt-sm-3">Links</h4>
-            <ul className="m-2 p-2">
-              <li>
-                <a href="#">Lorem ipsum</a>
-              </li>
-              <li>
-                <a href="#">Nam mauris velit</a>
-              </li>
-              <li>
-                <a href="#">Etiam vitae mauris</a>
-              </li>
-              <li>
-                <a href="#">Fusce scelerisque</a>
-              </li>
-              <li>
-                <a href="#">Sed faucibus</a>
-              </li>
-              <li>
-                <a href="#">Mauris efficitur nulla</a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-lg-3 col-xs-12">
-            <h4 className="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
-            <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-            <p className="mb-0">(541) 754-3010</p>
-            <p>info@hsdf.com</p>
+
+          {/* 右侧区域 */}
+          <div style={footerSectionStyle}>
+            {rightSectionImages.map((row, rowIndex) => (
+                <div style={rowStyle} key={`right-row-${rowIndex}`}>
+                  {row.map((image, imgIndex) => (
+                      <img
+                          key={`right-row-${rowIndex}-img-${imgIndex}`}
+                          src={image.src}
+                          alt={image.alt}
+                          style={
+                            rowIndex === 1
+                                ? rightSecondRowImgStyle
+                                : imageStyle
+                          }
+                          loading="lazy"
+                      />
+                  ))}
+                </div>
+            ))}
           </div>
         </div>
-        <hr />
-        {/* The following MUST be on every page: license information and link to the repository on gitlab.igem.org */}
-        <div className="row mt-4">
-          <div className="col">
-            <p className="mb-0">
-              <small>
-                © 2024 - Content on this site is licensed under a{" "}
-                <a
-                  className="subfoot"
-                  href="https://creativecommons.org/licenses/by/4.0/"
-                  rel="license"
-                >
-                  Creative Commons Attribution 4.0 International license
-                </a>
-                .
-              </small>
-            </p>
-            <p>
-              <small>
-                The repository used to create this website is available at{" "}
-                <a href={`https://gitlab.igem.org/${teamYear}/${teamSlug}`}>
-                  gitlab.igem.org/{teamYear}/{teamSlug}
-                </a>
-                .
-              </small>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
   );
 }
+
