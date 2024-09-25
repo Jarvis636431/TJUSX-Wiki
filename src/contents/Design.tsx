@@ -62,6 +62,7 @@ export function Design(): JSX.Element {
 
     return (
         <div style={styles.container}>
+
             <aside style={styles.sidebar}>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                     {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
@@ -94,6 +95,9 @@ export function Design(): JSX.Element {
                             we continuously refined the Spidey Microbe consortium following the DBTL (Design, Build,
                             Test, Learn) framework recommended by iGEM.
                         </p>
+                        {/*<img>*/}
+                        {/*    src="https://static.igem.wiki/teams/5376/design/design1.png"*/}
+                        {/*</img>*/}
                     </Element>
                     <Element name="section2" style={styles.section}>
                         <h2 style={styles.heading}>Adhension Module</h2>
