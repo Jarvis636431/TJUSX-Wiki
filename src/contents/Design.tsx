@@ -5,7 +5,10 @@ const styles = {
     container: {
         backgroundColor: '#FFF8F0',
         display: 'flex',
-        height: '100vh',
+
+        //height从100vh改成auto即可实现点击滚动，原因就在于100vh是固定高度，不会随着内容的增加而增加，用视窗高度限制住了内容
+
+        height: 'auto',
         overflow: 'hidden',
     },
     sidebar: {
@@ -17,12 +20,14 @@ const styles = {
         padding: '20px',
         overflowY: 'scroll',
         borderRight: '1px solid #ddd',
+        position:'fixed',
     },
     sidebarItem: {
         marginBottom: '15px',
     },
     content: {
-        width: 'calc(100% - 350px)',
+        marginLeft: '270px',
+        width: '100%',
         backgroundColor: '#ffffff',
         border: '20px solid #BC8C5B', // 修改这里
         borderRadius: '20px',
@@ -52,12 +57,12 @@ const styles = {
 
 export function Design(): JSX.Element {
 
-    const handleScrollTo = (section: string) => {
-        const element = document.getElementById(section);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    };
+    // const handleScrollTo = (section: string) => {
+    //     const element = document.getElementById(section);
+    //     if (element) {
+    //         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    //     }
+    // };
 
 
     return (
@@ -94,9 +99,13 @@ export function Design(): JSX.Element {
                             we continuously refined the Spidey Microbe consortium following the DBTL (Design, Build,
                             Test, Learn) framework recommended by iGEM.
                         </p>
-                        {/*<img>*/}
-                        {/*    src="https://static.igem.wiki/teams/5376/design/design1.png"*/}
-                        {/*</img>*/}
+                        <img src="https://static.igem.wiki/teams/5376/design/design1.png" alt="描述文本" style={{
+                            display: 'block',
+                            margin: '0 auto',
+                            width: '40%', // 可以根据需要调整宽度
+                            borderRadius: '10px'
+                        }}  />
+
                     </Element>
                     <Element name="section2" style={styles.section}>
                         <h2 style={styles.heading}>Adhension Module</h2>
