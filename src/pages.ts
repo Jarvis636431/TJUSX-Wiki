@@ -4,7 +4,6 @@ import {
     Engineering,
     Home,
     HumanPractices,
-    Notebook,
     Results,
     Safety,
     Members,
@@ -63,13 +62,6 @@ const Pages: (Page | Folder)[] = [
                 lead: "Describe how and why you chose your iGEM project.",
             },
             {
-                name: "Design",
-                title: "Design",
-                path: "/Design",
-                component: Design,
-                lead: "Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology.",
-            },
-            {
                 name: "Contribution",
                 title: "Contribution",
                 path: "/contribution",
@@ -89,11 +81,11 @@ const Pages: (Page | Folder)[] = [
                 lead: "Demonstrate engineering success in a technical aspect of your project by going through at least one iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.",
             },
             {
-                name: "Notebook",
-                title: "Notebook",
-                path: "/notebook",
-                component: Notebook,
-                lead: "Document the dates you worked on your project. This should be a detailed account of the work done each day for your project.",
+                name: "Design",
+                title: "Design",
+                path: "/Design",
+                component: Design,
+                lead: "Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology.",
             },
             {
                 name: "Protcol",
