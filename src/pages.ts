@@ -9,7 +9,7 @@ import {
     Safety,
     Members,
     Design,
-    Protcol,
+    Protocol,
     Parts,
     Model,
     Software,
@@ -96,10 +96,10 @@ const Pages: (Page | Folder)[] = [
                 lead: "Document the dates you worked on your project. This should be a detailed account of the work done each day for your project.",
             },
             {
-                name: "Protcol",
-                title: "Protcol",
-                path: "/protcol",
-                component: Protcol,
+                name: "Protocol",
+                title: "Protocol",
+                path: "/protocol",
+                component: Protocol,
                 lead: "The entrepreneurship prize recognizes exceptional effort to build a business case and commercialize an iGEM project.",
             },
             {

@@ -15,7 +15,7 @@ export * from "./safety.tsx";
 export * from "./human-practices.tsx";
 // Awards
 export * from "./Design.tsx";
-export * from "./Protcol.tsx";
+export * from "./Protocol.tsx";
 export * from "./hardware.tsx";
 export * from "./parts.tsx";
 export * from "./measurement.tsx";

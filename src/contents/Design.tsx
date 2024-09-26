@@ -15,7 +15,7 @@ const styles = {
         backgroundColor: '#F0D6B4',
         borderRadius: '20px',
         padding: '20px',
-        overflowY: 'auto',
+        overflowY: 'scroll',
         borderRight: '1px solid #ddd',
     },
     sidebarItem: {
@@ -62,7 +62,6 @@ export function Design(): JSX.Element {
 
     return (
         <div style={styles.container}>
-
             <aside style={styles.sidebar}>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                     {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
