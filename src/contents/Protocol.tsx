@@ -75,47 +75,22 @@ export function Protocol() {
         />
       </div>
       <div style={styles.container}>
-      <aside style={styles.sidebar as React.CSSProperties}>
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          {['Overview'].map((item, index) => (
-            <li key={index} style={{ fontSize: '22px', color: '#c67e38', fontWeight: 'bold', marginBottom: '10px' }}>
-              <Link
-                to={`section${index + 1}`}
-                smooth={true}
-                duration={500}
-                offset={-20}
-                spy={true}
-                activeClass="active"
-                style={{
-                  textDecoration: 'none',
-                  cursor: 'pointer',
-                  fontSize: '30px', // 字体大小
-                  color: '#c67e38', // 文字颜色
-                  fontWeight: 'bold', // 字体加粗
-                }}
-                onMouseOver={(e) => e.currentTarget.style.color = '#333'}
-                onMouseOut={(e) => e.currentTarget.style.color = '#c67e38'}
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </aside>
-      <div style={styles.content as React.CSSProperties}>
-      <img
-          src="https://static.igem.wiki/teams/5376/overview.png"
-          alt="Overview Image"
-          style={styles.overviewImage as React.CSSProperties}
-        />
-        <div>
-
+        
+        <div style={styles.content as React.CSSProperties}>
+        <br />
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <embed
+              src="https://static.igem.wiki/teams/5376/protocol.pdf"
+              type="application/pdf"
+              width="75%"
+              height="800px"
+            />
+          </div>
         </div>
       </div>
-      </div>
-      
 
-      
+
+
     </main>
   );
 }
