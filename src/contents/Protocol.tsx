@@ -4,6 +4,8 @@ const styles = {
     display: 'flex',
     height: '100vh',
     overflow: 'hidden',
+    width: 'calc(100% - 200px)',
+    margin: '0 auto',
   },
   sidebar: {
     marginRight: '10px',
@@ -25,9 +27,8 @@ const styles = {
     border: '20px solid #BC8C5B', // 修改这里
     borderRadius: '20px',
     flex: 1,
-    padding: '20px',
+    padding: '40px',
     overflowY: 'auto',
-
     //用负值的outline代替内圆角，而且radius是一样的
 
     outline: '5px solid #ffffff',
@@ -62,9 +63,9 @@ export function Protocol() {
           style={{ maxWidth: '200px', height: 'auto' }}
         />
         <img
-          src="https://static.igem.wiki/teams/5376/protocol.png"
+          src="https://static.igem.wiki/teams/5376/protocollogo.png"
           alt="TITLE"
-          style={{ width: '547px', height: '110px', objectFit: 'cover' }}
+          style={{ width: '700px', height: '169px', objectFit: 'cover' }}
         />
         <img
           src="https://static.igem.wiki/teams/5376/viruse2.png"

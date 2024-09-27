@@ -4,7 +4,6 @@ import BootstrapNavbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import Pages from "../pages.ts";
-
 export function Navbar() {
   const pages = Pages.map((item, pageIndex) => {
     if ("folder" in item && item.folder) {
