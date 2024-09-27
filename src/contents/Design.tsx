@@ -24,6 +24,9 @@ const styles = {
     },
     sidebarItem: {
         marginBottom: '15px',
+        fontSize: '22px', 
+        color: '#c67e38', 
+        fontWeight: 'bold',
     },
     content: {
         marginLeft: '390px',
@@ -47,15 +50,20 @@ const styles = {
         borderBottom: '1px solid #ddd',
     },
     heading: {
-        marginBottom: '20px',
-        fontSize: '24px',
+        marginBottom: '15px',
+        fontSize: '36px', 
+        color: '#c67e38', 
+        fontWeight: 'bold',
+        textAlign: 'center' as const,
     },
     partheading: {
         marginBottom: '10px',
         fontSize: '20px',
     },
     paragraph: {
-        lineHeight: 1.6,
+        lineHeight: 1.4,
+        fontSize: '24px',
+        textAlign: 'justify',
     },
     
 };
@@ -89,7 +97,7 @@ export function Design(): JSX.Element {
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                     {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
                         <li key={index} style={styles.sidebarItem}>
-                            <div style={{ textDecoration: 'none', color: '#333', cursor: 'pointer' }}>
+                            <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                                 <Link
                                     to={`section${index + 1}`}
                                     smooth={true}
@@ -97,8 +105,8 @@ export function Design(): JSX.Element {
                                     offset={-20}
                                     spy={true}
                                     activeClass="active"
-                                    onMouseOver={(e) => e.currentTarget.style.color = '#C27529'}
-                                    onMouseOut={(e) => e.currentTarget.style.color = '#333'}
+                                    onMouseOver={(e) => e.currentTarget.style.color = '#955321'}
+                                    onMouseOut={(e) => e.currentTarget.style.color = '#c67e38'}
                                 >
                                     {item}
                                 </Link>
@@ -137,7 +145,7 @@ export function Design(): JSX.Element {
                         "silk," and used a signal peptide to localize this fusion protein to the extracellular
                         space[2].
                     </p>
-                    <p>
+                    <p style={styles.paragraph}>
                         Since EcN lacks T7 RNA polymerase, we constructed a T7 RNA polymerase (T7RNP) expression
                         framework using the Cloning Vector pJUMP27-1A(sfGFP) from the iGEM 2024 Distribution, which
                         has compatible biobrick restriction sites.
@@ -199,7 +207,8 @@ export function Design(): JSX.Element {
                     </p>
                     <ImageWithCaption
                         src={'https://static.igem.wiki/teams/5376/design/design6.png'}
-                        caption={'Figure 6 Metabolic Pathway for Butyrate Production'}>
+                        caption={'Figure 6 Metabolic Pathway for Butyrate Production'}
+                        customWidth={'40%'}>
                     </ImageWithCaption>
                     <h3 style={styles.partheading}>
                         Levodopa Production Part
@@ -312,13 +321,13 @@ export function Design(): JSX.Element {
                         style={{
                             display: 'block',
                             margin: '0 auto',
-                            width: '40%',
+                            width: '85%',
                             borderRadius: '10px',
                         }} />
-                    <p style={styles.paragraph}>
+                    <p style={{...styles.paragraph,fontSize: '20px'}}>
                         In the early stages of project research and design, we constructed the gut microbiome metabolite database - ProMetab and analyzed it, selecting EcN and Lactococcus lactis F44 from the candidate probiotics.//(Jump link to the dry experiment page)
                     </p>
-                    <p style={styles.paragraph}>
+                    <p style={{...styles.paragraph,fontSize: '20px'}}>
                         EcN only has the adhesion module and the preliminary quorum sensing module for expressing lcnG, while Lactococcus lactis F44 produces levodopa and can produce the lcnG immunity gene lagC under IPTG induction.
                     </p>
                     <h3 style={styles.partheading}>
@@ -328,14 +337,14 @@ export function Design(): JSX.Element {
                         style={{
                             display: 'block',
                             margin: '0 auto',
-                            width: '40%',
+                            width: '85%',
                             borderRadius: '10px',
                         }} />
-                    <p style={styles.paragraph}>
+                    <p style={{...styles.paragraph,fontSize: '20px'}}>
                         We attended CCiC and communicated with Professor Liu Xingyin from Nanjing Medical University //(Jump link to the HP page), realizing that having only levodopa in the system cannot further cope with the different stages of Parkinson's disease, and the effect may be poor.
                         Based on the previous design, we added a strain of Lactococcus lactis F44 that produces serotonin, and 5-HTP can inhibit the motor disorders caused by levodopa in Parkinson's patients.
                     </p>
-                    <p style={styles.paragraph}>
+                    <p style={{...styles.paragraph,fontSize: '20px'}}>
                         We also interviewed Director Chen Lei, the person in charge of the Chinese Parkinson's Disease One-Stop Service Center and the Chinese Parkinson's Disease Diagnosis and Treatment Training Base at Tianjin Huanhu Hospital, and realized that for Parkinson's patients, symptoms of gut inflammatory reactions are also a thorny issue //(Jump to the HP page).
                         We tried to construct a butyric acid expression module in EcN, which makes EcN more modular and can be used for the treatment of various diseases with gut inflammatory reactions.
                     </p>
@@ -346,10 +355,10 @@ export function Design(): JSX.Element {
                         style={{
                             display: 'block',
                             margin: '0 auto',
-                            width: '40%',
+                            width: '85%',
                             borderRadius: '10px',
                         }} />
-                    <p style={styles.paragraph}>
+                    <p style={{...styles.paragraph,fontSize: '20px'}}>
                         To enhance the control of the system, we changed the design of the quorum sensing module, constructed an arabinose-induced lcnG expression circuit in EcN,
                         and replaced the IPTG-controlled immunity gene lagC expression circuit in Lactococcus lactis F44 with Nisin control, and removed the immunity gene expression circuit in the serotonin-producing bacteria,
                         thus achieving control over serotonin production.
@@ -361,10 +370,10 @@ export function Design(): JSX.Element {
                         style={{
                             display: 'block',
                             margin: '0 auto',
-                            width: '40%',
+                            width: '85%',
                             borderRadius: '10px',
                         }} />
-                    <p style={styles.paragraph}>
+                    <p style={{...styles.paragraph,fontSize: '20px'}}>
                         The mouse experiment group experimented with multiple probiotics and analyzed their treatment of Parkinson's disease, finding that Lactobacillus plantarum has a positive effect on the treatment of Parkinson's disease //(Jump link to the mouse experiment page).
                         The dry experiment used the data from ProMetab to analyze the amino acid feeding situation of Lactobacillus plantarum, and adding Lactobacillus plantarum can strengthen the amino acid feeding relationship of the community, thereby enhancing the stability of the community //(Jump link to the dry experiment page).
                         We tried to add Lactobacillus plantarum to the system, but due to its difficulty in genetic manipulation, we ultimately used natural Lactobacillus plantarum.
@@ -372,15 +381,15 @@ export function Design(): JSX.Element {
                 </Element>
                 <Element name="section7" style={styles.section}>
                     <h2 style={styles.heading}>Reference</h2>
-                    <p style={styles.paragraph}>[1]	Vargason, A. M., Santhosh, S. & Anselmo, A. C., Surface Modifications for Improved Delivery and Function of Therapeutic Bacteria. SMALL 16 e2001705 (2020).</p>
-                    <p style={styles.paragraph}>[2]	Zandsalimi, F., Hajihassan, Z. & Hamidi, R., Denovo designing : a novel signal peptide for tat translocation pathway to transport activin A to the periplasmic space of E . coli. BIOTECHNOL LETT 42 45 (2020).</p>
-                    <p style={styles.paragraph}>[3]	Lim SH,Jahanshiri F,Rahim RA,et al.Surfacedisplay of respiratory syncytial virus glycoproteins inLactococcus lactis NZ9000.Lett Appl Microbiol,2010,51:658-664.</p>
-                    <p style={styles.paragraph}>[4]	Deleu S, Machiels K, Raes J, et al. Short chain fatty acids and its producing organisms: an overlooked therapy for IBD?[J]. EBioMedicine, 2021,66:103293. </p>
-                    <p style={styles.paragraph}>[5]	JHA A K,LI J,YUAN Y,et al.A review on biobutyric acid production and its optimization[J].International Journal of Agriculture & Biology,2014,6(5):1019-1024.</p>
-                    <p style={styles.paragraph}>[6]	Rekdal, V. M., Bess, E. N., Bisanz, J. E., Turnbaugh, P. J. & Balskus, E. P., Discovery and inhibition of an interspecies gut bacterial pathway for Levodopa metabolism. SCIENCE 364 1055 (2019).</p>
-                    <p style={styles.paragraph}>[7]	Dong, X. L. et al., Polymannuronic acid prevents dopaminergic neuronal loss via brain-gut-microbiota  axis in Parkinson's disease model. INT J BIOL MACROMOL 164 994 (2020).</p>
-                    <p style={styles.paragraph}>[8]	TAN D X,HARDELAND R.The Reserve/Maximum Capacity of Melatonin's Synthetic Function for the Potential Dimorphism of Melatonin Production and Its Biological Significance in Mammals[J].Molecules,2021,26(23):7302.</p>
-                    <p style={styles.paragraph}>[9]	Liu, F. et al., Interaction variability shapes succession of synthetic microbial ecosystems. NAT COMMUN 11 309 (2020).</p>
+                    <p style={{...styles.paragraph,fontSize: '15px'}}>[1]	Vargason, A. M., Santhosh, S. & Anselmo, A. C., Surface Modifications for Improved Delivery and Function of Therapeutic Bacteria. SMALL 16 e2001705 (2020).</p>
+                    <p style={{...styles.paragraph,fontSize: '15px'}}>[2]	Zandsalimi, F., Hajihassan, Z. & Hamidi, R., Denovo designing : a novel signal peptide for tat translocation pathway to transport activin A to the periplasmic space of E . coli. BIOTECHNOL LETT 42 45 (2020).</p>
+                    <p style={{...styles.paragraph,fontSize: '15px'}}>[3]	Lim SH,Jahanshiri F,Rahim RA,et al.Surfacedisplay of respiratory syncytial virus glycoproteins inLactococcus lactis NZ9000.Lett Appl Microbiol,2010,51:658-664.</p>
+                    <p style={{...styles.paragraph,fontSize: '15px'}}>[4]	Deleu S, Machiels K, Raes J, et al. Short chain fatty acids and its producing organisms: an overlooked therapy for IBD?[J]. EBioMedicine, 2021,66:103293. </p>
+                    <p style={{...styles.paragraph,fontSize: '15px'}}>[5]	JHA A K,LI J,YUAN Y,et al.A review on biobutyric acid production and its optimization[J].International Journal of Agriculture & Biology,2014,6(5):1019-1024.</p>
+                    <p style={{...styles.paragraph,fontSize: '15px'}}>[6]	Rekdal, V. M., Bess, E. N., Bisanz, J. E., Turnbaugh, P. J. & Balskus, E. P., Discovery and inhibition of an interspecies gut bacterial pathway for Levodopa metabolism. SCIENCE 364 1055 (2019).</p>
+                    <p style={{...styles.paragraph,fontSize: '15px'}}>[7]	Dong, X. L. et al., Polymannuronic acid prevents dopaminergic neuronal loss via brain-gut-microbiota  axis in Parkinson's disease model. INT J BIOL MACROMOL 164 994 (2020).</p>
+                    <p style={{...styles.paragraph,fontSize: '15px'}}>[8]	TAN D X,HARDELAND R.The Reserve/Maximum Capacity of Melatonin's Synthetic Function for the Potential Dimorphism of Melatonin Production and Its Biological Significance in Mammals[J].Molecules,2021,26(23):7302.</p>
+                    <p style={{...styles.paragraph,fontSize: '15px'}}>[9]	Liu, F. et al., Interaction variability shapes succession of synthetic microbial ecosystems. NAT COMMUN 11 309 (2020).</p>
                 </Element>
             </main>
         </div>

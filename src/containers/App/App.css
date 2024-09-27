@@ -63,3 +63,7 @@ footer a:hover {
   color: white;
   text-decoration: underline;
 }
+.active {
+  text-decoration: none; /* 取消下划线 */
+  color: #955321 !important; /* 更改激活状态下的颜色 */
+}

@@ -4,9 +4,10 @@ interface ImageWithCaptionProps {
     src: string;
     alt?: string;
     caption: string;
+    customWidth?:string
 }
 
-const ImageWithCaption: React.FC<ImageWithCaptionProps> = ({ src, alt = '图片', caption }) => {
+const ImageWithCaption: React.FC<ImageWithCaptionProps> = ({ src, alt = '图片', caption,customWidth}) => {
     return (
         <figure style={{ textAlign: 'center' }}>
             <img
@@ -15,11 +16,11 @@ const ImageWithCaption: React.FC<ImageWithCaptionProps> = ({ src, alt = '图片'
                 style={{
                     display: 'block',
                     margin: '0 auto',
-                    width: '40%',
+                    width: customWidth || '75%',
                     borderRadius: '10px',
                 }}
             />
-            <figcaption style={{ marginTop: '10px', fontStyle: 'italic' }}>
+            <figcaption style={{ marginTop: '10px', fontStyle: 'normal' }}>
                 {caption}
             </figcaption>
         </figure>
