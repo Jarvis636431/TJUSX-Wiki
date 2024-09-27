@@ -63,7 +63,7 @@ const styles = {
     paragraph: {
         lineHeight: 1.4,
         fontSize: '24px',
-        textAlign: 'justify',
+        textAlign: 'justify' as const,
     },
     
 };
