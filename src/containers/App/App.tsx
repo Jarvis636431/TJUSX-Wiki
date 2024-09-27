@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
-import { Header,Footer, Navbar, NotFound} from "../../components";
+import { Footer, Navbar, NotFound} from "../../components";
 import { getPathMapping, stringToSlug } from "../../utils";
 import { useEffect } from "react";
 
@@ -27,13 +27,12 @@ const App = () => {
             {/* Header and PageContent */}
             <Routes>
                 {Object.entries(pathMapping).map(
-                    ([path, { title, lead, component: Component }]) => (
+                    ([path, { component: Component }]) => (
                         <Route
                             key={path}
                             path={path}
                             element={
                                 <>
-                                    <Header title={title || ""} lead={lead || ""} />
                                     <Component />
                                 </>
                             }
@@ -44,10 +43,6 @@ const App = () => {
                     path="*"
                     element={
                         <>
-                            <Header
-                                title="Not Found"
-                                lead="The requested URL was not found on this server."
-                            />
                             <NotFound />
                         </>
                     }

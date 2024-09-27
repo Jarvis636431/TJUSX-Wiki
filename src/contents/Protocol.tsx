@@ -1,5 +1,3 @@
-import { Inspirations, InspirationLink } from "../components";
-import { Link, Element } from 'react-scroll';
 const styles = {
   container: {
     backgroundColor: '#FFF8F0',
