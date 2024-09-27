@@ -1,5 +1,6 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
+import {useState} from "react";
 
 // 使用内联样式
 const styles = {
@@ -347,69 +348,7 @@ export function Design(): JSX.Element {
                 </Element>
                 <Element name="section6" style={styles.section}>
                     <h2 style={styles.heading}>Project Design Iteration</h2>
-                    <h3 style={styles.partheading}>
-                        Part 1: Preliminary Design of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design14.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        In the early stages of project research and design, we constructed the gut microbiome metabolite database - ProMetab and analyzed it, selecting EcN and Lactococcus lactis F44 from the candidate probiotics.//(Jump link to the dry experiment page)
-                    </p>
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        EcN only has the adhesion module and the preliminary quorum sensing module for expressing lcnG, while Lactococcus lactis F44 produces levodopa and can produce the lcnG immunity gene lagC under IPTG induction.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 2: Improvement of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design15.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        We attended CCiC and communicated with Professor Liu Xingyin from Nanjing Medical University //(Jump link to the HP page), realizing that having only levodopa in the system cannot further cope with the different stages of Parkinson's disease, and the effect may be poor.
-                        Based on the previous design, we added a strain of Lactococcus lactis F44 that produces serotonin, and 5-HTP can inhibit the motor disorders caused by levodopa in Parkinson's patients.
-                    </p>
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        We also interviewed Director Chen Lei, the person in charge of the Chinese Parkinson's Disease One-Stop Service Center and the Chinese Parkinson's Disease Diagnosis and Treatment Training Base at Tianjin Huanhu Hospital, and realized that for Parkinson's patients, symptoms of gut inflammatory reactions are also a thorny issue //(Jump to the HP page).
-                        We tried to construct a butyric acid expression module in EcN, which makes EcN more modular and can be used for the treatment of various diseases with gut inflammatory reactions.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 3: Restructuring of the Quorum Sensing in Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design16.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        To enhance the control of the system, we changed the design of the quorum sensing module, constructed an arabinose-induced lcnG expression circuit in EcN,
-                        and replaced the IPTG-controlled immunity gene lagC expression circuit in Lactococcus lactis F44 with Nisin control, and removed the immunity gene expression circuit in the serotonin-producing bacteria,
-                        thus achieving control over serotonin production.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 4: Expansion of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design17.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        The dry experiment used the data from ProMetab to analyze the amino acid feeding situation of Lactobacillus plantarum, and adding Lactobacillus plantarum can strengthen the amino acid feeding relationship of the community, thereby enhancing the stability of the community //(Jump link to the dry experiment page).
-                        We tried to add Lactobacillus plantarum to the system, but due to its difficulty in genetic manipulation, we ultimately used natural Lactobacillus plantarum.
-                    </p>
+                    <ChangePage />
                 </Element>
                 <Element name="section7" style={styles.section}>
                     <h2 style={styles.heading}>Reference</h2>
@@ -426,10 +365,102 @@ export function Design(): JSX.Element {
             </main>
         </div>
         </main>
-        
-    )
-        ;
-}
+    );}
+
+const ChangePage = () => {
+    const [currentPart, setCurrentPart] = useState(0);
+
+    const parts = [
+        {
+            heading: "Part 1: Preliminary Design of Spidey Microbe",
+            img: "https://static.igem.wiki/teams/5376/design/design14.png",
+            content: [
+                "In the early stages of project research and design, we constructed the gut microbiome metabolite database - ProMetab and analyzed it, selecting EcN and Lactococcus lactis F44 from the candidate probiotics.",
+                "EcN only has the adhesion module and the preliminary quorum sensing module for expressing lcnG, while Lactococcus lactis F44 produces levodopa and can produce the lcnG immunity gene lagC under IPTG induction."
+            ]
+        },
+        {
+            heading: "Part 2: Improvement of Spidey Microbe",
+            img: "https://static.igem.wiki/teams/5376/design/design15.png",
+            content: [
+                "We attended CCiC and communicated with Professor Liu Xingyin from Nanjing Medical University, realizing that having only levodopa in the system cannot further cope with the different stages of Parkinson's disease, and the effect may be poor.",
+                "Based on the previous design, we added a strain of Lactococcus lactis F44 that produces serotonin, and 5-HTP can inhibit the motor disorders caused by levodopa in Parkinson's patients."
+            ]
+        },
+        {
+            heading: "Part 3: Restructuring of the Quorum Sensing in Spidey Microbe",
+            img: "https://static.igem.wiki/teams/5376/design/design16.png",
+            content: [
+                "To enhance the control of the system, we changed the design of the quorum sensing module, constructed an arabinose-induced lcnG expression circuit in EcN.",
+                "We replaced the IPTG-controlled immunity gene lagC expression circuit in Lactococcus lactis F44 with Nisin control, and removed the immunity gene expression circuit in the serotonin-producing bacteria."
+            ]
+        },
+        {
+            heading: "Part 4: Expansion of Spidey Microbe",
+            img: "https://static.igem.wiki/teams/5376/design/design17.png",
+            content: [
+                "The dry experiment used the data from ProMetab to analyze the amino acid feeding situation of Lactobacillus plantarum.",
+                "We tried to add Lactobacillus plantarum to the system, but due to its difficulty in genetic manipulation, we ultimately used natural Lactobacillus plantarum."
+            ]
+        }
+    ];
+
+    const handleNext = () => {
+        if (currentPart < parts.length - 1) {
+            setCurrentPart(currentPart + 1);
+        }
+    };
+
+    const handlePrevious = () => {
+        if (currentPart > 0) {
+            setCurrentPart(currentPart - 1);
+        }
+    };
+
+    return (
+        <div style={styles.section}>
+            <h2 style={styles.heading}>Project Design Iteration</h2>
+            <h3 style={styles.partheading}>{parts[currentPart].heading}</h3>
+            <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
+                <div onClick={handlePrevious}
+                     style={{
+                         position: 'absolute',
+                         left: '10px',
+                         top: '50%', // 将箭头垂直居中
+                         transform: 'translateY(-50%)', // 调整垂直位置
+                         cursor: currentPart === 0 ? 'not-allowed' : 'pointer',
+                         fontSize: '30px' }}>
+                    {currentPart > 0 ? '<' : '<'}
+                </div>
+                <img
+                    alt=''
+                    src={parts[currentPart].img}
+                    style={{
+                        display: 'block',
+                        margin: '0 auto',
+                        width: '85%',
+                        borderRadius: '10px',
+                    }}
+                />
+                <div onClick={handleNext}
+                     style={{
+                         position: 'absolute',
+                         right: '10px',
+                         top: '50%', // 将箭头垂直居中
+                         transform: 'translateY(-50%)', // 调整垂直位置
+                         cursor: currentPart === parts.length - 1 ? 'not-allowed' : 'pointer',
+                         fontSize: '30px' }}>
+                    {currentPart < parts.length - 1 ? '>' : '>'}
+                </div>
+            </div>
+            {parts[currentPart].content.map((text, index) => (
+                <p key={index} style={{...styles.paragraph, fontSize: '20px'}}>
+                    {text}
+                </p>
+            ))}
+        </div>
+    );
+};
 
 
 

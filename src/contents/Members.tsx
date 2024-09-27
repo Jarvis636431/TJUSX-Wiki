@@ -10,6 +10,6 @@ interface MembersProps {
 export function Members({}: MembersProps) {
 
   return (
-    <Card  avatar={''}  name={'12345'} contribution={'1243'} introduction={'43242'}></Card>
+    <Card  avatar={'hsdkajfl'}  name={'12345'} contribution={'1243'} introduction={'43242'}></Card>
   );
 }
