@@ -1,109 +1,98 @@
-import { Inspirations, InspirationLink } from "../components";
+import { Link, Element } from 'react-scroll';
+//import ImageWithCaption from "../components/ImageWithCaption.tsx";
+
+// 使用内联样式
+const styles = {
+  container: {
+    backgroundColor: '#FFF8F0',
+    display: 'flex',
+
+    //height从100vh改成auto即可实现点击滚动，原因就在于100vh是固定高度，不会随着内容的增加而增加，用视窗高度限制住了内容
+
+    height: 'auto',
+    overflow: 'hidden',
+  },
+  sidebar: {
+    marginRight: '10px',
+    marginLeft: '10px',
+    width: '250px',
+    backgroundColor: '#F0D6B4',
+    borderRadius: '20px',
+    padding: '20px',
+    borderRight: '1px solid #ddd',
+    position:'fixed' as 'fixed',// 强制类型断言
+  },
+  sidebarItem: {
+    marginBottom: '15px',
+  },
+  content: {
+    marginLeft: '270px',
+    width: '100%',
+    backgroundColor: '#ffffff',
+    border: '20px solid #BC8C5B', // 修改这里
+    borderRadius: '20px',
+    flex: 1,
+    padding: '20px',
+    overflowY: 'auto' as 'auto',// 强制类型断言
+
+    //用负值的outline代替内圆角，而且radius是一样的
+
+    outline:'5px solid #ffffff',
+    outlineOffset: '-20px',
+    // boxShadow: '0 0 0 30px #FFF8F0', // 模拟内侧圆角
+  },
+
+  section: {
+    padding: '50px 0',
+    borderBottom: '1px solid #ddd',
+  },
+  heading: {
+    marginBottom: '20px',
+    fontSize: '24px',
+  },
+  partheading: {
+    marginBottom: '10px',
+    fontSize: '20px',
+  },
+  paragraph: {
+    lineHeight: 1.6,
+  },
+};
 
 export function HumanPractices() {
-  const links: InspirationLink[] = [
-    { year: 2019, teamName: "Thessaly", pageName: "Human_Practices" },
-    { year: 2019, teamName: "Linkoping_Sweden", pageName: "Human_Practices" },
-    { year: 2019, teamName: "FDR-HB_Peru", pageName: "Human_Practices" },
-    { year: 2020, teamName: "William_and_Mary", pageName: "Human_Practices" },
-    { year: 2020, teamName: "Rochester", pageName: "Human_Practices" },
-    { year: 2020, teamName: "Leiden", pageName: "Human_Practices" },
-    { year: 2020, teamName: "Baltimore_BioCrew", pageName: "Human_Practices" },
-  ];
-
   return (
-    <>
-      <div className="row mt-4">
-        <div className="col">
-          <div className="bd-callout bd-callout-info">
-            <h4>Silver Medal Criterion #2</h4>
-            <p>
-              Explain how you have determined your work is responsible and good
-              for the world.
-            </p>
-            <hr />
-            <p>
-              Please see the{" "}
-              <a href="https://competition.igem.org/judging/medals">
-                2024 Medals Page
-              </a>{" "}
-              for more information.
-            </p>
-          </div>
-
-          <div className="bd-callout bd-callout-info">
-            <h4>Best Integrated Human Practices</h4>
-            <p>
-              How does your project affect society and how does society
-              influence the direction of your project? How might ethical
-              considerations and stakeholder input guide your project purpose
-              and design and the experiments you conduct in the lab? How does
-              this feedback enter into the process of your work all through the
-              iGEM competition? Document a thoughtful and creative approach to
-              exploring these questions and how your project evolved in the
-              process to compete for this award!
-            </p>
-            <p>
-              To compete for the Best Integrated Human Practices prize, select
-              the prize on the{" "}
-              <a href="https://competition.igem.org/deliverables/judging-form">
-                judging form
-              </a>{" "}
-              and describe your work on this page.
-            </p>
-            <hr />
-            <p>
-              Please see the{" "}
-              <a href="https://competition.igem.org/judging/awards">
-                2024 Awards Page
-              </a>{" "}
-              for more information.
-            </p>
-          </div>
-        </div>
+      <div style={styles.container}>
+        <aside style={styles.sidebar}>
+          <ul style={{listStyle: 'none', padding: 0}}>
+            {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
+                <li key={index} style={styles.sidebarItem}>
+                  <div style={{textDecoration: 'none', color: '#333', cursor: 'pointer'}}>
+                    <Link
+                        to={`section${index + 1}`}
+                        smooth={true}
+                        duration={50}
+                        offset={-20}
+                        spy={true}
+                        activeClass="active"
+                        onMouseOver={(e) => e.currentTarget.style.color = '#C27529'}
+                        onMouseOut={(e) => e.currentTarget.style.color = '#333'}
+                    >
+                      {item}
+                    </Link>
+                  </div>
+                </li>
+            ))}
+          </ul>
+        </aside>
+        <main style={styles.content}>
+          <Element name="section1" style={styles.section}></Element>
+          <Element name="section2" style={styles.section}></Element>
+          <Element name="section3" style={styles.section}></Element>
+          <Element name="section4" style={styles.section}></Element>
+          <Element name="section5" style={styles.section}></Element>
+          <Element name="section6" style={styles.section}></Element>
+          <Element name="section7" style={styles.section}></Element>
+        </main>
       </div>
-
-      <div className="row mt-4">
-        <div className="col-lg-8">
-          <h2>Overview</h2>
-          <hr />
-          <p>
-            At iGEM we believe societal considerations should be upfront and
-            integrated throughout the design and execution of synthetic biology
-            projects. “Human Practices” refers to iGEM teams' efforts to
-            actively consider how the world affects their work and their work
-            affects the world. Through your Human Practices activities, your
-            team should demonstrate how you have thought carefully and
-            creatively about whether your project is responsible and good for
-            the world. We invite you to explore issues relating (but not
-            limited) to the ethics, safety, security, and sustainability of your
-            project, and to show how this exploration feeds back into your
-            project purpose, design, and execution.
-          </p>
-          <p>
-            Please note you can compete for the Silver Medal criterion #2 and
-            the Best Integrated Human Practices prize with this page.
-          </p>
-          <p>
-            For more information, please see the{" "}
-            <a href="https://responsibility.igem.org/human-practices/what-is-human-practices">
-              Human Practices Hub
-            </a>
-            .
-          </p>
-          <p>
-            On this page, your team should document all of your Human Practices
-            work and activities. You should write about the Human Practices
-            topics you considered in your project, document any activities you
-            conducted to explore these topics (such as engaging with experts and
-            stakeholders), describe why you took a particular approach
-            (including referencing any work you built upon), and explain if and
-            how you integrated takeaways from your Human Practices work back
-            into your project purpose, design and/or execution.
-          </p>
-        </div>
-        <Inspirations inspirationLinkList={links} />
-      </div>
-    </>
   );
 }
