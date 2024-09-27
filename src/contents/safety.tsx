@@ -1,92 +1,98 @@
+import { Link, Element } from 'react-scroll';
+//import ImageWithCaption from "../components/ImageWithCaption.tsx";
+
+// 使用内联样式
+const styles = {
+  container: {
+    backgroundColor: '#FFF8F0',
+    display: 'flex',
+
+    //height从100vh改成auto即可实现点击滚动，原因就在于100vh是固定高度，不会随着内容的增加而增加，用视窗高度限制住了内容
+
+    height: 'auto',
+    overflow: 'hidden',
+  },
+  sidebar: {
+    marginRight: '10px',
+    marginLeft: '10px',
+    width: '250px',
+    backgroundColor: '#F0D6B4',
+    borderRadius: '20px',
+    padding: '20px',
+    borderRight: '1px solid #ddd',
+    position:'fixed' as 'fixed',// 强制类型断言
+  },
+  sidebarItem: {
+    marginBottom: '15px',
+  },
+  content: {
+    marginLeft: '270px',
+    width: '100%',
+    backgroundColor: '#ffffff',
+    border: '20px solid #BC8C5B', // 修改这里
+    borderRadius: '20px',
+    flex: 1,
+    padding: '20px',
+    overflowY: 'auto' as 'auto',// 强制类型断言
+
+    //用负值的outline代替内圆角，而且radius是一样的
+
+    outline:'5px solid #ffffff',
+    outlineOffset: '-20px',
+    // boxShadow: '0 0 0 30px #FFF8F0', // 模拟内侧圆角
+  },
+
+  section: {
+    padding: '50px 0',
+    borderBottom: '1px solid #ddd',
+  },
+  heading: {
+    marginBottom: '20px',
+    fontSize: '24px',
+  },
+  partheading: {
+    marginBottom: '10px',
+    fontSize: '20px',
+  },
+  paragraph: {
+    lineHeight: 1.6,
+  },
+};
+
 export function Safety() {
   return (
-    <>
-      <div className="row mt-4">
-        <div className="col">
-          <div className="bd-callout bd-callout-info">
-            <h4>Safety and Security Award</h4>
-            <p>
-              Synthetic biology will need to be used safely and securely if
-              local people are to solve local problems all around the world. The
-              Safety and Security Committee is challenging teams to apply
-              biological engineering approaches to manage risks associated with
-              synthetic biology. Can you take the next step in incremental
-              progress towards knowledge, understanding, and tools that will
-              make the use of synthetic biology safer and more secure?
-            </p>
-            <p>
-              To compete for the Safety and Security award, please describe your
-              work on this page and also fill out the description on the{" "}
-              <a href="https://competition.igem.org/deliverables/judging-form">
-                judging form
-              </a>
-              .
-            </p>
-            <hr />
-            <p>
-              Please see the{" "}
-              <a href="https://competition.igem.org/judging/awards">
-                2024 Awards Page
-              </a>{" "}
-              for more information.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="row mt-4">
-        <div className="col">
-          <h2>What should this page contain?</h2>
-          <hr />
-          <p>
-            On this page of your wiki, you should write about how you are
-            addressing any safety issues in your project. The wiki is a place
-            where you can go beyond the questions on the safety forms, and write
-            about whatever safety topics are most interesting in your project.
-            (You do not need to copy your safety forms onto this wiki page.)
-          </p>
-          <div className="bd-callout bd-callout-info">
-            <p>
-              Please visit the{" "}
-              <a href="https://responsibility.igem.org/safety-policies/introduction">
-                Safety Policies page
-              </a>{" "}
-              to find this year's safety requirements & deadlines, and to learn
-              about safe & responsible research in iGEM.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="row mt-4">
-        <div className="col-lg-8">
-          <h2>Safe Project Design</h2>
-          <hr />
-          <p>
-            Does your project include any safety features? Have you made certain
-            decisions about the design to reduce risks? Write about them here!
-            For example:
-          </p>
-          <ul>
-            <li>Choosing a non-pathogenic chassis</li>
-            <li>Choosing parts that will not harm humans / animals / plants</li>
-            <li>
-              Substituting safer materials for dangerous materials in a
-              proof-of-concept experiment
-            </li>
-            <li>Including an "induced lethality" or "kill-switch" device</li>
+      <div style={styles.container}>
+        <aside style={styles.sidebar}>
+          <ul style={{listStyle: 'none', padding: 0}}>
+            {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
+                <li key={index} style={styles.sidebarItem}>
+                  <div style={{textDecoration: 'none', color: '#333', cursor: 'pointer'}}>
+                    <Link
+                        to={`section${index + 1}`}
+                        smooth={true}
+                        duration={50}
+                        offset={-20}
+                        spy={true}
+                        activeClass="active"
+                        onMouseOver={(e) => e.currentTarget.style.color = '#C27529'}
+                        onMouseOut={(e) => e.currentTarget.style.color = '#333'}
+                    >
+                      {item}
+                    </Link>
+                  </div>
+                </li>
+            ))}
           </ul>
-        </div>
-        <div className="col-lg-4">
-          <h2>Safe Lab Work</h2>
-          <hr />
-          <p>
-            What safety procedures do you use every day in the lab? Did you
-            perform any unusual experiments, or face any unusual safety issues?
-            Write about them here!
-          </p>
-        </div>
+        </aside>
+        <main style={styles.content}>
+          <Element name="section1" style={styles.section}></Element>
+          <Element name="section2" style={styles.section}></Element>
+          <Element name="section3" style={styles.section}></Element>
+          <Element name="section4" style={styles.section}></Element>
+          <Element name="section5" style={styles.section}></Element>
+          <Element name="section6" style={styles.section}></Element>
+          <Element name="section7" style={styles.section}></Element>
+        </main>
       </div>
-    </>
   );
 }
