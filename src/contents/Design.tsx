@@ -1,7 +1,7 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
 import {useState} from "react";
-
+import BackToTopButton from '../components/BackButton.tsx';
 // 使用内联样式
 const styles = {
     container: {
@@ -32,7 +32,7 @@ const styles = {
     content: {
         marginLeft: '30px',
         width: '100%',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#fff8f0',
         border: '20px solid #BC8C5B', // 修改这里
         borderRadius: '20px',
         flex: 1,
@@ -119,6 +119,7 @@ export function Design(): JSX.Element {
                     ))}
                 </ul>
             </aside>
+            <BackToTopButton />
             <main style={styles.content}>
                 <Element name="section1" style={styles.section}>
                     <h2 style={styles.heading}>Overview</h2>

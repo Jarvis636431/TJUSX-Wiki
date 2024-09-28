@@ -18,7 +18,7 @@ export function Footer(): JSX.Element {
       right: '0px',
     },
     topRightImg: {
-      width: '75px',
+      width: '8vw',
       height: 'auto',
     },
     footerSection: {

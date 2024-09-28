@@ -67,3 +67,28 @@ footer a:hover {
   text-decoration: none; /* 取消下划线 */
   color: #955321 !important; /* 更改激活状态下的颜色 */
 }
+/* CSS */
+.back-to-top-button {
+  position: fixed;
+  bottom: 300px;
+  left: 120px;
+  z-index: 999; /* 确保按钮位于其他元素之上 */
+  background-color: transparent; /* 按钮背景透明 */
+  color: white; /* 按钮文字颜色 */
+  border: none;
+  padding: 10px; /* 内边距 */
+  width: 100px; /* 按钮宽度 */
+  height: 100px; /* 按钮高度 */
+  cursor: pointer;
+  border-radius: 50%; /* 圆形按钮 */
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top-button img {
+  width: 300px; /* 图片宽度 */
+  height:300px; /* 图片高度 */
+  object-fit: contain; /* 确保图片内容完整显示 */
+}
