@@ -24,7 +24,7 @@ export function Footer(): JSX.Element {
     footerSection: {
       display: 'flex',
       flexDirection: 'column',
-      gap: '10px',
+      gap: '30px',
       width: '48%', // Adjusted for non-mobile
       paddingTop: '20px',
       paddingLeft: '50px',
@@ -68,24 +68,26 @@ export function Footer(): JSX.Element {
               <img
                   src="https://static.igem.wiki/teams/5376/footer/contactus.png"
                   alt="Left Row 1 Image"
-                  style={{ width: '150px', height: 'auto' }}
+                  style={{ width: '200px', height: 'auto' }}
                   loading="lazy"
               />
             </div>
+            
             <div style={styles.rowStyle}>
               <img
                   src="https://static.igem.wiki/teams/5376/footer/locationlogo.png"
                   alt="Left Row 2 Image 1"
-                  style={{ width: '40px', height: 'auto' }}
+                  style={{ width: '40px', height: '50px' }}
                   loading="lazy"
               />
               <img
                   src="https://static.igem.wiki/teams/5376/footer/location.png"
                   alt="Left Row 2 Image 2"
-                  style={{ width: '300px', height: 'auto' }}
+                  style={{ width: '500px', height: 'auto' }}
                   loading="lazy"
               />
             </div>
+            
             <div style={styles.rowStyle}>
               <img
                   src="https://static.igem.wiki/teams/5376/footer/contactlogo.png"
@@ -96,14 +98,14 @@ export function Footer(): JSX.Element {
               <img
                   src="https://static.igem.wiki/teams/5376/footer/igemtjusx.png"
                   alt="Left Row 3 Image 2"
-                  style={{ width: '225px', height: 'auto' }}
+                  style={{ width: '180px', height: 'auto',objectFit: 'contain'}}
                   loading="lazy"
               />
             </div>
           </div>
 
           {/* 右侧区域 */}
-          <div style={styles.footerSection}>
+          <div style={{...styles.footerSection, gap: '10px'}}>
             <div style={styles.rowStyle}>
               <img
                   src="https://static.igem.wiki/teams/5376/footer/aboutus.png"

@@ -40,7 +40,7 @@ export function Navbar() {
   });
 
   return (
-    <BootstrapNavbar expand="lg" className="bg-body-tertiary" fixed="top">
+    <BootstrapNavbar expand="lg" className="bg-body-tertiary" fixed="top"  >
       <Container>
         <BootstrapNavbar.Brand>
           {import.meta.env.VITE_TEAM_NAME}

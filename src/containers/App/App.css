@@ -92,3 +92,7 @@ footer a:hover {
   height:300px; /* 图片高度 */
   object-fit: contain; /* 确保图片内容完整显示 */
 }
+/* styles.css */
+.navbar {
+  background-color: #ffebd3; /* 你希望的颜色，例如深灰色 */
+}
