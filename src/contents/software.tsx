@@ -10,9 +10,11 @@ const styles = {
         //height从100vh改成auto即可实现点击滚动，原因就在于100vh是固定高度，不会随着内容的增加而增加，用视窗高度限制住了内容
 
         height: 'auto',
-        overflow: 'hidden',
     },
     sidebar: {
+        //使用position: sticky;实现侧边栏滚动到顶端固定，必须设置top/bottom等四边属性之一，属性值就是滚动的极限距离，而且父组件不可以设置未overflow:hidden/auto
+        top: '70px',
+        height: '400px',
         marginRight: '10px',
         marginLeft: '10px',
         width: '350px',
@@ -20,7 +22,7 @@ const styles = {
         borderRadius: '20px',
         padding: '20px',
         borderRight: '1px solid #ddd',
-        position: 'fixed' as 'fixed',// 强制类型断言
+        position: 'sticky' as 'sticky',// 强制类型断言
     },
     sidebarItem: {
         marginBottom: '15px',
@@ -29,7 +31,7 @@ const styles = {
         fontWeight: 'bold',
     },
     content: {
-        marginLeft: '390px',
+        marginLeft: '30px',
         width: '100%',
         backgroundColor: '#ffffff',
         border: '20px solid #BC8C5B', // 修改这里
