@@ -23,7 +23,7 @@ const styles = {
   },
   content: {
     width: 'calc(100% - 350px)',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#fff8f0',
     border: '20px solid #BC8C5B', // 修改这里
     borderRadius: '20px',
     flex: 1,

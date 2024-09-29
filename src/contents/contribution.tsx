@@ -33,7 +33,7 @@ const styles = {
     content: {
         marginLeft: '30px',
         width: '100%',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#fff8f0',
         border: '20px solid #BC8C5B', // 修改这里
         borderRadius: '20px',
         flex: 1,

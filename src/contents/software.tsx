@@ -1,6 +1,6 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
-
+import BackToTopButton from '../components/BackButton.tsx';
 // 使用内联样式
 const styles = {
     container: {
@@ -26,14 +26,14 @@ const styles = {
     },
     sidebarItem: {
         marginBottom: '15px',
-        fontSize: '22px', 
-        color: '#c67e38', 
+        fontSize: '22px',
+        color: '#c67e38',
         fontWeight: 'bold',
     },
     content: {
         marginLeft: '30px',
         width: '100%',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#fff8f0',
         border: '20px solid #BC8C5B', // 修改这里
         borderRadius: '20px',
         flex: 1,
@@ -53,15 +53,15 @@ const styles = {
     },
     heading: {
         marginBottom: '15px',
-        fontSize: '36px', 
-        color: '#c67e38', 
+        fontSize: '36px',
+        color: '#c67e38',
         fontWeight: 'bold',
         textAlign: 'center' as const,
     },
     partheading: {
         marginBottom: '10px',
         fontSize: '30px',
-        color: '#c67e38', 
+        color: '#c67e38',
         fontWeight: 'bold',
         textAlign: 'center' as const,
     },
@@ -70,365 +70,310 @@ const styles = {
         fontSize: '24px',
         textAlign: 'justify' as const,
     },
-    
+
 };
 
 export function Software(): JSX.Element {
 
     return (
         <main style={{ backgroundColor: '#FFF8F0', minHeight: '100vh' }}>
-            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px'}}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px' }}>
                 <img
                     src="https://static.igem.wiki/teams/5376/viruse1.png"
                     alt="Left Image"
-                    style={{maxWidth: '200px', height: 'auto'}}
+                    style={{ maxWidth: '200px', height: 'auto' }}
                 />
 
                 <img
                     src="https://static.igem.wiki/teams/5376/software/softwarelogo.png"
                     alt="TITLE"
-                    style={{width: '660px', height: '150px', objectFit: 'cover'}}
+                    style={{ width: '660px', height: '150px', objectFit: 'cover' }}
                 />
 
 
                 <img
                     src="https://static.igem.wiki/teams/5376/viruse2.png"
                     alt="Right Image"
-                    style={{maxWidth: '200px', height: 'auto'}}
+                    style={{ maxWidth: '200px', height: 'auto' }}
                 />
             </div>
             <div style={styles.container}>
-            <aside style={styles.sidebar}>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
-                        <li key={index} style={styles.sidebarItem}>
-                            <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
-                                <Link
-                                    to={`section${index + 1}`}
-                                    smooth={true}
-                                    duration={50}
-                                    offset={-20}
-                                    spy={true}
-                                    activeClass="active"
-                                    onMouseOver={(e) => e.currentTarget.style.color = '#955321'}
-                                    onMouseOut={(e) => e.currentTarget.style.color = '#c67e38'}
-                                >
-                                    {item}
-                                </Link>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </aside>
-            <main style={styles.content}>
-                <Element name="section1" style={styles.section}>
-                    <h2 style={styles.heading}>Overview</h2>
-                    <p style={styles.paragraph}>
-                        To provide treatment for Parkinson's disease, we designed the Spidey Microbe consortium,
-                        which consists of three main modules:adhesion module, quorum Sensing module, therapeutic
-                        module.
-                        Throughout the iterations of our project,
-                        we continuously refined the Spidey Microbe consortium following the DBTL (Design, Build,
-                        Test, Learn) framework recommended by iGEM.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design1.png'}
-                        caption={'Figure 1 Flowchart of Wet Lab Experimental Design'}>
-                    </ImageWithCaption>
-                    <br />
-                </Element>
-                <Element name="section2" style={styles.section}>
-                    <h2 style={styles.heading}>Adhension Module</h2>
-                    <p style={styles.paragraph}>
-                        The ability to colonize in the gut is crucial for probiotics’ effects. To further enhance
-                        this ability and improve the controllability of colonization to reduce the risk of bacterial
-                        translocation,
-                        we designed a self-assembled system based on the binding of streptavidin and biotin. We used
-                        N-hydroxysuccinimide biotin, a reagent that can be conjugated through primary amines (such
-                        as the N-terminus and side chains of lysine residues in proteins and peptides),
-                        to label the surface of Escherichia coli Nissle 1917 (EcN) cells[1]. We constructed an
-                        inducible fusion protein of streptavidin and gut mucin-binding protein in EcN, termed
-                        "silk," and used a signal peptide to localize this fusion protein to the extracellular
-                        space[2].
-                    </p>
-                    <p style={styles.paragraph}>
-                        Since EcN lacks T7 RNA polymerase, we constructed a T7 RNA polymerase (T7RNP) expression
-                        framework using the Cloning Vector pJUMP27-1A(sfGFP) from the iGEM 2024 Distribution, which
-                        has compatible biobrick restriction sites.
-                        This expression plasmid has a replication origin of PSC101 and confers resistance to
-                        kanamycin, making it compatible with most protein expression vectors (such as PET series),
-                        thus expanding the available vectors for EcN and enabling transfer to other E. coli strains
-                        that do not contain T7 RNA polymerase.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design2.png'}
-                        caption={'Figure 2 The gene circuit for adhesion module of Escherichia coli Nissle 1917'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Under induced conditions, "spider silk" is secreted into the extracellular space of EcN,
-                        self-assembling on the surface of biotinylated EcN through streptavidin.
-                        The gut mucin-binding protein at one end of the "spider silk" promotes the colonization of
-                        EcN on the gut mucus layer(which is rich in mucin).
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design3.png'}
-                        caption={'Figure 3 The principal of intestinal adhesion of Escherichia coli Nissle 1917'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        This method also facilitates the aggregation of probiotic communities.
-                        We constructed a gene circuit for streptavidin surface display based on cell wall
-                        peptidoglycan binding in Lactococcus lactis F44 within the Spidey Microbe community.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design4.png'}
-                        caption={'Figure 4 The gene circuit for surface display of streptavidin in Lactococcus lactis F44'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        By using USP45 to localize the protein to the extracellular space and fusing the 3LysM domain to the N-terminus of streptavidin, we achieved surface display of streptavidin in Lactococcus lactis F44[3].
-                        Through the interaction between streptavidin and biotin, we can facilitate the aggregation of Lactococcus lactis F44 with biotinylated EcN.
-                        This allows Lactococcus lactis F44 to be anchored in the gut via the “bridge” of EcN, promoting the aggregation of the Spidey Microbe community and enhancing its stability.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design5.png'}
-                        caption={'Figure 5 The principal of mechanism of Lactococcus lactis F44 and Escherichia coli Nissle 1917 aggregation'}
-                        customWidth={'40%'}>
-                            
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Importantly, this adhesion module exhibits strong modularity and transferability.
-                        EcN acts as a bindable "spider silk", allowing any probiotic to be anchored in the gut simply by displaying streptavidin on its surface.
-                    </p>
-                </Element>
-                <Element name="section3" style={styles.section}>
-                    <h2 style={styles.heading}>Therapeutic Modules</h2>
-                    <p style={styles.paragraph}>
-                        The project ultimately constructed three therapeutic components, which include a butyrate production part based on EcN, and parts for the production of serotonin and levodopa  based on Lactococcus lactis F44.
-                    </p>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Butyrate Production Part
-                    </h3>
-                    <br />
-                    <p style={styles.paragraph}>
-                        To further expand the capabilities of EcN and establish it as a module for colonization by intestinal probiotics , we enhanced its butyrate production capacity during subsequent iterations.
-                        Butyrate, as a short-chain fatty acid, can reduce inflammatory responses by improving intestinal mucosal permeability and downregulating the expression of inflammatory factors.
-                        It can also  excite  intestinal neurons, accelerate gut motility, promote hormone secretion, and inhibit the proliferation of pathogenic bacteria. Butyrate plays a significant role in maintaining the homeostasis of the intestinal environment and the dynamic balance of the gut microbiota[4].
-                        We enhanced the carbon metabolic flux of acetyl-CoA to butyrate by expressing acetyl-CoA acetyltransferase (ACAT), thereby improving the butyrate synthesis capability of EcN[5].
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design6.png'}
-                        caption={'Figure 6 Metabolic Pathway for Butyrate Production'}
-                        customWidth={'40%'}>
-                    </ImageWithCaption>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Levodopa Production Part
-                    </h3>
-                    <br />
-                    <p style={styles.paragraph}>
-                        The primary medication for treating Parkinson's disease is levodopa (L-DOPA). Levodopa enters the brain and is converted to the neurotransmitter dopamine by aromatic amino acid decarboxylase (AADC) present in the body.
-                        Dopamine cannot cross the blood-brain barrier, but levodopa can, and peripheral metabolism of levodopa significantly reduces its therapeutic efficacy[6].
-                        To further reduce peripheral metabolism, we constructed a levodopa synthesis module in the probiotic Lactococcus lactis F44, which can produce levodopa upon oral administration, thereby minimizing  its peripheral metabolism.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design7.png'}
-                        caption={'Figure 7 Metabolic Pathway for Levodopa Production'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        To control the production of levodopa, we utilized a nisin-inducible Pnis promoter.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design8.png'}
-                        caption={'Figure 8 Gene Circuit for Levodopa Production in Lactococcus lactis F44 '}>
-                    </ImageWithCaption>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Serotonin Production Part
-                    </h3>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Serotonin is a neurotransmitter that plays a role in regulating various physiological processes in the central nervous system, such as mood, sleep, appetite, and memory, and can alleviate symptoms of motor impairment and emotional depression associated with Parkinson's disease[7].
-                        In the later stages of the project, to further enhance the therapeutic effects of Spidey Microbe, we constructed a serotonin production module in another strain of Lactococcus lactis F44, achieving serotonin production by overexpressing N-acetyltransferase[8].
-                        For expression control, we also employed a nisin-inducible Pnis promoter.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design9.png'}
-                        caption={'Figure 9 Serotonin Biosynthetic Pathway in Lactococcus lactis F44 '}>
-                    </ImageWithCaption>
-                    <br />
-                </Element>
-                <Element name="section4" style={styles.section}>
-                    <h2 style={styles.heading}>Quorum Sensing Module</h2>
-                    <p style={styles.paragraph}>
-                        Quorum sensing is a common mode of microbial cell communication, where nisin, produced by lactic acid bacteria, serves as a typical quorum sensing signal peptide.
-                        It is a bacteriocin generated by a group of Gram-positive bacteria belonging to the genera Lactococcus and Streptococcus. As lcnG is a class II two-component bacteriocin which is toxic to Lactococcus lactis  F44.
-                        The gene cluster includes five genes: lagA, lagB, lagC, lagD, and lagE. lagA, lagD, and lagE encode the precursor of the alpha peptide, the ABC transporter, and an accessory protein of the pathway, respectively, enabling the strain to synthesize and secrete the alpha subunit of lcnG. lagB encodes the beta subunit of lcnG, while lagC is the immunity gene for lcnG[9].
-                    </p>
-                    <p style={styles.paragraph}>
-                        At the outset of the project, considering biosafety, we designed a dynamically regulated quorum sensing relationship, with EcN constitutively expressing the lcnG production gene cluster  and Lactococcus lactis F44 designed with a lacI-lacO-based lagC expression circuit.
-                        Upon removal of the inducing environment, the relationship among the Spidey Microbe consortium would shift from cooperative to competitive.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design10.png'}
-                        caption={'Figure 10 Initial Design Principle of the Quorum Sensing Module '}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Subsequently, due to the controllable induction expression of the adhesion system and the incorporation of serotonin-producing bacteria, we revised the design of the quorum sensing module, further regulating the expression of therapeutic factors while ensuring biosafety.
-                    </p>
-                    <p style={styles.paragraph}>
-                        We replaced the constitutive expression of lcnG in EcN with arabinose induction and constructed a nisin-inducible lagC (lcnG immune gene) gene expression circuit in the levodopa-producing bacteria.
-                        Compared to the initial design, this change provides Spidey Microbe with a greater variety of regulatory strategies.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design11.png'}
-                        caption={'Figure 11 Improved Design of the Quorum Sensing Module Gene Circuit'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Spidey Microbe possesses four regulatory strategies, enabling the system to pause, start, switch, and end, enhancing system controllability.
-                    </p>
-                    <p style={styles.paragraph}>
-                        In the absence of  both arabinose and nisin, the system enters a paused state, producing only butyrate to alleviate inflammatory responses.
-                        Upon the addition of nisin, the system initiates, producing butyrate, serotonin, and levodopa.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When both arabinose and nisin are present, the system switches to produce only levodopa in response to different stages of Parkinson's disease.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When both arabinose and nisin are present, the system switches to produce only levodopa in response to different stages of Parkinson's disease.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When the nisin environment is removed and arabinose is added, the Spidey Microbe system concludes, with the bacteria producing therapeutic components being killed , ensuring biosafety. Concurrently, by controllable regulation of the adhesion system, without IPTG induction, EcN loses its adherence to the gut, further ensuring safety.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design12.png'}
-                        caption={'Figure 12 Quorum Sensing Regulation Strategies and Their Outputs'}>
-                    </ImageWithCaption>
-                    <br />
-                </Element>
-                <Element name="section5" style={styles.section}>
-                    <h2 style={styles.heading}>Community Characterization Methods</h2>
-                    <p style={styles.paragraph}>
-                        To characterize the growth of each bacterium in Spidey Microbe, we used three fluorescent proteins from the iGEM 2024 Distribution: TannenRFP, mTagBFP, and SYFP2.
-                    </p>
+                <aside style={styles.sidebar}>
+                    <ul style={{ listStyle: 'none', padding: 0 }}>
+                        {['Overview', 'Probiotic Metabolite—ProMetab', 'Software package—ProMetab Tool', 'How does our software help with wet lab', 'Reference'].map((item, index) => (
+                            <li key={index} style={styles.sidebarItem}>
+                                <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
+                                    <Link
+                                        to={`section${index + 1}`}
+                                        smooth={true}
+                                        duration={50}
+                                        offset={-20}
+                                        spy={true}
+                                        activeClass="active"
+                                        onMouseOver={(e) => e.currentTarget.style.color = '#955321'}
+                                        onMouseOut={(e) => e.currentTarget.style.color = '#c67e38'}
+                                    >
+                                        {item}
+                                    </Link>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </aside>
+                <main style={styles.content}>
+                    <BackToTopButton />
+                    <Element name="section1" style={styles.section}>
+                        <h2 style={styles.heading}>Overview</h2>
+                        <p style={styles.paragraph}>
+                            In this project, the software part of the dry lab consists of the construction of
+                            the probiotic database <strong style={{ color: '#c67e38' }}>ProMetab</strong> and the development of the software package <strong style={{ color: '#c67e38' }}>ProMetab Tool</strong>.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>ProMetab (Probiotic Metabolite)</strong> is a very useful probiotic database, mainly containing probiotic
+                            metabolite data, corresponding data of probiotic strains and diseases they treat and the nutritional
+                            deficiency data of amino acid and vitamin. For the public, they can use our database website to
+                            look up probiotic species of interest and learn about probiotics and the diseases they can treat;
+                            for wet Lab members and probiotic researchers, they can look up metabolites of the target probiotic
+                            , amino acid deficiencies, vitamin deficiencies, etc by using the database. The data can help them
+                            with needs such as rational design of probiotic use and optimization of probiotic composition.
+                        </p>
+                        <p style={styles.paragraph}>
+                            By browsing the wiki of previous competitions, we found that there are quite a number of teams focusing on gut
+                            health and probiotics as we do, so subsequent iGEM teams can also refer to our ProMetab data to rationally design
+                            projects for medical engineering treatments with probiotics, for example, chassis selection based on probiotic metabolite data.
+                        </p>
+                        <p style={styles.paragraph}>
+                            ProMetab Tool is a software tool developed by members of the dry lab for batch processing of strain interaction
+                            data, designed to help users to easily carry out the work of importing graph databases and calculating and
+                            evaluating strain interaction scores. Users can use the ProMetab database in conjunction with this software
+                            tool for subsequent analysis, or organization of query data.
+                        </p>
+                        <p style={styles.paragraph}>
+                            The address of the database and the software download package can be found at: <a href="https://gitlab.igem.org/2024/software-tools/tjusx" style={{ color: '#955321', fontSize: '24px' }}>Our code repository</a>
+                        </p>
+                    </Element>
+                    <Element name="section2" style={styles.section}>
+                        <h2 style={styles.heading}>Probiotic Metabolite—ProMetab</h2>
+                        <br />
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '30px' }}>1.Preliminary Ideas</h3>
+                        <p style={styles.paragraph}>
+                            Our team's program is related to probiotics and gut health. While reading through iGEM's previous
+                            competition projects, we found that different teams had conducted research related to different
+                            diseases and probiotics, and we thought that a probiotic flora rational design tool might be
+                            able to better guide protocols for engineering probiotic flora disease treatments. So the
+                            project team firstly investigated the probiotic databases reported in the literature and found
+                            <i>MicrobiomeHUB, Optibac Probiotics, BIDD Probio</i> <sup>[1]</sup>, etc. However, the existing databases all
+                            only associate the related diseases and probiotics, and lack the prediction of metabolites of
+                            the strains and the analysis of probiotic interactions. After some thought and discussion with
+                            our instructors, we decided to make our own database——Probiotic Metabolite (ProMetab) to aid in
+                            the design of probiotic flora treatment programs. The advantage of ProMetab is that it has a larger
+                            volume of data and contains data not only limited to strains which are already on the market,
+                            but also strains which are not on the market or have the potential to be probiotic. Specifically,
+                            we also include<strong style={{ color: '#c67e38' }}> metabolite data</strong> of probiotics and analyze the <strong style={{ color: '#c67e38' }}>nutritional deficiencies of amino
+                                acids and vitamins</strong> among them, which makes our database more specialized and can be used as a data
+                            reference for wet-lab and probiotic researchers.
+                        </p>
 
-                    {/*//放置表格*/}
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '30px' }}>2.Data Collection</h3>
 
-                    <img alt="" src="https://static.igem.wiki/teams/5376/design/design13.png"
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '40%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={styles.paragraph}>
-                        We constructed the TannenRFP expression element on the T7 RNA polymerase expression vector of EcN, the mTagBFP on the adhesion module vector of the levodopa-producing bacteria, and the SYFP2 on the adhesion module vector of the serotonin-producing bacteria.
-                    </p>
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design13.png'}
-                        caption={'Figure 13 Gene circuit of community fluorescence protein characterization'}>
-                    </ImageWithCaption>
-                </Element>
-                <Element name="section6" style={styles.section}>
-                    <h2 style={styles.heading}>Project Design Iteration</h2>
-                    <h3 style={styles.partheading}>
-                        Part 1: Preliminary Design of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design14.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        In the early stages of project research and design, we constructed the gut microbiome metabolite database - ProMetab and analyzed it, selecting EcN and Lactococcus lactis F44 from the candidate probiotics.//(Jump link to the dry experiment page)
-                    </p>
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        EcN only has the adhesion module and the preliminary quorum sensing module for expressing lcnG, while Lactococcus lactis F44 produces levodopa and can produce the lcnG immunity gene lagC under IPTG induction.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 2: Improvement of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design15.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        We attended CCiC and communicated with Professor Liu Xingyin from Nanjing Medical University //(Jump link to the HP page), realizing that having only levodopa in the system cannot further cope with the different stages of Parkinson's disease, and the effect may be poor.
-                        Based on the previous design, we added a strain of Lactococcus lactis F44 that produces serotonin, and 5-HTP can inhibit the motor disorders caused by levodopa in Parkinson's patients.
-                    </p>
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        We also interviewed Director Chen Lei, the person in charge of the Chinese Parkinson's Disease One-Stop Service Center and the Chinese Parkinson's Disease Diagnosis and Treatment Training Base at Tianjin Huanhu Hospital, and realized that for Parkinson's patients, symptoms of gut inflammatory reactions are also a thorny issue //(Jump to the HP page).
-                        We tried to construct a butyric acid expression module in EcN, which makes EcN more modular and can be used for the treatment of various diseases with gut inflammatory reactions.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 3: Restructuring of the Quorum Sensing in Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design16.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        To enhance the control of the system, we changed the design of the quorum sensing module, constructed an arabinose-induced lcnG expression circuit in EcN,
-                        and replaced the IPTG-controlled immunity gene lagC expression circuit in Lactococcus lactis F44 with Nisin control, and removed the immunity gene expression circuit in the serotonin-producing bacteria,
-                        thus achieving control over serotonin production.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 4: Expansion of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design17.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        The dry experiment used the data from ProMetab to analyze the amino acid feeding situation of Lactobacillus plantarum, and adding Lactobacillus plantarum can strengthen the amino acid feeding relationship of the community, thereby enhancing the stability of the community //(Jump link to the dry experiment page).
-                        We tried to add Lactobacillus plantarum to the system, but due to its difficulty in genetic manipulation, we ultimately used natural Lactobacillus plantarum.
-                    </p>
-                </Element>
-                <Element name="section7" style={styles.section}>
-                    <h2 style={styles.heading}>Reference</h2>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[1]	Vargason, A. M., Santhosh, S. & Anselmo, A. C., Surface Modifications for Improved Delivery and Function of Therapeutic Bacteria. SMALL 16 e2001705 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[2]	Zandsalimi, F., Hajihassan, Z. & Hamidi, R., Denovo designing : a novel signal peptide for tat translocation pathway to transport activin A to the periplasmic space of E . coli. BIOTECHNOL LETT 42 45 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[3]	Lim SH,Jahanshiri F,Rahim RA,et al.Surfacedisplay of respiratory syncytial virus glycoproteins inLactococcus lactis NZ9000.Lett Appl Microbiol,2010,51:658-664.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[4]	Deleu S, Machiels K, Raes J, et al. Short chain fatty acids and its producing organisms: an overlooked therapy for IBD?[J]. EBioMedicine, 2021,66:103293. </p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[5]	JHA A K,LI J,YUAN Y,et al.A review on biobutyric acid production and its optimization[J].International Journal of Agriculture & Biology,2014,6(5):1019-1024.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[6]	Rekdal, V. M., Bess, E. N., Bisanz, J. E., Turnbaugh, P. J. & Balskus, E. P., Discovery and inhibition of an interspecies gut bacterial pathway for Levodopa metabolism. SCIENCE 364 1055 (2019).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[7]	Dong, X. L. et al., Polymannuronic acid prevents dopaminergic neuronal loss via brain-gut-microbiota  axis in Parkinson's disease model. INT J BIOL MACROMOL 164 994 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[8]	TAN D X,HARDELAND R.The Reserve/Maximum Capacity of Melatonin's Synthetic Function for the Potential Dimorphism of Melatonin Production and Its Biological Significance in Mammals[J].Molecules,2021,26(23):7302.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[9]	Liu, F. et al., Interaction variability shapes succession of synthetic microbial ecosystems. NAT COMMUN 11 309 (2020).</p>
-                </Element>
-            </main>
-        </div>
+                        <p style={styles.paragraph}>
+                            The database was constructed in terms of intestinal probiotic strains, and relevant information
+                            was collected through open source databases.
+                        </p>
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(1) Determination of the List of Probiotic Strains</h3>
+                        <p style={styles.paragraph}>
+                            Based on the <i>BIDD Probio's</i> list of probiotic strains, we combined data from major online open-source probiotic
+                            databases as well as probiotic data published by official organizations (like <i>National Health Commission of the People's
+                                Republic of China</i>) in the past few years. The strains we selected are not only limited to those already on the market, but
+                            also include strains that are not on the market or have probiotic potential.
+                        </p>
+
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(2) Metabolite Data</h3>
+
+                        <p style={styles.paragraph}>
+                            Obtaining the EC numbers of the enzymes: For strains for which the complete EC number can be queried
+                            on the <i>Uniport</i> database <sup>[2]</sup>, the EC numbers is directly crawled; for strains for which the EC numbers
+                            cannot be retrieved, the gene sequence is utilized, and the protein sequence is obtained by operation
+                            with tools such as <i>antiSMASH</i>, and then predicted to obtain the corresponding EC numbers by <i>CLEAN</i> <sup>[3]</sup>.
+                        </p>
+
+                        <p style={styles.paragraph}>
+                            Obtaining metabolic reactions corresponding to EC numbers: different metabolic reactions corresponding to different EC
+                            numbers were crawled through the <i>BRENDA</i> <sup>[4]</sup> database. The end products of the metabolic reactions are the metabolites of the strain.
+                        </p>
+
+                        <p style={styles.paragraph}>
+                            At the beginning of the data crawling phase, we developed a standard operating procedure for crawling data and carried
+                            out the data collection work in an organized manner. The figure below shows the team members who helped to participate in the data crawling:
+                        </p>
+
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/software/1.png'}
+                            caption={'Figure 1 Pie Chart of Crawling Data Division of Labor'}
+                            customWidth={'60%'}>
+                        </ImageWithCaption>
+
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(3) Synthesis Capacity Data of Amino Acid and Vitamin</h3>
+                        <p style={styles.paragraph}>
+                            Amino acids and vitamins are two very important categories of probiotic metabolites, and they are
+                            considered as the main metabolites exchanged between colonies and between colonies and the environment <sup>[5]</sup>. Therefore,
+                            we analyzed the synthesis capacity of 18 amino acids and B vitamins of the strains, categorizing the data into two separate categories.
+                        </p>
+                        <p style={styles.paragraph}>
+                            Vitamin synthesis ability data: common B vitamins (including derivatives) imported and exported by bacteria were selected for analysis, such as thiamin [B1], riboflavin [B2], niacin [B3], pantothenate [B5], pyridoxine [B6], and so on. If a particular type of B vitamin (including derivatives) cannot be found in the metabolite data of a strain, it means that the probiotic is unable to synthesize that type of B vitamin, and is a defective type of that vitamin.
+                        </p>
+                        <p style={styles.paragraph}>
+                            Amino acid synthesis capacity data: Amino acid synthesis capacity was predicted using GapMind, an amino acid auxotroph prediction framework developed by Morgan Price et al <sup>[6]</sup>.<i>GapMind</i>specifically analyzes amino acid synthesis pathways, and the resulting amino acid auxotroph predictions are more comprehensive and accurate than our metabolite data. GapMind's input data is the strain's genome or proteome, and the output is a prediction of the synthesis capacity of 18 amino acids.
+                        </p>
+
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(4) Corresponding Data of Probiotic Strains and Diseases They Treat</h3>
+                        <p style={styles.paragraph}>
+                            The data in this category are primarily referenced and integrated from <i>BIDD Probio, MicrobiomeHUB</i> and related references.
+                        </p>
+
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '30px' }}>3.Database Structure Design & Search Platform Design</h3>
+
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(1)	Database Structure Design</h3>
+                        <p style={styles.paragraph}>
+                            For database structure design, we use a <strong style={{ color: '#c67e38' }}>graph database</strong> <sup>[7]</sup> instead of a relational database to store data. The reason
+                            we use a graph database is that ProMetab contains more complex data relationships, so it is difficult to maintain
+                            multi-table consistency and transactional integrity if a relational database is used. In a graph database,
+                            on the other hand, each entity (like strain, enzyme, metabolite, etc.) is a node, and the relationships
+                            between them are represented by edges. Such a model makes it possible to jump directly from one node
+                            to another when querying, without the need to realize it through table joins as in relational databases
+                            . At the same time, graph databases are optimized for multi-hop queries and can easily handle complex
+                            paths involving multiple entities and relationships. For highly interconnected datasets, graph databases
+                            can efficiently track multi-step relationships without causing a dramatic drop in query performance.
+                            Finally, graph databases are highly extensible due to the nature of their data storage, where new nodes
+                            and relationships can be directly connected to the old data without having to consider issues such as consistency
+                            , so we end up presenting our data in graph databases.
+                        </p>
+                        <p style={styles.paragraph}>
+                            The data structure is shown below:
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/software/2.png'}
+                            caption={'Figure 2 Database Structure Diagram'}
+                            customWidth={'80%'}>
+                        </ImageWithCaption>
+
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(2) Search Platform Design</h3>
+                        <p style={styles.paragraph}>
+                            We designed four interfaces for <strong style={{ color: '#c67e38' }}>ProMetab--HOME, OVERVIEW, SEARCH, and CONTACT</strong>.
+                            In the SEARCH interface, six different entity queries are supported, including
+                            strain, metabolite, disease, EC numbers, and amino acid vitamin deficiency queries.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/software/3.gif'}
+                            caption={'Figure 3 GIF of Search Platform Display'}
+                            customWidth={'80%'}>
+                        </ImageWithCaption>
+                    </Element>
+
+                    <Element name="section3" style={styles.section}>
+                        <h2 style={styles.heading}>Software package—ProMetab Tool</h2>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>ProMetab Tool</strong> is a batch processing tool for microbial interaction data based on the ProMetab graph database, designed to facilitate direct interaction, computation, and query operations with the graph database. The tool offers two modes of interaction: a Python command-line interface and a Graphical User Interface (GUI).
+                        </p>
+                        <p style={styles.paragraph}>
+                            Interface overview of ProMetab Tool:
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/software/4.png'}
+                            caption={'Figure 4 Interface of ProMetab Tool'}
+                            customWidth={'50%'}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                            Brief Introduction to Software Usage:
+                        </p>
+                        <br />
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <embed
+                                src="https://static.igem.wiki/teams/5376/software/readme1.pdf"
+                                type="application/pdf"
+                                width="70%"
+                                height="850px"
+                            />
+                        </div>
+                        <br />
+                        <p style={styles.paragraph}>
+                        Features and Advantages of the Software:</p>
+                        <p style={styles.paragraph}>(1) <strong>Quick Import</strong>: Capable of rapidly importing Excel data files into the graph database. The software utilizes a commonly accepted Excel file format, making it user-friendly for operation and browsing, and facilitating data addition and deletion. This feature encapsulates a series of Python methods using py2neo for data interaction.</p>
+                        <p style={styles.paragraph}>(2) <strong>Categorized Filtering</strong>: Preliminary screening based on specific data nodes. Through the "Disease Dropdown Menu" in the software, one can view the types of diseases currently stored in the database. By selecting a disease, all strains associated with it can be retrieved for further screening.</p>
+                        <p style={styles.paragraph}>(3) <strong>Interaction Algorithm</strong>: An algorithm for scoring and ranking selected strains. It scores based on the metabolic supply and demand relationships between strains. The algorithm includes two scores: Network Density and Minimum Feeding Quantity. Network Density refers to the total number of metabolic interaction lines between two strains, while Minimum Feeding Quantity refers to the minimum value of single-supply numbers between two strains. By comparing the values of them, we can obtain a list of strain combinations sorted in descending order of scores. </p>
+                        <p style={styles.paragraph}>(4) <strong>Visualization of Results</strong>: The software visualizes the interaction situation and scores obtained from the calculations.</p>
+                        </Element>
+
+                        <Element name="section4" style={styles.section}>
+                        <h2 style={styles.heading}>How does our software help with wet lab</h2>
+                        <p style={styles.paragraph}>
+                        At the initial stage of project design, focusing on the current challenges
+                         and urgent needs in the treatment of mental diseases, we selected Parkinson's
+                          disease as the target disease for our project. In line with the current disease
+                           treatment needs, we referred to the ProMetab database for the rational selection
+                            of probiotic chassis.
+                        </p>
+                        <p style={styles.paragraph}>
+                        In the early stages of wet lab experiments, we decided to use two wild-type probiotics for synthetic biology 
+                        modification to construct our Spidey Microbe consortium, based on our database and software. After preliminary 
+                        screening in wet experiments, Escherichia coli and Lactococcus lactis were chosen for modification. There are 
+                        two E. coli strains available (M-17, Nissle 1917) and three L. lactis strains (F44, IL1403, KF147). By using
+                         ProMetab Tool combined with ProMetab data, we conducted amino acid feeding analysis on six combinations, and
+                          the highest-scoring strain combinations was <strong style={{ color: '#c67e38' }}>E.coli Nissle 1917 + L.lactis F44 or E.coli M-17 + L.lactis F44</strong>
+                           — we believe that the more metabolic feeding interactions, the closer the relationship between the two bacteria
+                           , meaning E. coli can provide a strong nutritional support for Lactococcus lactis, strengthening the connections
+                            within the Spidey Microbe consortium.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/software/5.png'}
+                            caption={'Figure 5 Score List for Strain Combinations'}
+                            customWidth={'50%'}>
+                        </ImageWithCaption>
+                        <br />
+                        <p style={styles.paragraph}>
+                        Further selection of E. coli strains: For this two E. coli strains with similar amino acid synthesis
+                         capabilities, Escherichia coli Nissle 1917 and Escherichia coli M-17, the probiotic-disease data in
+                          the database was queried to select the Nissle 1917 probiotic strain with more therapeutic effects.
+                           The reason is that strains with richer therapeutic effects are generally considered to have better
+                            gut compatibility. At the same time, Nissle 1917 and F44 are easy to modify and common probiotic
+                             strains. The combination <strong style={{ color: '#c67e38' }}>E.coli Nissle 1917 + L.lactis F44</strong> was ultimately chosen, considering
+                              the difficulty of modification and the feasibility of wet experiments.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/software/6u.jpg'}
+                            caption={'Figure 6 Probiotic-disease Data of Nissle 1917 (left) and M-17(right)'}
+                            customWidth={'50%'}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        In the middle stage of the project, considering the smooth progress of the molecular biology
+                         of the dual-bacterial relationship, we boldly proposed the idea of adding a third strain.
+                          Through preliminary literature research, Lactobacillus plantarum was selected for addition.
+                           We used ProMetab data to analyze the amino acid feeding situation after adding Lactobacillus
+                            plantarum and found that this addition could also strengthen the amino acid feeding
+                             relationships within the consortium. After database verification, we finally decided
+                              to include the probiotic Lactobacillus plantarum ATCC 8014 in the consortium.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/software/7u.jpg'}
+                            caption={'Figure 7 Metabolic Relationships Before (left) and After (right) the Addition of Lactobacillus Plantarum ATCC 8014'}
+                            customWidth={'100%'}>
+                        </ImageWithCaption>
+                    </Element>
+                    
+                    <Element name="section5" style={styles.section}>
+                        <h2 style={styles.heading}>Reference</h2>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[1]    Taolin, Wang Bohua, et al. Database and Bioinformatics Studies of Probiotics[J]. JOURNAL OF AGRICULTURAL AND FOOD CHEMISTRY, 2017, 65(35): 7600-7603.</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[2]    UniProt Consortium (2021). UniProt: the universal protein knowledgebase in 2021. Nucleic acids research, 49(D1), D480–D489.</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[3]    Yu, Tianhao, Cui, Haiyang, Li, Jianan Canal, Luo, Yunan, Jiang, Guangde, & Zhao, Huimin. (2023). Enzyme function prediction using contrastive learning. Science, 379(6639), 1358-1363.</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[4]    Schomburg, I., Jeske, L., Ulbrich, M., Placzek, S., Chang, A., & Schomburg, D. (2017). The BRENDA enzyme information system–From a database to an expert system. Journal of Biotechnology, 261, 194-206. </p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[5]    Elizabeth J. Culp, Andrew L. Goodman.Cross-feeding in the gut microbiome: Ecology and mechanisms[J]. CELL HOST & MICROBE, 2023, 31(4): 486-493.</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[6]    Morgan N. Price, Adam M. Deutschbauer, et al. GapMind: Automated Annotation of Amino Acid Biosynthesis[J]. MSYSTEMS, 2020, 5(3).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[7]    Guia J, Soares V G, Bernardino J. Graph Databases: Neo4j Analysis [C/OL].In International Conference on Enterprise Information Systems, 2017.</p>
+                    </Element>
+                </main>
+            </div>
         </main>
-        
+
     )
         ;
 }
