@@ -1,7 +1,6 @@
 export * from "./home.tsx";
 // Members
 export * from "./Members.tsx";
-export * from "./attributions.tsx";
 // Project
 export * from "./contribution.tsx";
 export * from "./description.tsx";

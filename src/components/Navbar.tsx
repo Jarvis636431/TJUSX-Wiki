@@ -40,7 +40,8 @@ export function Navbar() {
   });
 
   return (
-    <BootstrapNavbar expand="lg" className="bg-body-tertiary" fixed="top"  >
+    <BootstrapNavbar expand="lg" className="bg-body-tertiary" fixed="top"  style={{ backgroundColor: '#FFF8F0' }}
+    >
       <Container>
         <BootstrapNavbar.Brand>
           {import.meta.env.VITE_TEAM_NAME}
@@ -53,3 +54,4 @@ export function Navbar() {
     </BootstrapNavbar>
   );
 }
+//TODO:修改样式

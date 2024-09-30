@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import BackToTopButton from '../components/BackButton.tsx';
+
 
 export function Home() {
     const [scrollY, setScrollY] = useState(0);
@@ -17,7 +19,7 @@ export function Home() {
     const maxScrollY = 400; // 你可以根据需要调整这个值
 
     return (
-        <main style={{ backgroundColor: '#fff8f0', height: '8200px',  position: 'relative' }}>
+        <main style={{backgroundColor: '#fff8f0', height: '8200px', position: 'relative'}}>
             {/* Container for title, subtitle, and images */}
             <div style={{
                 position: 'relative',
@@ -150,14 +152,14 @@ export function Home() {
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group-7-1.png" alt="Image 7.1"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
-                <img src="https://static.igem.wiki/teams/5376/home/group-7-2.png" alt="Image 7.2"
+                <img src="https://static.igem.wiki/teams/5376/home/group6-7-2.png" alt="Image 7.2"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group6-7-3.png" alt="Image 7.3"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
-                {/* 其他图片重复的可以合并 */}
             </div>
+                <BackToTopButton></BackToTopButton>
         </main>
     );
 }
 
-//TODO:添加内容填充
+//TODO:添加GiF跳转事件
