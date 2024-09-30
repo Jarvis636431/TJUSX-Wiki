@@ -329,15 +329,11 @@ export function Design(): JSX.Element {
                         <p style={styles.paragraph}>
                             To characterize the growth of each bacterium in Spidey Microbe, we used three fluorescent proteins from the iGEM 2024 Distribution: <strong style={{ color: '#c67e38' }}>TannenRFP, mTagBFP, and SYFP2</strong>.
                         </p>
-
-
-                        <img alt="" src="https://static.igem.wiki/teams/5376/design/design13.png"
-                            style={{
-                                display: 'block',
-                                margin: '0 auto',
-                                width: '40%',
-                                borderRadius: '10px',
-                            }} />
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/design/designtable.png'}
+                            caption={''}>
+                        </ImageWithCaption>
+                        <br />
                         <p style={styles.paragraph}>
                             We constructed the TannenRFP expression element on the T7 RNA polymerase expression vector of EcN, the mTagBFP on the adhesion module vector of the levodopa-producing bacteria, and the SYFP2 on the adhesion module vector of the serotonin-producing bacteria.
                         </p>

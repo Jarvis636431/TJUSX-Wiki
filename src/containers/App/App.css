@@ -70,8 +70,8 @@ footer a:hover {
 /* CSS */
 .back-to-top-button {
   position: fixed;
-  bottom: 300px;
-  left: 120px;
+  bottom: 18vw;
+  left: 8vw;
   z-index: 999; /* 确保按钮位于其他元素之上 */
   background-color: transparent; /* 按钮背景透明 */
   color: white; /* 按钮文字颜色 */

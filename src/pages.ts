@@ -70,6 +70,13 @@ const Pages: (Page | Folder)[] = [
                 component: Contribution,
                 lead: "Make a useful contribution for future iGEM teams. Use this page to document that contribution.",
             },
+            {
+                name:"Implement",
+                title:"Implement",
+                path: "/implement",
+                component: Implement,
+                lead: "The Best Sustainable Development prize is awarded to the team that best demonstrates how they have evaluated their project ideas against one or more of the Sustainable Development Goals (SDGs).",
+            },
         ],
     },
     {
@@ -109,13 +116,6 @@ const Pages: (Page | Folder)[] = [
                 path: "/parts",
                 component: Parts,
                 lead: "Every individual, regardless of background or experience, should have an equal opportunity to engage with scientific knowledge and technological development.",
-            },
-            {
-                name:"Implement",
-                title:"Implement",
-                path: "/implement",
-                component: Implement,
-                lead: "The Best Sustainable Development prize is awarded to the team that best demonstrates how they have evaluated their project ideas against one or more of the Sustainable Development Goals (SDGs).",
             },
         ],
     },

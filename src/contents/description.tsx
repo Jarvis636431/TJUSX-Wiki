@@ -1,6 +1,6 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
-
+import BackToTopButton from '../components/BackButton.tsx';
 // 使用内联样式
 const styles = {
     container: {
@@ -14,7 +14,7 @@ const styles = {
     sidebar: {
         //使用position: sticky;实现侧边栏滚动到顶端固定，必须设置top/bottom等四边属性之一，属性值就是滚动的极限距离，而且父组件不可以设置未overflow:hidden/auto
         top: '70px',
-        height: '400px',
+        height: '165px',
         marginRight: '10px',
         marginLeft: '10px',
         width: '350px',
@@ -100,7 +100,7 @@ export function Description(): JSX.Element {
             <div style={styles.container}>
                 <aside style={styles.sidebar}>
                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                        {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
+                        {['Background', 'Our solution', 'Reference'].map((item, index) => (
                             <li key={index} style={styles.sidebarItem}>
                                 <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                                     <Link
@@ -121,6 +121,7 @@ export function Description(): JSX.Element {
                     </ul>
                 </aside>
                 <main style={styles.content}>
+                <BackToTopButton />
                     <Element name="section1" style={styles.section}>
                         <h2 style={styles.heading}>Background</h2>
                         <br />
@@ -478,7 +479,7 @@ export function Description(): JSX.Element {
                             </p>
 
                     </Element>
-                    <Element name="section7" style={styles.section}>
+                    <Element name="section3" style={styles.section}>
                         <h2 style={styles.heading}>Reference</h2>
                         <p style={{ ...styles.paragraph, fontSize: '15px' }}>[1]	Fernandez, H. H., 2015 Update on Parkinson disease. CLEV CLIN J MED 82 563 (2015).</p>
                         <p style={{ ...styles.paragraph, fontSize: '15px' }}>[2]	Braak, H. et al., Staging of brain pathology related to sporadic Parkinson ' s disease. NEUROBIOL AGING 24 197 (2003).</p>

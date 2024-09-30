@@ -12,7 +12,7 @@ const styles = {
   sidebar: {
     //使用position: sticky;实现侧边栏滚动到顶端固定，必须设置top/bottom等四边属性之一，属性值就是滚动的极限距离，而且父组件不可以设置未overflow:hidden/auto
     top: '70px',
-    height: '400px',
+    height: '240px',
     marginRight: '10px',
     marginLeft: '10px',
     width: '350px',
@@ -97,7 +97,7 @@ export function Implement(): JSX.Element {
       <div style={styles.container}>
         <aside style={styles.sidebar}>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
+            {['Microbiome Construction', 'Microbial Community Therapy', 'Microbial Community Analysis'].map((item, index) => (
               <li key={index} style={styles.sidebarItem}>
                 <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                   <Link
