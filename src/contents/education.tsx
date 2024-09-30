@@ -13,7 +13,7 @@ const styles = {
     sidebar: {
         //使用position: sticky;实现侧边栏滚动到顶端固定，必须设置top/bottom等四边属性之一，属性值就是滚动的极限距离，而且父组件不可以设置未overflow:hidden/auto
         top: '70px',
-        height: '400px',
+        height: '300px',
         marginRight: '10px',
         marginLeft: '10px',
         width: '350px',
@@ -83,9 +83,9 @@ export function Education(): JSX.Element {
                 />
 
                 <img
-                    src="https://static.igem.wiki/teams/5376/design/designlogo2.png"
+                    src="https://static.igem.wiki/teams/5376/humanpractices/educationlogo.png"
                     alt="TITLE"
-                    style={{ width: '500px', height: '150px', objectFit: 'cover' }}
+                    style={{ width: '513px', height: '150px', objectFit: 'cover' }}
                 />
 
 
@@ -98,7 +98,7 @@ export function Education(): JSX.Element {
             <div style={styles.container}>
                 <aside style={styles.sidebar}>
                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                        {['Explanation of Science Popularization', 'Probiotic knowledge quiz', 'Microscopic Observation', 'Microbial Painting', 'Hands-on Cooperation', 'Hands-on Cooperation'].map((item, index) => (
+                        {['Explanation of Science Popularization', 'Probiotic knowledge quiz', 'Microscopic Observation', 'Microbial Painting', 'Hands-on Cooperation'].map((item, index) => (
                             <li key={index} style={styles.sidebarItem}>
                                 <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                                     <Link

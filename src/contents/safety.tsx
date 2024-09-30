@@ -137,6 +137,11 @@ export function Safety(): JSX.Element {
                             laboratory safety, biosafety, human practice safety,
                             and risk identification and policy.
                         </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/safety/safety2.png'}
+                            caption={''}
+                            customWidth={'100%'}>
+                        </ImageWithCaption>
                     </Element>
                     <Element name="section2" style={styles.section}>
                         <h2 style={styles.heading}>Project Design Safety</h2>

@@ -100,7 +100,7 @@ export function Software(): JSX.Element {
             <div style={styles.container}>
                 <aside style={styles.sidebar}>
                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                        {['Overview', 'Probiotic Metabolite—ProMetab', 'Software package—ProMetab Tool', 'How does our software help with wet lab', 'Reference'].map((item, index) => (
+                        {['Overview', 'Probiotic Metabolite—ProMetab', 'Software Package—ProMetab Tool', 'How does our software help with wet lab', 'Reference'].map((item, index) => (
                             <li key={index} style={styles.sidebarItem}>
                                 <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                                     <Link
@@ -271,7 +271,7 @@ export function Software(): JSX.Element {
                     </Element>
 
                     <Element name="section3" style={styles.section}>
-                        <h2 style={styles.heading}>Software package—ProMetab Tool</h2>
+                        <h2 style={styles.heading}>Software Package—ProMetab Tool</h2>
                         <p style={styles.paragraph}>
                             <strong style={{ color: '#c67e38' }}>ProMetab Tool</strong> is a batch processing tool for microbial interaction data based on the ProMetab graph database, designed to facilitate direct interaction, computation, and query operations with the graph database. The tool offers two modes of interaction: a Python command-line interface and a Graphical User Interface (GUI).
                         </p>

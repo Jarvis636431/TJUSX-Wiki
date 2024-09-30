@@ -1,6 +1,5 @@
 import { Link, Element } from 'react-scroll';
-import ImageWithCaption from "../components/ImageWithCaption.tsx";
-
+import BackToTopButton from '../components/BackButton.tsx';
 // 使用内联样式
 const styles = {
     container: {
@@ -14,7 +13,7 @@ const styles = {
     sidebar: {
       //使用position: sticky;实现侧边栏滚动到顶端固定，必须设置top/bottom等四边属性之一，属性值就是滚动的极限距离，而且父组件不可以设置未overflow:hidden/auto
       top: '70px',
-      height: '400px',
+      height: '300px',
       marginRight: '10px',
       marginLeft: '10px',
       width: '350px',
@@ -100,7 +99,7 @@ export function Contribution(): JSX.Element {
             <div style={styles.container}>
             <aside style={styles.sidebar}>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
+                    {['Overview', 'New Components', 'Community Characterization', 'Modular Probiotics', 'Database and Support'].map((item, index) => (
                         <li key={index} style={styles.sidebarItem}>
                             <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                                 <Link
@@ -121,310 +120,123 @@ export function Contribution(): JSX.Element {
                 </ul>
             </aside>
             <main style={styles.content}>
+            <BackToTopButton />
                 <Element name="section1" style={styles.section}>
                     <h2 style={styles.heading}>Overview</h2>
                     <p style={styles.paragraph}>
-                        To provide treatment for Parkinson's disease, we designed the Spidey Microbe consortium,
-                        which consists of three main modules:adhesion module, quorum Sensing module, therapeutic
-                        module.
-                        Throughout the iterations of our project,
-                        we continuously refined the Spidey Microbe consortium following the DBTL (Design, Build,
-                        Test, Learn) framework recommended by iGEM.
+                    In our project design, we have utilized databases for the
+                     analysis of probiotics and achieved the scientific
+                      construction of artificial probiotic communities.
+                       We have developed relevant software and methods
+                        for community interaction analysis based on <strong style={{ color: '#c67e38' }}>metabolic
+                         products</strong>, and selected three strains of probiotics
+                         : Escherichia coli Nissle 1917, Lactococcus lactis
+                          F44, and Lactobacillus plantarum ATCC 8014. In wet
+                           experiments, we genetically modified two of these
+                            probiotics (Escherichia coli Nissle 1917 and
+                             Lactococcus lactis F44) and constructed a
+                              <strong style={{ color: '#c67e38' }}>mixed community system of engineered and
+                               natural bacteria—"Spidey Microbe"</strong>.
                     </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design1.png'}
-                        caption={'Figure 1 Flowchart of Wet Lab Experimental Design'}>
-                    </ImageWithCaption>
-                    <br />
+                    <p style={styles.paragraph}>
+                    "Spidey Microbe" consists of three main modules: <strong style={{ color: '#c67e38' }}>adhesion module, therapeutic module, and quorum sensing module</strong>. To further facilitate the characterization of microbial communities, we established a strain marking based on fluorescent proteins and <strong style={{ color: '#c67e38' }}>measured its effectiveness</strong>.
+                    </p>
+                    <p style={styles.paragraph}>
+                    Our project's work has provided data support and assistance to other teams' projects.
+                    </p>
                 </Element>
                 <Element name="section2" style={styles.section}>
-                    <h2 style={styles.heading}>Adhension Module</h2>
+                    <h2 style={styles.heading}>New Components</h2>
+                    <br />
+                    <h3 style={styles.partheading}>Adhesion Module</h3>
                     <p style={styles.paragraph}>
-                        The ability to colonize in the gut is crucial for probiotics’ effects. To further enhance
-                        this ability and improve the controllability of colonization to reduce the risk of bacterial
-                        translocation,
-                        we designed a self-assembled system based on the binding of streptavidin and biotin. We used
-                        N-hydroxysuccinimide biotin, a reagent that can be conjugated through primary amines (such
-                        as the N-terminus and side chains of lysine residues in proteins and peptides),
-                        to label the surface of Escherichia coli Nissle 1917 (EcN) cells[1]. We constructed an
-                        inducible fusion protein of streptavidin and gut mucin-binding protein in EcN, termed
-                        "silk," and used a signal peptide to localize this fusion protein to the extracellular
-                        space[2].
+                    We have constructed <strong style={{ color: '#c67e38' }}>new components</strong>: <strong style={{ color: '#c67e38' }}>streptavidin and streptavidin-fusion with red fluorescent protein, core streptavidin and core streptavidin-fusion with red fluorescent protein</strong>. We determined the expression of streptavidin and core streptavidin fused with red fluorescent protein in EcN , measured their <strong style={{ color: '#c67e38' }}>expression curves</strong>, and found that the full-length streptavidin fused with red fluorescent protein could not express fluorescence normally, considering <strong style={{ color: '#c67e38' }}>structural abnormalities</strong> or <strong style={{ color: '#c67e38' }}>intracellular hydrolysis</strong>, thus ruling out faults for other teams.
                     </p>
                     <p style={styles.paragraph}>
-                        Since EcN lacks T7 RNA polymerase, we constructed a T7 RNA polymerase (T7RNP) expression
-                        framework using the Cloning Vector pJUMP27-1A(sfGFP) from the iGEM 2024 Distribution, which
-                        has compatible biobrick restriction sites.
-                        This expression plasmid has a replication origin of PSC101 and confers resistance to
-                        kanamycin, making it compatible with most protein expression vectors (such as PET series),
-                        thus expanding the available vectors for EcN and enabling transfer to other E. coli strains
-                        that do not contain T7 RNA polymerase.
+                    We also constructed a module for the <strong style={{ color: '#c67e38' }}>surface display of core streptavidin</strong> in Gram-positive bacteria and measured it using red fluorescent protein.
                     </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design2.png'}
-                        caption={'Figure 2 The gene circuit for adhesion module of Escherichia coli Nissle 1917'}>
-                    </ImageWithCaption>
-                    <br />
                     <p style={styles.paragraph}>
-                        Under induced conditions, "spider silk" is secreted into the extracellular space of EcN,
-                        self-assembling on the surface of biotinylated EcN through streptavidin.
-                        The gut mucin-binding protein at one end of the "spider silk" promotes the colonization of
-                        EcN on the gut mucus layer(which is rich in mucin).
+                    These components will not only play an important role in our project context but also, due to the fusion of His-tag at the C-terminus of the proteins, can be greatly utilized in other  <strong style={{ color: '#c67e38' }}>biological measurements</strong> and  <strong style={{ color: '#c67e38' }}>biotin-related bioconjugation reactions</strong>.
                     </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design3.png'}
-                        caption={'Figure 3 The principal of intestinal adhesion of Escherichia coli Nissle 1917'}>
-                    </ImageWithCaption>
-                    <br />
                     <p style={styles.paragraph}>
-                        This method also facilitates the aggregation of probiotic communities.
-                        We constructed a gene circuit for streptavidin surface display based on cell wall
-                        peptidoglycan binding in Lactococcus lactis F44 within the Spidey Microbe community.
+                    We also tested microbial biotinylation, and after biotinylation of EcN, Lactococcus lactis F44 displaying streptavidin on the surface could aggregate with EcN, indicating that the <strong style={{ color: '#c67e38' }}>biotin-streptavidin-mediated aggregation</strong> of microorganisms is effective.
                     </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design4.png'}
-                        caption={'Figure 4 The gene circuit for surface display of streptavidin in Lactococcus lactis F44'}>
-                    </ImageWithCaption>
-                    <br />
                     <p style={styles.paragraph}>
-                        By using USP45 to localize the protein to the extracellular space and fusing the 3LysM domain to the N-terminus of streptavidin, we achieved surface display of streptavidin in Lactococcus lactis F44[3].
-                        Through the interaction between streptavidin and biotin, we can facilitate the aggregation of Lactococcus lactis F44 with biotinylated EcN.
-                        This allows Lactococcus lactis F44 to be anchored in the gut via the “bridge” of EcN, promoting the aggregation of the Spidey Microbe community and enhancing its stability.
+                    We also tested whether extracellularly secreted streptavidin could self-assemble on biotinylated cell surfaces. We observed this binding using a laser confocal microscope and found it is effective.
                     </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design5.png'}
-                        caption={'Figure 5 The principal of mechanism of Lactococcus lactis F44 and Escherichia coli Nissle 1917 aggregation'}
-                        customWidth={'40%'}>
-                            
-                    </ImageWithCaption>
-                    <br />
                     <p style={styles.paragraph}>
-                        Importantly, this adhesion module exhibits strong modularity and transferability.
-                        EcN acts as a bindable "spider silk", allowing any probiotic to be anchored in the gut simply by displaying streptavidin on its surface.
+                    In this module, we also characterized an important domain of <strong style={{ color: '#c67e38' }}>mucin-binding protein MBD93</strong> and tested the display strategy of biotinylated cell surface-streptavidin labeled MBD93 for binding to Mucin. The results and data from these experiments will provide assistance and troubleshooting for other teams and similar research.
+                    </p>
+
+                    <h3 style={styles.partheading}>Therapeutic Module</h3>
+                    <p style={styles.paragraph}>
+                    In the therapeutic module, we attempted to produce <strong style={{ color: '#c67e38' }}>three therapeutic factors: butyrate, levodopa, and serotonin</strong>. We measured the impact of overexpressing acetyl-CoA acetyltransferase on cell growth to increase butyrate production.
+                    </p>
+                    <p style={styles.paragraph}>
+                    We determined in EcN whether expressing 4-hydroxyphenylacetate-3-hydroxylase could generate levodopa and measured the impact of this enzyme expression on cell growth in Lactococcus lactis F44. We <strong style={{ color: '#c67e38' }}>emulated drug release curves</strong> to measure the production of levodopa at different times by the bacteria.
+                    </p>
+                    <p style={styles.paragraph}>
+                    We also attempted the expression of serotonin, constructed a plasmid overexpressing N-acetyltransferase in Lactococcus lactis F44, and tested whether this approach could increase the serotonin production of Lactococcus lactis F44. We also measured the impact of this enzyme expression on cells and the drug release curve.
+                    </p>
+
+                    <h3 style={styles.partheading}>Quorum Sensing Module</h3>
+                    <p style={styles.paragraph}>
+                    In this module, we verified the <strong style={{ color: '#c67e38' }}>bactericidal effect</strong> of class II bacteriocin lcnG on Lactococcus lactis F44 and the <strong style={{ color: '#c67e38' }}>immune effect</strong> of lagC against this bactericidal action.
+                    </p>
+                    <p style={styles.paragraph}>
+                    We constructed four system control strategies for Spidey Microbe through genetic circuits: <strong style={{ color: '#c67e38' }}>pause, start, switch, and end</strong>, which increased the regulation of the microbial community.
+                    </p>
+                    <p style={styles.paragraph}>
+                    We combined the quorum sensing module with the adhesion module to ensure the safety of Spidey Microbe. Compared to previous teams using suicide modules for <strong style={{ color: '#c67e38' }}>safety</strong>, we constructed a process for the <strong style={{ color: '#c67e38' }}>lysis of bacterial communities</strong>. The constitutive expression of streptavidin on the surface of Lactococcus lactis F44, which displays streptavidin, determines that its adhesion to EcN is continuous. When we built the adhesion of EcN to the gut, we used inducible expression, so after the induction environment is removed, EcN will <strong style={{ color: '#c67e38' }}>detach from the gut</strong>, and Lactococcus lactis F44 adhering to it will also <strong style={{ color: '#c67e38' }}>detach from the gut</strong>. We utilized the quorum sensing system to construct lcnG in EcN, which can <strong style={{ color: '#c67e38' }}>kill Lactococcus lactis F44</strong> under arabinose-induced conditions, thus further ensuring safety. This strategy provides a reference for other teams designing safety components.
                     </p>
                 </Element>
                 <Element name="section3" style={styles.section}>
-                    <h2 style={styles.heading}>Therapeutic Modules</h2>
+                    <h2 style={styles.heading}>Community Characterization</h2>
                     <p style={styles.paragraph}>
-                        The project ultimately constructed three therapeutic components, which include a butyrate production part based on EcN, and parts for the production of serotonin and levodopa  based on Lactococcus lactis F44.
+                    To establish a convenient method for microbial community characterization, we selected three fluorescent proteins from the iGEM 2024 Distribution, which not only <strong style={{ color: '#c67e38' }}>verified the great usability of the iGEM Distribution</strong> but also provided a reference for other teams to select iGEM Distribution.
                     </p>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Butyrate Production Part
-                    </h3>
-                    <br />
                     <p style={styles.paragraph}>
-                        To further expand the capabilities of EcN and establish it as a module for colonization by intestinal probiotics , we enhanced its butyrate production capacity during subsequent iterations.
-                        Butyrate, as a short-chain fatty acid, can reduce inflammatory responses by improving intestinal mucosal permeability and downregulating the expression of inflammatory factors.
-                        It can also  excite  intestinal neurons, accelerate gut motility, promote hormone secretion, and inhibit the proliferation of pathogenic bacteria. Butyrate plays a significant role in maintaining the homeostasis of the intestinal environment and the dynamic balance of the gut microbiota[4].
-                        We enhanced the carbon metabolic flux of acetyl-CoA to butyrate by expressing acetyl-CoA acetyltransferase (ACAT), thereby improving the butyrate synthesis capability of EcN[5].
+                    We planned to use CRISPR for genome editing of EcN and Lactococcus lactis F44, but during the process, we found that Lactococcus lactis F44 is difficult to transform with large plasmids via electroporation. When we attempted to genetically manipulate another strain in the Spidey Microbe community, Lactobacillus plantarum ATCC 8014, we also encountered this problem; Lactobacillus plantarum ATCC 8014 could not even take up a plasmid of about 3000bp via electroporation. The thicker cell wall of Gram-positive probiotics severely <strong style={{ color: '#c67e38' }}>limits their engineering</strong>, indicating that it is very<strong style={{ color: '#c67e38' }}> necessary</strong> to develop more efficient genetic manipulation methods to deal with these situations, and we have ruled out faults for other teams and research using Lactobacillus genus microbes.
                     </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design6.png'}
-                        caption={'Figure 6 Metabolic Pathway for Butyrate Production'}
-                        customWidth={'40%'}>
-                    </ImageWithCaption>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Levodopa Production Part
-                    </h3>
-                    <br />
                     <p style={styles.paragraph}>
-                        The primary medication for treating Parkinson's disease is levodopa (L-DOPA). Levodopa enters the brain and is converted to the neurotransmitter dopamine by aromatic amino acid decarboxylase (AADC) present in the body.
-                        Dopamine cannot cross the blood-brain barrier, but levodopa can, and peripheral metabolism of levodopa significantly reduces its therapeutic efficacy[6].
-                        To further reduce peripheral metabolism, we constructed a levodopa synthesis module in the probiotic Lactococcus lactis F44, which can produce levodopa upon oral administration, thereby minimizing  its peripheral metabolism.
+                    Subsequently, we attempted to construct fluorescent proteins on plasmids to achieve strain marking. We measured the relationship between OD values and fluorescence values when expressing TannenRFP (BBa_J97003) in EcN using J23111, and when expressing mTagBFP (BBa_K592100) and SYFP2 (BBa_K864100) in Lactococcus lactis F44 using the P32 promoter. We also found that the fluorescence intensity of fluorescent proteins in Lactococcus lactis F44 is low, considering the negative impact of its thicker cell wall. These explorations can provide references for other teams and research.
                     </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design7.png'}
-                        caption={'Figure 7 Metabolic Pathway for Levodopa Production'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        To control the production of levodopa, we utilized a nisin-inducible Pnis promoter.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design8.png'}
-                        caption={'Figure 8 Gene Circuit for Levodopa Production in Lactococcus lactis F44 '}>
-                    </ImageWithCaption>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Serotonin Production Part
-                    </h3>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Serotonin is a neurotransmitter that plays a role in regulating various physiological processes in the central nervous system, such as mood, sleep, appetite, and memory, and can alleviate symptoms of motor impairment and emotional depression associated with Parkinson's disease[7].
-                        In the later stages of the project, to further enhance the therapeutic effects of Spidey Microbe, we constructed a serotonin production module in another strain of Lactococcus lactis F44, achieving serotonin production by overexpressing N-acetyltransferase[8].
-                        For expression control, we also employed a nisin-inducible Pnis promoter.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design9.png'}
-                        caption={'Figure 9 Serotonin Biosynthetic Pathway in Lactococcus lactis F44 '}>
-                    </ImageWithCaption>
-                    <br />
                 </Element>
                 <Element name="section4" style={styles.section}>
-                    <h2 style={styles.heading}>Quorum Sensing Module</h2>
+                    <h2 style={styles.heading}>Modular Probiotics</h2>
                     <p style={styles.paragraph}>
-                        Quorum sensing is a common mode of microbial cell communication, where nisin, produced by lactic acid bacteria, serves as a typical quorum sensing signal peptide.
-                        It is a bacteriocin generated by a group of Gram-positive bacteria belonging to the genera Lactococcus and Streptococcus. As lcnG is a class II two-component bacteriocin which is toxic to Lactococcus lactis  F44.
-                        The gene cluster includes five genes: lagA, lagB, lagC, lagD, and lagE. lagA, lagD, and lagE encode the precursor of the alpha peptide, the ABC transporter, and an accessory protein of the pathway, respectively, enabling the strain to synthesize and secrete the alpha subunit of lcnG. lagB encodes the beta subunit of lcnG, while lagC is the immunity gene for lcnG[9].
+                    In our project, we <strong style={{ color: '#c67e38' }}>expanded the concept of modularization to bacteria</strong>, constructing EcN as a <strong style={{ color: '#c67e38' }}>modular probiotic</strong> that can be used to build other useful probiotic communities. This pattern can be used by other teams.
                     </p>
                     <p style={styles.paragraph}>
-                        At the outset of the project, considering biosafety, we designed a dynamically regulated quorum sensing relationship, with EcN constitutively expressing the lcnG production gene cluster  and Lactococcus lactis F44 designed with a lacI-lacO-based lagC expression circuit.
-                        Upon removal of the inducing environment, the relationship among the Spidey Microbe consortium would shift from cooperative to competitive.
+                    Our engineered EcN probiotic can secrete streptavidin and mucin-binding protein, biotinylate to display mucin-binding protein on the surface to adhere to the intestinal mucus layer, and other probiotics can aggregate with the engineered EcN probiotic by displaying streptavidin on the surface. This not only serves as <strong style={{ color: '#c67e38' }}>a bridge for other probiotics to adhere to the gut</strong> but also makes <strong style={{ color: '#c67e38' }}>the constructed artificial microbial community more stable</strong>.
                     </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design10.png'}
-                        caption={'Figure 10 Initial Design Principle of the Quorum Sensing Module '}>
-                    </ImageWithCaption>
-                    <br />
                     <p style={styles.paragraph}>
-                        Subsequently, due to the controllable induction expression of the adhesion system and the incorporation of serotonin-producing bacteria, we revised the design of the quorum sensing module, further regulating the expression of therapeutic factors while ensuring biosafety.
+                    At the same time, we also added a butyrate production module to the engineered EcN probiotic, which will further help to alleviate intestinal inflammatory responses. Butyrate can be applied in the treatment process of various diseases, <strong style={{ color: '#c67e38' }}>enhancing the function</strong> of the engineered EcN probiotic, making it not only have the role of adhesion.
                     </p>
                     <p style={styles.paragraph}>
                         We replaced the constitutive expression of lcnG in EcN with arabinose induction and constructed a nisin-inducible lagC (lcnG immune gene) gene expression circuit in the levodopa-producing bacteria.
                         Compared to the initial design, this change provides Spidey Microbe with a greater variety of regulatory strategies.
                     </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design11.png'}
-                        caption={'Figure 11 Improved Design of the Quorum Sensing Module Gene Circuit'}>
-                    </ImageWithCaption>
-                    <br />
                     <p style={styles.paragraph}>
-                        Spidey Microbe possesses four regulatory strategies, enabling the system to pause, start, switch, and end, enhancing system controllability.
+                    This provides <strong style={{ color: '#c67e38' }}>new ideas</strong> for other teams to construct artificial microbial communities.
                     </p>
-                    <p style={styles.paragraph}>
-                        In the absence of  both arabinose and nisin, the system enters a paused state, producing only butyrate to alleviate inflammatory responses.
-                        Upon the addition of nisin, the system initiates, producing butyrate, serotonin, and levodopa.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When both arabinose and nisin are present, the system switches to produce only levodopa in response to different stages of Parkinson's disease.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When both arabinose and nisin are present, the system switches to produce only levodopa in response to different stages of Parkinson's disease.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When the nisin environment is removed and arabinose is added, the Spidey Microbe system concludes, with the bacteria producing therapeutic components being killed , ensuring biosafety. Concurrently, by controllable regulation of the adhesion system, without IPTG induction, EcN loses its adherence to the gut, further ensuring safety.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design12.png'}
-                        caption={'Figure 12 Quorum Sensing Regulation Strategies and Their Outputs'}>
-                    </ImageWithCaption>
-                    <br />
                 </Element>
                 <Element name="section5" style={styles.section}>
-                    <h2 style={styles.heading}>Community Characterization Methods</h2>
+                    <h2 style={styles.heading}>Database and Support</h2>
                     <p style={styles.paragraph}>
-                        To characterize the growth of each bacterium in Spidey Microbe, we used three fluorescent proteins from the iGEM 2024 Distribution: TannenRFP, mTagBFP, and SYFP2.
+                    In the process of our project, in order to better <strong style={{ color: '#c67e38' }}>find strains suitable</strong> for constructing artificial microbial communities, we integrated existing databases to construct our <strong style={{ color: '#c67e38' }}>own probiotic database - ProMetab</strong> (Probiotic Metabolite), which includes probiotic strain information and strain-disease correspondence information, as well as metabolic data of probiotic strains and two types of nutritional deficiency data, providing help for wet experiments. We also developed it into an <strong style={{ color: '#c67e38' }}>interactive and easy-to-use retrieval website</strong> that can realize multiple information queries.
                     </p>
-
-                    {/*//放置表格*/}
-
-                    <img alt="" src="https://static.igem.wiki/teams/5376/design/design13.png"
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '40%',
-                            borderRadius: '10px',
-                        }} />
                     <p style={styles.paragraph}>
-                        We constructed the TannenRFP expression element on the T7 RNA polymerase expression vector of EcN, the mTagBFP on the adhesion module vector of the levodopa-producing bacteria, and the SYFP2 on the adhesion module vector of the serotonin-producing bacteria.
+                    We developed a <strong style={{ color: '#c67e38' }}>batch processing tool for ProMetab graph database</strong> - ProMetab Tool. ProMetab Tool can help users better achieve direct interaction, calculation, and query operations with graph database data. The software has two interaction modes: <strong style={{ color: '#c67e38' }}>Python command line interface and graphical user interface (GUI) operation</strong>.
                     </p>
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design13.png'}
-                        caption={'Figure 13 Gene circuit of community fluorescence protein characterization'}>
-                    </ImageWithCaption>
-                </Element>
-                <Element name="section6" style={styles.section}>
-                    <h2 style={styles.heading}>Project Design Iteration</h2>
-                    <h3 style={styles.partheading}>
-                        Part 1: Preliminary Design of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design14.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        In the early stages of project research and design, we constructed the gut microbiome metabolite database - ProMetab and analyzed it, selecting EcN and Lactococcus lactis F44 from the candidate probiotics.//(Jump link to the dry experiment page)
+                    <p style={styles.paragraph}>
+                    We also analyzed the <strong style={{ color: '#c67e38' }}>usability</strong> of these web pages and software, hoping to provide more convenient services for other teams and subsequent research.
                     </p>
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        EcN only has the adhesion module and the preliminary quorum sensing module for expressing lcnG, while Lactococcus lactis F44 produces levodopa and can produce the lcnG immunity gene lagC under IPTG induction.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 2: Improvement of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design15.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        We attended CCiC and communicated with Professor Liu Xingyin from Nanjing Medical University //(Jump link to the HP page), realizing that having only levodopa in the system cannot further cope with the different stages of Parkinson's disease, and the effect may be poor.
-                        Based on the previous design, we added a strain of Lactococcus lactis F44 that produces serotonin, and 5-HTP can inhibit the motor disorders caused by levodopa in Parkinson's patients.
-                    </p>
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        We also interviewed Director Chen Lei, the person in charge of the Chinese Parkinson's Disease One-Stop Service Center and the Chinese Parkinson's Disease Diagnosis and Treatment Training Base at Tianjin Huanhu Hospital, and realized that for Parkinson's patients, symptoms of gut inflammatory reactions are also a thorny issue //(Jump to the HP page).
-                        We tried to construct a butyric acid expression module in EcN, which makes EcN more modular and can be used for the treatment of various diseases with gut inflammatory reactions.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 3: Restructuring of the Quorum Sensing in Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design16.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        To enhance the control of the system, we changed the design of the quorum sensing module, constructed an arabinose-induced lcnG expression circuit in EcN,
-                        and replaced the IPTG-controlled immunity gene lagC expression circuit in Lactococcus lactis F44 with Nisin control, and removed the immunity gene expression circuit in the serotonin-producing bacteria,
-                        thus achieving control over serotonin production.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 4: Expansion of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design17.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        The dry experiment used the data from ProMetab to analyze the amino acid feeding situation of Lactobacillus plantarum, and adding Lactobacillus plantarum can strengthen the amino acid feeding relationship of the community, thereby enhancing the stability of the community //(Jump link to the dry experiment page).
-                        We tried to add Lactobacillus plantarum to the system, but due to its difficulty in genetic manipulation, we ultimately used natural Lactobacillus plantarum.
+                    <p style={styles.paragraph}>
+                    In our wet experiments, we used the constructed database and website for analysis and verified the results, proving that this database and software play a positive role in the construction of artificial microbial communities, helping scientific researchers to <strong style={{ color: '#c67e38' }}>conveniently</strong> select microbial strains for constructing microbial communities.
                     </p>
                 </Element>
-                <Element name="section7" style={styles.section}>
-                    <h2 style={styles.heading}>Reference</h2>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[1]	Vargason, A. M., Santhosh, S. & Anselmo, A. C., Surface Modifications for Improved Delivery and Function of Therapeutic Bacteria. SMALL 16 e2001705 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[2]	Zandsalimi, F., Hajihassan, Z. & Hamidi, R., Denovo designing : a novel signal peptide for tat translocation pathway to transport activin A to the periplasmic space of E . coli. BIOTECHNOL LETT 42 45 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[3]	Lim SH,Jahanshiri F,Rahim RA,et al.Surfacedisplay of respiratory syncytial virus glycoproteins inLactococcus lactis NZ9000.Lett Appl Microbiol,2010,51:658-664.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[4]	Deleu S, Machiels K, Raes J, et al. Short chain fatty acids and its producing organisms: an overlooked therapy for IBD?[J]. EBioMedicine, 2021,66:103293. </p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[5]	JHA A K,LI J,YUAN Y,et al.A review on biobutyric acid production and its optimization[J].International Journal of Agriculture & Biology,2014,6(5):1019-1024.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[6]	Rekdal, V. M., Bess, E. N., Bisanz, J. E., Turnbaugh, P. J. & Balskus, E. P., Discovery and inhibition of an interspecies gut bacterial pathway for Levodopa metabolism. SCIENCE 364 1055 (2019).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[7]	Dong, X. L. et al., Polymannuronic acid prevents dopaminergic neuronal loss via brain-gut-microbiota  axis in Parkinson's disease model. INT J BIOL MACROMOL 164 994 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[8]	TAN D X,HARDELAND R.The Reserve/Maximum Capacity of Melatonin's Synthetic Function for the Potential Dimorphism of Melatonin Production and Its Biological Significance in Mammals[J].Molecules,2021,26(23):7302.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[9]	Liu, F. et al., Interaction variability shapes succession of synthetic microbial ecosystems. NAT COMMUN 11 309 (2020).</p>
-                </Element>
+
             </main>
         </div>
         </main>
