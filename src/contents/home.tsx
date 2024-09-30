@@ -152,7 +152,7 @@ export function Home() {
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group-7-2.png" alt="Image 7.2"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
-                <img src="https://static.igem.wiki/teams/5376/home/group-7-3.png" alt="Image 7.3"
+                <img src="https://static.igem.wiki/teams/5376/home/group6-7-3.png" alt="Image 7.3"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 {/* 其他图片重复的可以合并 */}
             </div>
@@ -160,4 +160,4 @@ export function Home() {
     );
 }
 
-//TODO:添加内容填充，实现视察滚动效果
+//TODO:添加内容填充
