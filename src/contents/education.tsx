@@ -1,6 +1,5 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
-import { useState } from "react";
 import BackToTopButton from '../components/BackButton.tsx';
 // 使用内联样式
 const styles = {
@@ -224,105 +223,6 @@ export function Education(): JSX.Element {
         </main>
     );
 }
-
-const ChangePage = () => {
-    const [currentPart, setCurrentPart] = useState(0);
-
-    const parts = [
-        {
-            heading: "Part 1: Preliminary Design of Spidey Microbe",
-            img: "https://static.igem.wiki/teams/5376/design/design14.png",
-            content: [
-                "In the early stages of project research and design, we constructed the gut microbiome metabolite database - ProMetab and analyzed it, selecting EcN and Lactococcus lactis F44 from the candidate probiotics.",
-                "EcN only has the adhesion module and the preliminary quorum sensing module for expressing lcnG, while Lactococcus lactis F44 produces levodopa and can produce the lcnG immunity gene lagC under IPTG induction."
-            ]
-        },
-        {
-            heading: "Part 2: Improvement of Spidey Microbe",
-            img: "https://static.igem.wiki/teams/5376/design/design15.png",
-            content: [
-                "We attended CCiC and communicated with Professor Liu Xingyin from Nanjing Medical University, realizing that having only levodopa in the system cannot further cope with the different stages of Parkinson's disease, and the effect may be poor.",
-                "Based on the previous design, we added a strain of Lactococcus lactis F44 that produces serotonin, and 5-HTP can inhibit the motor disorders caused by levodopa in Parkinson's patients."
-            ]
-        },
-        {
-            heading: "Part 3: Restructuring of the Quorum Sensing in Spidey Microbe",
-            img: "https://static.igem.wiki/teams/5376/design/design16.png",
-            content: [
-                "To enhance the control of the system, we changed the design of the quorum sensing module, constructed an arabinose-induced lcnG expression circuit in EcN.",
-                "We replaced the IPTG-controlled immunity gene lagC expression circuit in Lactococcus lactis F44 with Nisin control, and removed the immunity gene expression circuit in the serotonin-producing bacteria."
-            ]
-        },
-        {
-            heading: "Part 4: Expansion of Spidey Microbe",
-            img: "https://static.igem.wiki/teams/5376/design/design17.png",
-            content: [
-                "The dry experiment used the data from ProMetab to analyze the amino acid feeding situation of Lactobacillus plantarum.",
-                "We tried to add Lactobacillus plantarum to the system, but due to its difficulty in genetic manipulation, we ultimately used natural Lactobacillus plantarum."
-            ]
-        }
-    ];
-
-    const handleNext = () => {
-        if (currentPart < parts.length - 1) {
-            setCurrentPart(currentPart + 1);
-        }
-    };
-
-    const handlePrevious = () => {
-        if (currentPart > 0) {
-            setCurrentPart(currentPart - 1);
-        }
-    };
-
-    return (
-        <div style={styles.section}>
-            <h2 style={styles.heading}>Project Design Iteration</h2>
-            <br />
-            <h3 style={styles.partheading}>{parts[currentPart].heading}</h3>
-            <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
-                <div onClick={handlePrevious}
-                    style={{
-                        position: 'absolute',
-                        left: '10px',
-                        top: '50%', // 将箭头垂直居中
-                        transform: 'translateY(-50%)', // 调整垂直位置
-                        cursor: currentPart === 0 ? 'not-allowed' : 'pointer',
-                        fontSize: '30px'
-                    }}>
-                    {currentPart > 0 ? '<' : '<'}
-                </div>
-                <img
-                    alt=''
-                    src={parts[currentPart].img}
-                    style={{
-                        display: 'block',
-                        margin: '0 auto',
-                        width: '85%',
-                        borderRadius: '10px',
-                    }}
-                />
-                <div onClick={handleNext}
-                    style={{
-                        position: 'absolute',
-                        right: '10px',
-                        top: '50%', // 将箭头垂直居中
-                        transform: 'translateY(-50%)', // 调整垂直位置
-                        cursor: currentPart === parts.length - 1 ? 'not-allowed' : 'pointer',
-                        fontSize: '30px'
-                    }}>
-                    {currentPart < parts.length - 1 ? '>' : '>'}
-                </div>
-            </div>
-            <br />
-            {parts[currentPart].content.map((text, index) => (
-                <p key={index} style={{ ...styles.paragraph, fontSize: '20px' }}>
-                    {text}
-                </p>
-            ))}
-        </div>
-    );
-};
 
 
 
