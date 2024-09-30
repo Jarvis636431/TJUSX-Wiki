@@ -1,46 +1,58 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+
 export function Home() {
     const [scrollY, setScrollY] = useState(0);
+
     useEffect(() => {
         const handleScroll = () => {
-          setScrollY(window.scrollY);
+            setScrollY(window.scrollY);
         };
-    
+
         window.addEventListener('scroll', handleScroll);
         return () => {
-          window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         };
-      }, []);
+    }, []);
+
+    const maxScrollY = 400; // 你可以根据需要调整这个值
+
     return (
-        <>
-            <main style={{ backgroundColor: '#fff8f0', minHeight: '100vh' }}>
-                {/* 叠加的第一张图片 */}
+        <main style={{ backgroundColor: '#fff8f0', height: '8200px',  position: 'relative' }}>
+            {/* Container for title, subtitle, and images */}
+            <div style={{
+                position: 'relative',
+                height: '100vh',
+                overflow: 'hidden'
+            }}>
+                {/* Overlay Title */}
                 <img
-                    src="https://static.igem.wiki/teams/5376/title.png"
+                    src="https://static.igem.wiki/teams/5376/titlenew.png"
                     alt="Overlay Title"
                     style={{
-                        position: 'fixed',
-                        top: '50%',  // 根据需要调整图片的位置
+                        position: 'absolute',
+                        top: '30%',
                         left: '50%',
-                        transform: 'translate(-50%, -50%)',  // 让图片居中
-                        maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
+                        transform: 'translate(-50%, -50%)',
+                        maxWidth: '100%',
                         height: 'auto',
+                        zIndex: 10,
                     }}
                 />
-
-                {/* 叠加的第二张图片 */}
+                {/* Overlay Subtitle */}
                 <img
-                    src="https://static.igem.wiki/teams/5376/subtitle.png"
+                    src="https://static.igem.wiki/teams/5376/subtitlenew.png"
                     alt="Overlay Subtitle"
                     style={{
-                        position: 'fixed',
-                        top: '55%',  // 位置调整为靠近第一张图片的下方
+                        position: 'absolute',
+                        top: '55%',
                         left: '50%',
-                        transform: 'translate(-50%, -50%)',  // 让图片居中
-                        maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
+                        transform: 'translate(-50%, -50%)',
+                        maxWidth: '100%',
                         height: 'auto',
+                        zIndex: 10,
                     }}
                 />
+                {/* Images with scroll effect */}
                 <img
                     src="https://static.igem.wiki/teams/5376/home/m1left.png"
                     alt="Overlay Subtitle"
@@ -58,7 +70,7 @@ export function Home() {
                     style={{
                         position: 'absolute',
                         top: '25%',  // 位置调整为靠近第一张图片的下方
-                        left: `${scrollY * 0.3+70}px`,
+                        left: `${scrollY * 0.3 + 70}px`,
                         maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
                         height: 'auto',
                     }}
@@ -79,8 +91,8 @@ export function Home() {
                     alt="Overlay Subtitle"
                     style={{
                         position: 'absolute',
-                        top: '55%',  // 位置调整为靠近第一张图片的下方
-                        left: `${scrollY * 0.5+10}px`,
+                        top: '44.5%',  // 位置调整为靠近第一张图片的下方
+                        left: `${scrollY * 0.5 + 10}px`,
                         maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
                         height: 'auto',
                     }}
@@ -90,8 +102,8 @@ export function Home() {
                     alt="Overlay Subtitle"
                     style={{
                         position: 'absolute',
-                        top: '55%',  // 位置调整为靠近第一张图片的下方
-                        left: `${scrollY * 0.8+520}px`,
+                        top: '51.5%',  // 位置调整为靠近第一张图片的下方
+                        left: `${scrollY * 0.8 + 520}px`,
                         maxWidth: '70%', // 确保图片在较小屏幕上不会超出宽度
                         height: 'auto',
                     }}
@@ -107,7 +119,45 @@ export function Home() {
                         height: 'auto',
                     }}
                 />
-            </main>
-        </>
+
+            </div>
+
+            {/* 新增的图片容器 */}
+            <div style={{
+                position: 'absolute',
+                bottom: '0', // 或者更改为你需要的值
+                left: '50%',
+                transform: 'translateX(-50%)',
+                transition: 'opacity 0.3s ease',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                opacity: scrollY > maxScrollY ? 1 : 0,
+            }}>
+                {/* 纵向排列的图片 */}
+                <img src="https://static.igem.wiki/teams/5376/home/group-1.png" alt="Image 1"
+                     style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
+                <img src="https://static.igem.wiki/teams/5376/home/gutleft.jpg" alt="Image 2"
+                     style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
+                <img src="https://static.igem.wiki/teams/5376/home/group-3.png" alt="Image 3"
+                     style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
+                <img src="https://static.igem.wiki/teams/5376/home/group-4.png" alt="Image 4"
+                     style={{margin: 'x 0', maxWidth: '100%', height: 'auto'}}/>
+                <img src="https://static.igem.wiki/teams/5376/home/group-5.png" alt="Image 5"
+                     style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
+                <img src="https://static.igem.wiki/teams/5376/home/group-6.png" alt="Image 6"
+                     style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
+                <img src="https://static.igem.wiki/teams/5376/home/group-7-1.png" alt="Image 7.1"
+                     style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
+                <img src="https://static.igem.wiki/teams/5376/home/group-7-2.png" alt="Image 7.2"
+                     style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
+                <img src="https://static.igem.wiki/teams/5376/home/group-7-3.png" alt="Image 7.3"
+                     style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
+                {/* 其他图片重复的可以合并 */}
+            </div>
+        </main>
     );
 }
+
+//TODO:添加内容填充，实现视察滚动效果
