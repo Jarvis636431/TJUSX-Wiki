@@ -26,8 +26,8 @@ const styles = {
     },
     sidebarItem: {
         marginBottom: '15px',
-        fontSize: '22px', 
-        color: '#c67e38', 
+        fontSize: '22px',
+        color: '#c67e38',
         fontWeight: 'bold',
     },
     content: {
@@ -53,15 +53,15 @@ const styles = {
     },
     heading: {
         marginBottom: '15px',
-        fontSize: '36px', 
-        color: '#c67e38', 
+        fontSize: '36px',
+        color: '#c67e38',
         fontWeight: 'bold',
         textAlign: 'center' as const,
     },
     partheading: {
         marginBottom: '10px',
         fontSize: '30px',
-        color: '#c67e38', 
+        color: '#c67e38',
         fontWeight: 'bold',
         textAlign: 'center' as const,
     },
@@ -70,365 +70,442 @@ const styles = {
         fontSize: '24px',
         textAlign: 'justify' as const,
     },
-    
+
 };
 
 export function Description(): JSX.Element {
 
     return (
         <main style={{ backgroundColor: '#FFF8F0', minHeight: '100vh' }}>
-            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px'}}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px' }}>
                 <img
                     src="https://static.igem.wiki/teams/5376/viruse1.png"
                     alt="Left Image"
-                    style={{maxWidth: '200px', height: 'auto'}}
+                    style={{ maxWidth: '200px', height: 'auto' }}
                 />
 
                 <img
                     src="https://static.igem.wiki/teams/5376/description/descriptionlogo.png"
                     alt="TITLE"
-                    style={{width: '768px', height: '150px', objectFit: 'cover'}}
+                    style={{ width: '768px', height: '150px', objectFit: 'cover' }}
                 />
 
 
                 <img
                     src="https://static.igem.wiki/teams/5376/viruse2.png"
                     alt="Right Image"
-                    style={{maxWidth: '200px', height: 'auto'}}
+                    style={{ maxWidth: '200px', height: 'auto' }}
                 />
             </div>
             <div style={styles.container}>
-            <aside style={styles.sidebar}>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
-                        <li key={index} style={styles.sidebarItem}>
-                            <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
-                                <Link
-                                    to={`section${index + 1}`}
-                                    smooth={true}
-                                    duration={50}
-                                    offset={-20}
-                                    spy={true}
-                                    activeClass="active"
-                                    onMouseOver={(e) => e.currentTarget.style.color = '#955321'}
-                                    onMouseOut={(e) => e.currentTarget.style.color = '#c67e38'}
-                                >
-                                    {item}
-                                </Link>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </aside>
-            <main style={styles.content}>
-                <Element name="section1" style={styles.section}>
-                    <h2 style={styles.heading}>Overview</h2>
-                    <p style={styles.paragraph}>
-                        To provide treatment for Parkinson's disease, we designed the Spidey Microbe consortium,
-                        which consists of three main modules:adhesion module, quorum Sensing module, therapeutic
-                        module.
-                        Throughout the iterations of our project,
-                        we continuously refined the Spidey Microbe consortium following the DBTL (Design, Build,
-                        Test, Learn) framework recommended by iGEM.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design1.png'}
-                        caption={'Figure 1 Flowchart of Wet Lab Experimental Design'}>
-                    </ImageWithCaption>
-                    <br />
-                </Element>
-                <Element name="section2" style={styles.section}>
-                    <h2 style={styles.heading}>Adhension Module</h2>
-                    <p style={styles.paragraph}>
-                        The ability to colonize in the gut is crucial for probiotics’ effects. To further enhance
-                        this ability and improve the controllability of colonization to reduce the risk of bacterial
-                        translocation,
-                        we designed a self-assembled system based on the binding of streptavidin and biotin. We used
-                        N-hydroxysuccinimide biotin, a reagent that can be conjugated through primary amines (such
-                        as the N-terminus and side chains of lysine residues in proteins and peptides),
-                        to label the surface of Escherichia coli Nissle 1917 (EcN) cells[1]. We constructed an
-                        inducible fusion protein of streptavidin and gut mucin-binding protein in EcN, termed
-                        "silk," and used a signal peptide to localize this fusion protein to the extracellular
-                        space[2].
-                    </p>
-                    <p style={styles.paragraph}>
-                        Since EcN lacks T7 RNA polymerase, we constructed a T7 RNA polymerase (T7RNP) expression
-                        framework using the Cloning Vector pJUMP27-1A(sfGFP) from the iGEM 2024 Distribution, which
-                        has compatible biobrick restriction sites.
-                        This expression plasmid has a replication origin of PSC101 and confers resistance to
-                        kanamycin, making it compatible with most protein expression vectors (such as PET series),
-                        thus expanding the available vectors for EcN and enabling transfer to other E. coli strains
-                        that do not contain T7 RNA polymerase.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design2.png'}
-                        caption={'Figure 2 The gene circuit for adhesion module of Escherichia coli Nissle 1917'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Under induced conditions, "spider silk" is secreted into the extracellular space of EcN,
-                        self-assembling on the surface of biotinylated EcN through streptavidin.
-                        The gut mucin-binding protein at one end of the "spider silk" promotes the colonization of
-                        EcN on the gut mucus layer(which is rich in mucin).
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design3.png'}
-                        caption={'Figure 3 The principal of intestinal adhesion of Escherichia coli Nissle 1917'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        This method also facilitates the aggregation of probiotic communities.
-                        We constructed a gene circuit for streptavidin surface display based on cell wall
-                        peptidoglycan binding in Lactococcus lactis F44 within the Spidey Microbe community.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design4.png'}
-                        caption={'Figure 4 The gene circuit for surface display of streptavidin in Lactococcus lactis F44'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        By using USP45 to localize the protein to the extracellular space and fusing the 3LysM domain to the N-terminus of streptavidin, we achieved surface display of streptavidin in Lactococcus lactis F44[3].
-                        Through the interaction between streptavidin and biotin, we can facilitate the aggregation of Lactococcus lactis F44 with biotinylated EcN.
-                        This allows Lactococcus lactis F44 to be anchored in the gut via the “bridge” of EcN, promoting the aggregation of the Spidey Microbe community and enhancing its stability.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design5.png'}
-                        caption={'Figure 5 The principal of mechanism of Lactococcus lactis F44 and Escherichia coli Nissle 1917 aggregation'}
-                        customWidth={'40%'}>
-                            
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Importantly, this adhesion module exhibits strong modularity and transferability.
-                        EcN acts as a bindable "spider silk", allowing any probiotic to be anchored in the gut simply by displaying streptavidin on its surface.
-                    </p>
-                </Element>
-                <Element name="section3" style={styles.section}>
-                    <h2 style={styles.heading}>Therapeutic Modules</h2>
-                    <p style={styles.paragraph}>
-                        The project ultimately constructed three therapeutic components, which include a butyrate production part based on EcN, and parts for the production of serotonin and levodopa  based on Lactococcus lactis F44.
-                    </p>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Butyrate Production Part
-                    </h3>
-                    <br />
-                    <p style={styles.paragraph}>
-                        To further expand the capabilities of EcN and establish it as a module for colonization by intestinal probiotics , we enhanced its butyrate production capacity during subsequent iterations.
-                        Butyrate, as a short-chain fatty acid, can reduce inflammatory responses by improving intestinal mucosal permeability and downregulating the expression of inflammatory factors.
-                        It can also  excite  intestinal neurons, accelerate gut motility, promote hormone secretion, and inhibit the proliferation of pathogenic bacteria. Butyrate plays a significant role in maintaining the homeostasis of the intestinal environment and the dynamic balance of the gut microbiota[4].
-                        We enhanced the carbon metabolic flux of acetyl-CoA to butyrate by expressing acetyl-CoA acetyltransferase (ACAT), thereby improving the butyrate synthesis capability of EcN[5].
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design6.png'}
-                        caption={'Figure 6 Metabolic Pathway for Butyrate Production'}
-                        customWidth={'40%'}>
-                    </ImageWithCaption>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Levodopa Production Part
-                    </h3>
-                    <br />
-                    <p style={styles.paragraph}>
-                        The primary medication for treating Parkinson's disease is levodopa (L-DOPA). Levodopa enters the brain and is converted to the neurotransmitter dopamine by aromatic amino acid decarboxylase (AADC) present in the body.
-                        Dopamine cannot cross the blood-brain barrier, but levodopa can, and peripheral metabolism of levodopa significantly reduces its therapeutic efficacy[6].
-                        To further reduce peripheral metabolism, we constructed a levodopa synthesis module in the probiotic Lactococcus lactis F44, which can produce levodopa upon oral administration, thereby minimizing  its peripheral metabolism.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design7.png'}
-                        caption={'Figure 7 Metabolic Pathway for Levodopa Production'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        To control the production of levodopa, we utilized a nisin-inducible Pnis promoter.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design8.png'}
-                        caption={'Figure 8 Gene Circuit for Levodopa Production in Lactococcus lactis F44 '}>
-                    </ImageWithCaption>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Serotonin Production Part
-                    </h3>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Serotonin is a neurotransmitter that plays a role in regulating various physiological processes in the central nervous system, such as mood, sleep, appetite, and memory, and can alleviate symptoms of motor impairment and emotional depression associated with Parkinson's disease[7].
-                        In the later stages of the project, to further enhance the therapeutic effects of Spidey Microbe, we constructed a serotonin production module in another strain of Lactococcus lactis F44, achieving serotonin production by overexpressing N-acetyltransferase[8].
-                        For expression control, we also employed a nisin-inducible Pnis promoter.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design9.png'}
-                        caption={'Figure 9 Serotonin Biosynthetic Pathway in Lactococcus lactis F44 '}>
-                    </ImageWithCaption>
-                    <br />
-                </Element>
-                <Element name="section4" style={styles.section}>
-                    <h2 style={styles.heading}>Quorum Sensing Module</h2>
-                    <p style={styles.paragraph}>
-                        Quorum sensing is a common mode of microbial cell communication, where nisin, produced by lactic acid bacteria, serves as a typical quorum sensing signal peptide.
-                        It is a bacteriocin generated by a group of Gram-positive bacteria belonging to the genera Lactococcus and Streptococcus. As lcnG is a class II two-component bacteriocin which is toxic to Lactococcus lactis  F44.
-                        The gene cluster includes five genes: lagA, lagB, lagC, lagD, and lagE. lagA, lagD, and lagE encode the precursor of the alpha peptide, the ABC transporter, and an accessory protein of the pathway, respectively, enabling the strain to synthesize and secrete the alpha subunit of lcnG. lagB encodes the beta subunit of lcnG, while lagC is the immunity gene for lcnG[9].
-                    </p>
-                    <p style={styles.paragraph}>
-                        At the outset of the project, considering biosafety, we designed a dynamically regulated quorum sensing relationship, with EcN constitutively expressing the lcnG production gene cluster  and Lactococcus lactis F44 designed with a lacI-lacO-based lagC expression circuit.
-                        Upon removal of the inducing environment, the relationship among the Spidey Microbe consortium would shift from cooperative to competitive.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design10.png'}
-                        caption={'Figure 10 Initial Design Principle of the Quorum Sensing Module '}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Subsequently, due to the controllable induction expression of the adhesion system and the incorporation of serotonin-producing bacteria, we revised the design of the quorum sensing module, further regulating the expression of therapeutic factors while ensuring biosafety.
-                    </p>
-                    <p style={styles.paragraph}>
-                        We replaced the constitutive expression of lcnG in EcN with arabinose induction and constructed a nisin-inducible lagC (lcnG immune gene) gene expression circuit in the levodopa-producing bacteria.
-                        Compared to the initial design, this change provides Spidey Microbe with a greater variety of regulatory strategies.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design11.png'}
-                        caption={'Figure 11 Improved Design of the Quorum Sensing Module Gene Circuit'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Spidey Microbe possesses four regulatory strategies, enabling the system to pause, start, switch, and end, enhancing system controllability.
-                    </p>
-                    <p style={styles.paragraph}>
-                        In the absence of  both arabinose and nisin, the system enters a paused state, producing only butyrate to alleviate inflammatory responses.
-                        Upon the addition of nisin, the system initiates, producing butyrate, serotonin, and levodopa.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When both arabinose and nisin are present, the system switches to produce only levodopa in response to different stages of Parkinson's disease.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When both arabinose and nisin are present, the system switches to produce only levodopa in response to different stages of Parkinson's disease.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When the nisin environment is removed and arabinose is added, the Spidey Microbe system concludes, with the bacteria producing therapeutic components being killed , ensuring biosafety. Concurrently, by controllable regulation of the adhesion system, without IPTG induction, EcN loses its adherence to the gut, further ensuring safety.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design12.png'}
-                        caption={'Figure 12 Quorum Sensing Regulation Strategies and Their Outputs'}>
-                    </ImageWithCaption>
-                    <br />
-                </Element>
-                <Element name="section5" style={styles.section}>
-                    <h2 style={styles.heading}>Community Characterization Methods</h2>
-                    <p style={styles.paragraph}>
-                        To characterize the growth of each bacterium in Spidey Microbe, we used three fluorescent proteins from the iGEM 2024 Distribution: TannenRFP, mTagBFP, and SYFP2.
-                    </p>
+                <aside style={styles.sidebar}>
+                    <ul style={{ listStyle: 'none', padding: 0 }}>
+                        {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
+                            <li key={index} style={styles.sidebarItem}>
+                                <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
+                                    <Link
+                                        to={`section${index + 1}`}
+                                        smooth={true}
+                                        duration={50}
+                                        offset={-20}
+                                        spy={true}
+                                        activeClass="active"
+                                        onMouseOver={(e) => e.currentTarget.style.color = '#955321'}
+                                        onMouseOut={(e) => e.currentTarget.style.color = '#c67e38'}
+                                    >
+                                        {item}
+                                    </Link>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </aside>
+                <main style={styles.content}>
+                    <Element name="section1" style={styles.section}>
+                        <h2 style={styles.heading}>Background</h2>
+                        <br />
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>Parkinson's Disease</h2>
+                        <p style={styles.paragraph}>
+                            Parkinson's disease (PD) is a serious <strong style={{ color: '#c67e38' }}>neurological</strong> condition that progresses gradually.
+                            The main pathological change is the degeneration and death of dopaminergic neurons in
+                            the substantia nigra of the midbrain, which results in decreased dopamine levels in
+                            the striatum <sup>[1]</sup>. The primary symptoms include resting tremors, rigidity, and bradykinesia,
+                            culminating in unstable gait and posture.<strong style={{ color: '#c67e38' }}> There are no effective cure methods to date</strong><sup>[2]</sup>.
+                            Currently, therapies focus on restoring dopaminergic activity in the brain and slowing
+                            disease progression with <strong style={{ color: '#c67e38' }}>levodopa combined with carbidopa and/or other medications</strong>,
+                            such as dopamine agonists, MAO-B inhibitors, and amantadine <sup>[3]</sup>.
+                        </p>
+                        <p style={styles.paragraph}>
+                            The World Health Organization (WHO) reports that the prevalence of PD has doubled over
+                            the past 25 years. As of 2024, approximately <strong style={{ color: '#c67e38' }}>10 million individuals</strong> globally
+                            are <strong style={{ color: '#c67e38' }}>living with PD</strong>, including 3 million in China. Projections for 2030 estimate
+                            5 million PD patients in China, with a global increase to <strong style={{ color: '#c67e38' }}>120 to 170 million</strong>
+                            by 2040. The aging global population will likely lead to a continuous rise
+                            in PD incidence, increasing the demand for healthcare resources and
+                            exacerbating the burden on the global healthcare system.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description1.jpg'}
+                            caption={'Figure 1: Temporal trend of the age-adjusted prevalence of Parkinson\'s disease'}>
+                        </ImageWithCaption>
+                    
+                        <br />
 
-                    {/*//放置表格*/}
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>Microbiota-Gut-Brain Axis</h2>
+                        <p style={styles.paragraph}>
+                            The brain and the gut engage in a bidirectional communication relationship. The brain regulates intestinal
+                            function via the <strong style={{ color: '#c67e38' }}>hypothalamic-pituitary-adrenal (HPA) axis</strong> and the <strong style={{ color: '#c67e38' }}>autonomic nervous system</strong>, while the
+                            gut influences the central nervous system through a range of microbial-derived <strong style={{ color: '#c67e38' }}>metabolites</strong>,  <strong style={{ color: '#c67e38' }}>neuroactive
+                                substances</strong>, and <strong style={{ color: '#c67e38' }}>intestinal hormones</strong> <sup>[4]</sup>.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description2.jpg'}
+                            caption={'Figure 2 Microbiota-Gut-Brain Axis'}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                            In the pathogenesis of Parkinson's disease, the <strong style={{ color: '#c67e38' }}>gut-brain axis</strong> plays
+                            a critically important role. Pathological processes of gut microbiota
+                            likely disseminate from the gut to the brain via this axis, contributing
+                            to the onset and progression of Parkinson's disease <sup>[5]</sup>. The mechanisms
+                            of the gut-brain axis in Parkinson's pathology can be broadly categorized
+                            into three aspects:
+                        </p>
+                        <p style={styles.paragraph}>
+                            (1) <strong style={{ color: '#c67e38' }}>Inflammatory Process</strong>: In the gastrointestinal intestinal
+                            tract affected by Parkinson's, pathogenic bacteria secrete pro-inflammatory
+                            chemokines and cytokines, initiating and amplifying immune responses, which
+                            are linked to gastrointestinal intestinal symptoms in over 80% of Parkinson's
+                            patients, such as constipation and intestinal inflammation <sup>[6]</sup>. Additionally
+                            , short-chain fatty acids (SCFAs) like butyrate, produced by beneficial gut
+                            microbes, modulate the expression of tight junction proteins in the
+                            intestinal epithelial barrier and balance downstream inflammatory
+                            responses <sup>[7]</sup>.
+                        </p>
+                        <p style={styles.paragraph}>
+                            (2) <strong style={{ color: '#c67e38' }}>Neuroendocrine Pathway</strong>: Pathogenic gut
+                            bacteria, particularly Gram-negative species, produce endotoxins that
+                            , at high levels, activate afferent vagal neurons, leading to diminished
+                            swallowing function (reduced food intake and eating behavior) and weight
+                            loss—common non-motor symptoms of PD <sup>[8]</sup>. Neurotransmitters such as
+                            serotonin and γ-aminobutyric acid (GABA) are released by enteric
+                            neurons and other cells within the gut, modulating the gut microbiota.
+                            Neurotransmitters (serotonin and gamma-aminobutyric acid, GABA) are
+                            released from neurons, immune cells, and intestinal mucosal cells
+                            into the intestinal lumen, regulating the balance of the gut
+                            microbiota. An imbalance in the gut microbiota can compromise
+                            the intestinal barrier, leading to systemic inflammation
+                            that may further impair the blood-brain barrier and promote
+                            neuroinflammation <sup>[6]</sup>.
+                        </p>
+                        <p style={styles.paragraph}>
+                            (3) <strong style={{ color: '#c67e38' }}>Vagus Nerve Pathway</strong>: Amyloid proteins in the gut, such as
+                            α-synuclein, can reach the central nervous system, where
+                            misfolded α-synuclein aggregates contribute to the
+                            degeneration of dopaminergic neurons. Dopamine supplementation
+                            is an effective therapeutic approach for this pathway <sup>[6]</sup>.
+                        </p>
+                        <br />
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>Utilizing Gut Microbiota for Parkinson's Treatment</h2>
+                        <p style={styles.paragraph}>
+                            Research has shown that natural probiotics can treat Parkinson's
+                            disease, suggesting that targeting the gut-brain axis is a
+                            viable treatment strategy [9]. However, the complex community
+                            dynamics of natural probiotics and their limited therapeutic
+                            potential necessitate consideration of their survival and
+                            competitive ability in the human gut. Synthetic biology
+                            can enhance probiotics with stronger colonization and
+                            therapeutic capabilities, regulated through genetic
+                            engineering. Based on these insights, we propose
+                            a novel treatment approach termed <strong style={{ color: '#c67e38' }}>"Spidey Microbe"</strong>.
+                        </p>
+                    </Element>
+                    <Element name="section2" style={styles.section}>
+                        <br />
+                        <h2 style={styles.heading}>Our solution</h2>
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>"ProMetab" Database and Software</h2>
+                        <p style={styles.paragraph}>
+                            In the early stages of the project, we needed to screen
+                            probiotic strains suitable for constructing Spidey Microbe.
+                            Given the complex metabolic and community relationships
+                            among probiotics, we attempted to construct a probiotic
+                            metabolic database. By analyzing community relationships
+                            through metabolic complementarity, we selected suitable
+                            probiotic strains for wet experiment.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description3.gif'}
+                            caption={'Figure 3 Example of Probiotic Metabolite Database'}>
+                        </ImageWithCaption>
 
-                    <img alt="" src="https://static.igem.wiki/teams/5376/design/design13.png"
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '40%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={styles.paragraph}>
-                        We constructed the TannenRFP expression element on the T7 RNA polymerase expression vector of EcN, the mTagBFP on the adhesion module vector of the levodopa-producing bacteria, and the SYFP2 on the adhesion module vector of the serotonin-producing bacteria.
-                    </p>
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design13.png'}
-                        caption={'Figure 13 Gene circuit of community fluorescence protein characterization'}>
-                    </ImageWithCaption>
-                </Element>
-                <Element name="section6" style={styles.section}>
-                    <h2 style={styles.heading}>Project Design Iteration</h2>
-                    <h3 style={styles.partheading}>
-                        Part 1: Preliminary Design of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design14.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        In the early stages of project research and design, we constructed the gut microbiome metabolite database - ProMetab and analyzed it, selecting EcN and Lactococcus lactis F44 from the candidate probiotics.//(Jump link to the dry experiment page)
-                    </p>
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        EcN only has the adhesion module and the preliminary quorum sensing module for expressing lcnG, while Lactococcus lactis F44 produces levodopa and can produce the lcnG immunity gene lagC under IPTG induction.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 2: Improvement of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design15.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        We attended CCiC and communicated with Professor Liu Xingyin from Nanjing Medical University //(Jump link to the HP page), realizing that having only levodopa in the system cannot further cope with the different stages of Parkinson's disease, and the effect may be poor.
-                        Based on the previous design, we added a strain of Lactococcus lactis F44 that produces serotonin, and 5-HTP can inhibit the motor disorders caused by levodopa in Parkinson's patients.
-                    </p>
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        We also interviewed Director Chen Lei, the person in charge of the Chinese Parkinson's Disease One-Stop Service Center and the Chinese Parkinson's Disease Diagnosis and Treatment Training Base at Tianjin Huanhu Hospital, and realized that for Parkinson's patients, symptoms of gut inflammatory reactions are also a thorny issue //(Jump to the HP page).
-                        We tried to construct a butyric acid expression module in EcN, which makes EcN more modular and can be used for the treatment of various diseases with gut inflammatory reactions.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 3: Restructuring of the Quorum Sensing in Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design16.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        To enhance the control of the system, we changed the design of the quorum sensing module, constructed an arabinose-induced lcnG expression circuit in EcN,
-                        and replaced the IPTG-controlled immunity gene lagC expression circuit in Lactococcus lactis F44 with Nisin control, and removed the immunity gene expression circuit in the serotonin-producing bacteria,
-                        thus achieving control over serotonin production.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 4: Expansion of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design17.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        The dry experiment used the data from ProMetab to analyze the amino acid feeding situation of Lactobacillus plantarum, and adding Lactobacillus plantarum can strengthen the amino acid feeding relationship of the community, thereby enhancing the stability of the community //(Jump link to the dry experiment page).
-                        We tried to add Lactobacillus plantarum to the system, but due to its difficulty in genetic manipulation, we ultimately used natural Lactobacillus plantarum.
-                    </p>
-                </Element>
-                <Element name="section7" style={styles.section}>
-                    <h2 style={styles.heading}>Reference</h2>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[1]	Vargason, A. M., Santhosh, S. & Anselmo, A. C., Surface Modifications for Improved Delivery and Function of Therapeutic Bacteria. SMALL 16 e2001705 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[2]	Zandsalimi, F., Hajihassan, Z. & Hamidi, R., Denovo designing : a novel signal peptide for tat translocation pathway to transport activin A to the periplasmic space of E . coli. BIOTECHNOL LETT 42 45 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[3]	Lim SH,Jahanshiri F,Rahim RA,et al.Surfacedisplay of respiratory syncytial virus glycoproteins inLactococcus lactis NZ9000.Lett Appl Microbiol,2010,51:658-664.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[4]	Deleu S, Machiels K, Raes J, et al. Short chain fatty acids and its producing organisms: an overlooked therapy for IBD?[J]. EBioMedicine, 2021,66:103293. </p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[5]	JHA A K,LI J,YUAN Y,et al.A review on biobutyric acid production and its optimization[J].International Journal of Agriculture & Biology,2014,6(5):1019-1024.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[6]	Rekdal, V. M., Bess, E. N., Bisanz, J. E., Turnbaugh, P. J. & Balskus, E. P., Discovery and inhibition of an interspecies gut bacterial pathway for Levodopa metabolism. SCIENCE 364 1055 (2019).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[7]	Dong, X. L. et al., Polymannuronic acid prevents dopaminergic neuronal loss via brain-gut-microbiota  axis in Parkinson's disease model. INT J BIOL MACROMOL 164 994 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[8]	TAN D X,HARDELAND R.The Reserve/Maximum Capacity of Melatonin's Synthetic Function for the Potential Dimorphism of Melatonin Production and Its Biological Significance in Mammals[J].Molecules,2021,26(23):7302.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[9]	Liu, F. et al., Interaction variability shapes succession of synthetic microbial ecosystems. NAT COMMUN 11 309 (2020).</p>
-                </Element>
-            </main>
-        </div>
+                        <p style={styles.paragraph}>
+                            Referring to the structure and style of existing probiotic
+                            databases, we designed and built our own probiotic
+                            database—ProMetab (Probiotic Metabolite). ProMetab not only
+                            includes information on probiotic strains and strain-disease
+                            correspondence but also contains metabolic data of probiotic
+                            strains and two types of nutritional deficiency data,
+                            aiding wet lab experiments.
+                        </p>
+                        <p style={styles.paragraph}>
+                            We designed an interactive and user-friendly search website
+                            for ProMetab, capable of supporting queries on six different
+                            entities: strains, metabolites, diseases, and EC number.<a href="https://gitlab.igem.org/2024/software-tools/tjusx">(Click to jump to ProMetab)</a>
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description4.png'}
+                            caption={'Figure 4 Schematic Diagram of ProMetab Database'}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                            Additionally, to further expand its usability, we developed ProMetab Tool, an operational tool for batch processing of species interaction data in the ProMetab graph database. ProMetab Tool assists users in achieving direct interaction, computation, and query operations with graph database data. The software offers two modes of interaction: Python command-line interface and Graphical User Interface (GUI) operations.
+                        </p>
+                        <br />
+
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '30px' }}>Spidey Microbe Community</h2>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description5.png'}
+                            caption={'Figure 5 Spidey Microbe'}>
+                        </ImageWithCaption>
+                        <br />
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>Mucin-binding Protein</h2>
+                        <p style={styles.paragraph}>
+                            To enhance the probiotic's intestinal capabilities,
+                            we envisioned displaying factors on their surface
+                            that can bind to the intestinal surface. Our research
+                            revealed that the human gastrointestinal tract is
+                            lined with a mucus layer, which is the primary site
+                            for probiotic colonization. This mucus layer is rich
+                            in mucin (an acid-resistant glycoprotein composed
+                            of mucopolysaccharides) <sup>[10]</sup>. Researchers
+                            identified a domain of mucin-binding protein
+                            (MBD93) in E. coli, and purified MBD93 was
+                            proven to bind to mucin and exhibit strong affinity
+                            for mucin oligosaccharides expressed at the
+                            mucin termini (N-acetylgalactosamine,
+                            N-acetylglucosamine, galactose) <sup>[11]</sup>.
+                            We selected this substance as a factor for
+                            probiotics to adhere to the intestine and
+                            attempted to display it on the surface of the
+                            EcN using a novel method.
+                        </p>
+                        <br />
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>Streptavidin and Biotin</h2>
+                        <p style={styles.paragraph}>
+                        Biotin is commonly used in bioconjugation reactions due
+                         to its strong specific interaction with streptavidin,
+                          and it is also recognized as a safe substance. We used
+                           N-hydroxysuccinimide biotin, which can react with primary
+                            amines on the surface of probiotics to label the surface
+                             of EcN <sup>[12]</sup>.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description6-1.png'}
+                            caption={'Figure 6 Biotinylation of Cell Surface and Adhesion Principle'}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        We constructed a fusion protein of mucin-binding protein and streptavidin
+                        , hoping that this fusion protein can be excreted by EcN. After the surface
+                         of EcN is labeled with N-hydroxysuccinimide biotin, MBD93 with streptavidin
+                          can be successfully displayed on the engineered EcN surface, enhancing
+                           its ability to colonize the intestine. To regulate this process, the
+                            fusion protein ("spider silk") was designed for inducible expression.
+                        </p>
+                        <br />
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>NDSP Signal Peptide</h2>
+                        <p style={styles.paragraph}>
+                        To enhance the secretion of the mucin-binding protein and streptavidin fusion protein in EcN, we investigated the secretion pathways of E. coli and sought a more efficient method.
+                        </p>
+                        <p style={styles.paragraph}>
+                        There are three secretion pathways in E. coli: the general secretion pathway
+                         (Sec pathway), the signal recognition particle pathway (Srp pathway),
+                          and the twin-arginine translocation pathway (Tat pathway) <sup>[13]</sup>. Both
+                           the Sec pathway and Srp pathway transport proteins to the periplasm
+                            before they are fully post-translationally modified, while the Tat
+                             pathway mediates transport after proteins have achieved partial 
+                             folding, which is more conducive to the secretion of proteins forming 
+                             the correct structure.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description7.jpg'}
+                            caption={'Figure 7 Three Protein Secretion Pathways in Escherichia coli '}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        Researchers used the ClustalW program and HADDOCK and other computational simulation methods to optimize the Tat transport signal peptide of E. coli, designing the NDSP signal peptide, which achieved a transport efficiency of up to approximately 70% for recombinant activin A [14]. We selected this signal peptide to mediate the transport of the mucin-binding protein and streptavidin fusion protein.
+                        </p>
+                        <br />
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>Surface display</h2>
+                        <p style={styles.paragraph}>
+                        The use of streptavidin and biotin to display mucin binding proteins on the surface
+                         of EcN has modular characteristics. At the same time, we attempted to <strong style={{ color: '#c67e38' }}>display
+                          streptavidin on the surface</strong> of Lactococcus lactis F44 in Spidey Microbe, so
+                           that Lactococcus lactis F44 can bind to the biotinylated EcN and <strong style={{ color: '#c67e38' }}>colonize the
+                            intestine with EcN</strong>.
+                        </p>
+                        <p style={styles.paragraph}>
+                        The surface display strategy of lactic acid bacteria
+                         mainly uses signal peptides to transport to the
+                          periplasmic space, and locates proteins in the
+                           cell wall peptidoglycan layer through the peptidoglycan
+                            binding domain of peptidoglycan hydrolase <sup>[15]</sup>.
+                        </p>
+                        <p style={styles.paragraph}>
+                        The commonly used transport signal peptide in
+                         lactobacilli is <strong style={{ color: '#c67e38' }}>Usp45</strong>, and the peptidoglycan-binding
+                          domain often utilizes three repeats of <strong style={{ color: '#c67e38' }}>the Lys M
+                           motif</strong> from lactobacillus peptidoglycan hydrolase
+                            Acm A, known as 3Lys M. Each 3Lys M motif consists
+                             of 45 highly conserved amino acids, with repeat
+                              sequences separated by Ser, Thr, and Asp residues
+                              , forming flexible hinges that enable bidirectional
+                               anchoring <sup>[16]</sup>
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description8.png'}
+                            caption={'Figure 8 Schematic diagram of surface display of Lactobacillus F44'}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        We constructed the Usp45 signal peptide and 3Lys M motif
+                         at the N-terminus of streptavidin, which can mediate
+                          the display of streptavidin on the surface of
+                           Lactococcus lactis F44, thereby allowing
+                            it to aggregate with EcN. This process
+                             not only allows Lactococcus lactis F44
+                              to bind to the intestine through engineered EcN,
+                               but also enhances the stability between the Spidey
+                                Microbe microbiota. For detailed design, please
+                                 visit the
+                        </p>
+                        <br />
+
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>Therapeutic factors</h2>
+                        <p style={styles.paragraph}>
+                        In terms of treatment, as Parkinson's disease involves
+                         many symptoms, we expect to adopt a combination therapy
+                          of multiple drugs similar to “cocktail therapy”.
+                           Finally, we selected three therapeutic drugs: <strong style={{ color: '#c67e38' }}>butyric
+                            acid</strong> (EcN), <strong style={{ color: '#c67e38' }}>levodopa</strong> (F44), and <strong style={{ color: '#c67e38' }}>serotonin</strong> (F44).
+                        </p>
+                        <p style={styles.paragraph}>
+                        The main drug used to treat Parkinson's disease is levodopa, which is used
+                         to control motor symptoms caused by the loss of dopaminergic neurons
+                          in the substantia nigra. After passing through the blood-brain barrier
+                          , levodopa is decarboxylated by aromatic amino acid decarboxylase to
+                           produce the active therapeutic drug dopamine. However, the peripheral
+                            decarboxylation of levodopa to dopamine cannot pass through the blood-brain barrier
+                             <sup>[17]</sup>. We use Lactococcus lactis F44 to produce levodopa and reduce its peripheral
+                              decarboxylation through oral administration of probiotics.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description9.png'}
+                            caption={'Figure 9 Treatment principle of levodopa'}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        The biosynthetic pathway of levodopa is mainly based on the production of
+                         L-tyrosine by cells, which can be hydroxylated to <strong style={{ color: '#c67e38' }}>L-tyrosine</strong> by
+                          3-hydroxyphenylacetate 3-hydroxylase or tyrosinase <sup>[18]</sup>. The gene
+                           cluster composed of two genes,<strong style={{ color: '#c67e38' }}> hpaB and hpaC</strong>, can jointly express
+                            4-hydroxyphenylacetate-3-hydroxylase. We heterologously expressed
+                             this gene cluster in Lactococcus lactis F44 and used the Nisin
+                              induced Pnis promoter to regulate gene expression.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description10.png'}
+                            caption={'Figure 10  Treatment Module and Gene Circuit of Lactococcus lactis F44'}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        Serotonin can inhibit motor disorders in Parkinson's patients
+                         caused by levodopa. In order to further cooperate with levodopa
+                          treatment for motor symptoms in patients, we constructed a
+                           serotonin production element in another strain of Lactobacillus
+                            F44, which enhances serotonin production by overexpressing
+                             <strong style={{ color: '#c67e38' }}>N-acetyltransferase</strong>. This process is also regulated by the
+                              nisin induced Pnis promoter to regulate gene expression.
+                        </p>
+                        <p style={styles.paragraph}>
+                        Parkinson's patients often experience gastrointestinal
+                         inflammation. To further alleviate this symptom, we
+                          have considered butyric acid, a short chain fatty 
+                          acid, which has a good effect on reducing inflammation
+                           and inhibiting the proliferation of pathogens.
+                            We overexpressed <strong style={{ color: '#c67e38' }}>acetyl CoA acetyltransferase</strong>,
+                             enhancing the carbon metabolism flow of acetyl CoA 
+                             to butyric acid and improving the butyric acid
+                              production capacity of EcN. This also enhances
+                               the probiotic and therapeutic effects of engineering
+                                probiotic EcN as a bridge for probiotic group
+                                 adhesion, making EcN a module for constructing
+                                  and maintaining gut health probiotic groups.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description11.png'}
+                            caption={'Figure 11 EcN treatment module and gene circuit'}>
+                        </ImageWithCaption>
+                        <br />
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>Quorum sensing</h2>
+                        <p style={styles.paragraph}>
+                        Quorum sensing(QS)is a way for microbial communities to communicate and exchange information. Different microorganisms can communicate and transmit information through quorum sensing signal molecules. QS is also a way to regulate the growth density of different bacteria in the microbial community. For lactic acid bacteria, bacteriocins are a key part of their quorum sensing.
+                        </p>
+                        <p style={styles.paragraph}>
+                        <strong style={{ color: '#c67e38' }}>LcnG</strong> is a second-class dual subunit lactobacilli
+                         bacteriocin that can inhibit the growth of
+                          Lactococcus lactis F44. If Lactococcus
+                           lactis F44 contains <strong style={{ color: '#c67e38' }}>lagC</strong>, this inhibition
+                            can be relieved <sup>[19]</sup>.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/description/description12-1.png'}
+                            caption={'Figure 12 Schematic diagram of the interaction between lcnG and lagC'}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        In order to regulate the microbiota, we designed and constructed QS elements, constructed arabinose induced lcnG gene expression pathways in EcN, and constructed nisin induced lagC gene expression pathways in lactobacilli producing levodopa.
+                        </p>
+                        <p style={styles.paragraph}>
+                        Our QS element is based on arabinose and nisin, which
+                         can achieve four control strategies for the Spidey Mirobe
+                          system: <strong style={{ color: '#c67e38' }}>pause, start, switch, and end</strong>. For detailed design
+                          , please visit the background page (redirect to the design page).
+                        </p>
+                        <br />
+                        <h2 style={{ ...styles.heading, textAlign: 'center' as const, fontSize: '28px' }}>Measuring method</h2>
+                        <p style={styles.paragraph}>
+                        One of the major challenges in building a microbial
+                         community is how to quantify and measure different
+                          bacteria in the community. In our project, we used
+                           three fluorescent proteins from iGEM 2024 Distribution
+                           : <strong style={{ color: '#c67e38' }}>TannenRFP</strong> <a href='https://parts.igem.org/Part:BBa_J97003'>(BBa_J97003)</a>, <strong style={{ color: '#c67e38' }}>mTagBFP</strong> <a href='https://parts.igem.org/Part:BBa_K592100'>(BBa_K592100)</a>, and
+                            <strong style={{ color: '#c67e38' }}>SYFP2</strong> <a href='https://parts.igem.org/Part:BBa_K864100'>(BBa_K864100)</a> to measure the Spidey Microbe
+                             microbial community. For detailed design,you can
+                              browse the design page (redirect to design page).
+                            </p>
+
+                    </Element>
+                    <Element name="section7" style={styles.section}>
+                        <h2 style={styles.heading}>Reference</h2>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[1]	Fernandez, H. H., 2015 Update on Parkinson disease. CLEV CLIN J MED 82 563 (2015).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[2]	Braak, H. et al., Staging of brain pathology related to sporadic Parkinson ' s disease. NEUROBIOL AGING 24 197 (2003).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[3]	Willis, A. W. et al., Incidence of Parkinson disease in North America. NPJ PARKINSONS DISEASE 8 (2022).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[4]	Liu, L., Huh, J. R. & Shah, K., Microbiota and the gut-brain-axis : Implications for new therapeutic design in the CNS. EBIOMEDICINE 77 (2022). </p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[5]	Mulak, A. & Bonaz, B., Brain-gut-microbiota axis in Parkinson's disease. World J Gastroenterol 21 10609 (2015).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[6]	Dong, X. et al., Polymannuronic acid prevents dopaminergic neuronal loss via brain-gut-microbiota axis in Parkinson's disease model. INT J BIOL MACROMOL 164 994 (2020).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[7]	Lenoir, M. et al., Butyrate mediates anti-inflammatory effects of Faecalibacterium prausnitzii in  intestinal epithelial cells through Dact3. Gut Microbes 12 1 (2020).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[8]	Gakis, G. et al., Neuronal activation in the nucleus of the solitary tract following jejunal  lipopolysaccharide in the rat. Auton Neurosci 148 63 (2009).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[9]	Barichella, M. et al., Unraveling gut microbiota in Parkinson's disease and atypical parkinsonism. Mov Disord 34 396 (2019).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[10]	Tailford, L. E., Crost, E. H., Kavanaugh, D. & Juge, N., Mucin glycan foraging in the human gut microbiome. FRONT GENET 6 81 (2015).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[11]	Chatterjee, M. et al., Understanding the adhesion mechanism of a mucin binding domain from Lactobacillus  fermentum and its role in enteropathogen exclusion. INT J BIOL MACROMOL 110 598 (2018).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[12]	Vargason, A. M., Santhosh, S. & Anselmo, A. C., Surface Modifications for Improved Delivery and Function of Therapeutic Bacteria. SMALL 16 e2001705 (2020).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[13]	Kleiner-Grote, G., Risse, J. M. & Friehs, K., Secretion of recombinant proteins from E. coli. ENG LIFE SCI 18 532 (2018). </p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[14]	Zandsalimi, F., Hajihassan, Z. & Hamidi, R., Denovo designing : a novel signal peptide for tat translocation pathway to transport activin A to the periplasmic space of E . coli. BIOTECHNOL LETT 42 45 (2020).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[15]	Borrero, J. et al., Use of the usp45 lactococcal secretion signal sequence to drive the secretion and  functional expression of enterococcal bacteriocins in Lactococcus lactis. Appl Microbiol Biotechnol 89 131 (2011).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[16]	Steen, A. et al., AcmA of Lactococcus lactis is an N - acetylglucosaminidase with an optimal number of LysM domains for proper functioning. FEBS J 272 2854 (2005).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[17]	Maini, R. V., Bess, E. N., Bisanz, J. E., Turnbaugh, P. J. & Balskus, E. P., Discovery and inhibition of an interspecies gut bacterial pathway for Levodopa  metabolism. SCIENCE 364 (2019).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[18]	Fordjour, E., Adipah, F. K., Zhou, S., Du G & Zhou, J., Metabolic engineering of Escherichia coli BL21 (DE3) for de novo production of  L-DOPA from D-glucose. MICROB CELL FACT 18 74 (2019).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[19]	Mirkovic, N. et al., Lactococcus lactis LMG2081 Produces Two Bacteriocins , a Nonlantibiotic and a Novel Lantibiotic. APPL ENVIRON MICROB 82 2555 (2016).</p>
+                        <p style={{ ...styles.paragraph, fontSize: '15px' }}>[20]	Zhu, J. et al., Temporal trends in the prevalence of Parkinson's disease from 1980 to 2023 : a systematic review and meta-analysis. LANCET HEALTHY LONGEVITY 5 (2024).
+</p>
+                    </Element>
+                </main>
+            </div>
         </main>
-        
+
     )
         ;
 }

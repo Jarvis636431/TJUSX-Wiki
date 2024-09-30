@@ -13,6 +13,7 @@ import {
     Model,
     Software,
     Implement,
+    Education
 } from "./contents";
 
 interface Base {
@@ -139,10 +140,22 @@ const Pages: (Page | Folder)[] = [
     },
     {
         name: "Human Practices",
-        title: "Human Practices",
-        path: "/human-practices",
-        component: HumanPractices,
-        lead: "We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.",
+        folder: [
+            {
+                name: "Integrated Human Practices",
+                title: "Integrated Human Practices",
+                path: "/human-practices",
+                component: HumanPractices,
+                lead: "We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.",
+            },
+            {
+                name: "Education",
+                title: "Education",
+                path: "/education",
+                component: Education,
+                lead: "",
+            },
+        ]
     },
     {
         name: "Safety",

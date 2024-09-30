@@ -12,6 +12,7 @@ export * from "./results.tsx";
 export * from "./safety.tsx";
 // Human Practices
 export * from "./human-practices.tsx";
+export * from "./education.tsx";
 // Awards
 export * from "./Design.tsx";
 export * from "./Protocol.tsx";

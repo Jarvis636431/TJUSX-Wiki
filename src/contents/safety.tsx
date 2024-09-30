@@ -1,6 +1,6 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
-
+import BackToTopButton from '../components/BackButton.tsx';
 // 使用内联样式
 const styles = {
     container: {
@@ -12,22 +12,22 @@ const styles = {
         height: 'auto',
     },
     sidebar: {
-      //使用position: sticky;实现侧边栏滚动到顶端固定，必须设置top/bottom等四边属性之一，属性值就是滚动的极限距离，而且父组件不可以设置未overflow:hidden/auto
-      top: '70px',
-      height: '400px',
-      marginRight: '10px',
-      marginLeft: '10px',
-      width: '350px',
-      backgroundColor: '#F0D6B4',
-      borderRadius: '20px',
-      padding: '20px',
-      borderRight: '1px solid #ddd',
-      position: 'sticky' as 'sticky',// 强制类型断言
-  },
+        //使用position: sticky;实现侧边栏滚动到顶端固定，必须设置top/bottom等四边属性之一，属性值就是滚动的极限距离，而且父组件不可以设置未overflow:hidden/auto
+        top: '70px',
+        height: '400px',
+        marginRight: '10px',
+        marginLeft: '10px',
+        width: '350px',
+        backgroundColor: '#F0D6B4',
+        borderRadius: '20px',
+        padding: '20px',
+        borderRight: '1px solid #ddd',
+        position: 'sticky' as 'sticky',// 强制类型断言
+    },
     sidebarItem: {
         marginBottom: '15px',
-        fontSize: '22px', 
-        color: '#c67e38', 
+        fontSize: '22px',
+        color: '#c67e38',
         fontWeight: 'bold',
     },
     content: {
@@ -53,15 +53,15 @@ const styles = {
     },
     heading: {
         marginBottom: '15px',
-        fontSize: '36px', 
-        color: '#c67e38', 
+        fontSize: '36px',
+        color: '#c67e38',
         fontWeight: 'bold',
         textAlign: 'center' as const,
     },
     partheading: {
         marginBottom: '10px',
         fontSize: '30px',
-        color: '#c67e38', 
+        color: '#c67e38',
         fontWeight: 'bold',
         textAlign: 'center' as const,
     },
@@ -70,365 +70,212 @@ const styles = {
         fontSize: '24px',
         textAlign: 'justify' as const,
     },
-    
+
 };
 
 export function Safety(): JSX.Element {
 
     return (
         <main style={{ backgroundColor: '#FFF8F0', minHeight: '100vh' }}>
-            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px'}}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px' }}>
                 <img
                     src="https://static.igem.wiki/teams/5376/viruse1.png"
                     alt="Left Image"
-                    style={{maxWidth: '200px', height: 'auto'}}
+                    style={{ maxWidth: '200px', height: 'auto' }}
                 />
 
                 <img
                     src="https://static.igem.wiki/teams/5376/safety/safetylogo.png"
                     alt="TITLE"
-                    style={{width: '473px', height: '150px', objectFit: 'cover'}}
+                    style={{ width: '473px', height: '150px', objectFit: 'cover' }}
                 />
 
 
                 <img
                     src="https://static.igem.wiki/teams/5376/viruse2.png"
                     alt="Right Image"
-                    style={{maxWidth: '200px', height: 'auto'}}
+                    style={{ maxWidth: '200px', height: 'auto' }}
                 />
             </div>
             <div style={styles.container}>
-            <aside style={styles.sidebar}>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
-                        <li key={index} style={styles.sidebarItem}>
-                            <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
-                                <Link
-                                    to={`section${index + 1}`}
-                                    smooth={true}
-                                    duration={50}
-                                    offset={-20}
-                                    spy={true}
-                                    activeClass="active"
-                                    onMouseOver={(e) => e.currentTarget.style.color = '#955321'}
-                                    onMouseOut={(e) => e.currentTarget.style.color = '#c67e38'}
-                                >
-                                    {item}
-                                </Link>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </aside>
-            <main style={styles.content}>
-                <Element name="section1" style={styles.section}>
-                    <h2 style={styles.heading}>Overview</h2>
-                    <p style={styles.paragraph}>
-                        To provide treatment for Parkinson's disease, we designed the Spidey Microbe consortium,
-                        which consists of three main modules:adhesion module, quorum Sensing module, therapeutic
-                        module.
-                        Throughout the iterations of our project,
-                        we continuously refined the Spidey Microbe consortium following the DBTL (Design, Build,
-                        Test, Learn) framework recommended by iGEM.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design1.png'}
-                        caption={'Figure 1 Flowchart of Wet Lab Experimental Design'}>
-                    </ImageWithCaption>
-                    <br />
-                </Element>
-                <Element name="section2" style={styles.section}>
-                    <h2 style={styles.heading}>Adhension Module</h2>
-                    <p style={styles.paragraph}>
-                        The ability to colonize in the gut is crucial for probiotics’ effects. To further enhance
-                        this ability and improve the controllability of colonization to reduce the risk of bacterial
-                        translocation,
-                        we designed a self-assembled system based on the binding of streptavidin and biotin. We used
-                        N-hydroxysuccinimide biotin, a reagent that can be conjugated through primary amines (such
-                        as the N-terminus and side chains of lysine residues in proteins and peptides),
-                        to label the surface of Escherichia coli Nissle 1917 (EcN) cells[1]. We constructed an
-                        inducible fusion protein of streptavidin and gut mucin-binding protein in EcN, termed
-                        "silk," and used a signal peptide to localize this fusion protein to the extracellular
-                        space[2].
-                    </p>
-                    <p style={styles.paragraph}>
-                        Since EcN lacks T7 RNA polymerase, we constructed a T7 RNA polymerase (T7RNP) expression
-                        framework using the Cloning Vector pJUMP27-1A(sfGFP) from the iGEM 2024 Distribution, which
-                        has compatible biobrick restriction sites.
-                        This expression plasmid has a replication origin of PSC101 and confers resistance to
-                        kanamycin, making it compatible with most protein expression vectors (such as PET series),
-                        thus expanding the available vectors for EcN and enabling transfer to other E. coli strains
-                        that do not contain T7 RNA polymerase.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design2.png'}
-                        caption={'Figure 2 The gene circuit for adhesion module of Escherichia coli Nissle 1917'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Under induced conditions, "spider silk" is secreted into the extracellular space of EcN,
-                        self-assembling on the surface of biotinylated EcN through streptavidin.
-                        The gut mucin-binding protein at one end of the "spider silk" promotes the colonization of
-                        EcN on the gut mucus layer(which is rich in mucin).
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design3.png'}
-                        caption={'Figure 3 The principal of intestinal adhesion of Escherichia coli Nissle 1917'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        This method also facilitates the aggregation of probiotic communities.
-                        We constructed a gene circuit for streptavidin surface display based on cell wall
-                        peptidoglycan binding in Lactococcus lactis F44 within the Spidey Microbe community.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design4.png'}
-                        caption={'Figure 4 The gene circuit for surface display of streptavidin in Lactococcus lactis F44'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        By using USP45 to localize the protein to the extracellular space and fusing the 3LysM domain to the N-terminus of streptavidin, we achieved surface display of streptavidin in Lactococcus lactis F44[3].
-                        Through the interaction between streptavidin and biotin, we can facilitate the aggregation of Lactococcus lactis F44 with biotinylated EcN.
-                        This allows Lactococcus lactis F44 to be anchored in the gut via the “bridge” of EcN, promoting the aggregation of the Spidey Microbe community and enhancing its stability.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design5.png'}
-                        caption={'Figure 5 The principal of mechanism of Lactococcus lactis F44 and Escherichia coli Nissle 1917 aggregation'}
-                        customWidth={'40%'}>
-                            
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Importantly, this adhesion module exhibits strong modularity and transferability.
-                        EcN acts as a bindable "spider silk", allowing any probiotic to be anchored in the gut simply by displaying streptavidin on its surface.
-                    </p>
-                </Element>
-                <Element name="section3" style={styles.section}>
-                    <h2 style={styles.heading}>Therapeutic Modules</h2>
-                    <p style={styles.paragraph}>
-                        The project ultimately constructed three therapeutic components, which include a butyrate production part based on EcN, and parts for the production of serotonin and levodopa  based on Lactococcus lactis F44.
-                    </p>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Butyrate Production Part
-                    </h3>
-                    <br />
-                    <p style={styles.paragraph}>
-                        To further expand the capabilities of EcN and establish it as a module for colonization by intestinal probiotics , we enhanced its butyrate production capacity during subsequent iterations.
-                        Butyrate, as a short-chain fatty acid, can reduce inflammatory responses by improving intestinal mucosal permeability and downregulating the expression of inflammatory factors.
-                        It can also  excite  intestinal neurons, accelerate gut motility, promote hormone secretion, and inhibit the proliferation of pathogenic bacteria. Butyrate plays a significant role in maintaining the homeostasis of the intestinal environment and the dynamic balance of the gut microbiota[4].
-                        We enhanced the carbon metabolic flux of acetyl-CoA to butyrate by expressing acetyl-CoA acetyltransferase (ACAT), thereby improving the butyrate synthesis capability of EcN[5].
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design6.png'}
-                        caption={'Figure 6 Metabolic Pathway for Butyrate Production'}
-                        customWidth={'40%'}>
-                    </ImageWithCaption>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Levodopa Production Part
-                    </h3>
-                    <br />
-                    <p style={styles.paragraph}>
-                        The primary medication for treating Parkinson's disease is levodopa (L-DOPA). Levodopa enters the brain and is converted to the neurotransmitter dopamine by aromatic amino acid decarboxylase (AADC) present in the body.
-                        Dopamine cannot cross the blood-brain barrier, but levodopa can, and peripheral metabolism of levodopa significantly reduces its therapeutic efficacy[6].
-                        To further reduce peripheral metabolism, we constructed a levodopa synthesis module in the probiotic Lactococcus lactis F44, which can produce levodopa upon oral administration, thereby minimizing  its peripheral metabolism.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design7.png'}
-                        caption={'Figure 7 Metabolic Pathway for Levodopa Production'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        To control the production of levodopa, we utilized a nisin-inducible Pnis promoter.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design8.png'}
-                        caption={'Figure 8 Gene Circuit for Levodopa Production in Lactococcus lactis F44 '}>
-                    </ImageWithCaption>
-                    <br />
-                    <h3 style={styles.partheading}>
-                        Serotonin Production Part
-                    </h3>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Serotonin is a neurotransmitter that plays a role in regulating various physiological processes in the central nervous system, such as mood, sleep, appetite, and memory, and can alleviate symptoms of motor impairment and emotional depression associated with Parkinson's disease[7].
-                        In the later stages of the project, to further enhance the therapeutic effects of Spidey Microbe, we constructed a serotonin production module in another strain of Lactococcus lactis F44, achieving serotonin production by overexpressing N-acetyltransferase[8].
-                        For expression control, we also employed a nisin-inducible Pnis promoter.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design9.png'}
-                        caption={'Figure 9 Serotonin Biosynthetic Pathway in Lactococcus lactis F44 '}>
-                    </ImageWithCaption>
-                    <br />
-                </Element>
-                <Element name="section4" style={styles.section}>
-                    <h2 style={styles.heading}>Quorum Sensing Module</h2>
-                    <p style={styles.paragraph}>
-                        Quorum sensing is a common mode of microbial cell communication, where nisin, produced by lactic acid bacteria, serves as a typical quorum sensing signal peptide.
-                        It is a bacteriocin generated by a group of Gram-positive bacteria belonging to the genera Lactococcus and Streptococcus. As lcnG is a class II two-component bacteriocin which is toxic to Lactococcus lactis  F44.
-                        The gene cluster includes five genes: lagA, lagB, lagC, lagD, and lagE. lagA, lagD, and lagE encode the precursor of the alpha peptide, the ABC transporter, and an accessory protein of the pathway, respectively, enabling the strain to synthesize and secrete the alpha subunit of lcnG. lagB encodes the beta subunit of lcnG, while lagC is the immunity gene for lcnG[9].
-                    </p>
-                    <p style={styles.paragraph}>
-                        At the outset of the project, considering biosafety, we designed a dynamically regulated quorum sensing relationship, with EcN constitutively expressing the lcnG production gene cluster  and Lactococcus lactis F44 designed with a lacI-lacO-based lagC expression circuit.
-                        Upon removal of the inducing environment, the relationship among the Spidey Microbe consortium would shift from cooperative to competitive.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design10.png'}
-                        caption={'Figure 10 Initial Design Principle of the Quorum Sensing Module '}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Subsequently, due to the controllable induction expression of the adhesion system and the incorporation of serotonin-producing bacteria, we revised the design of the quorum sensing module, further regulating the expression of therapeutic factors while ensuring biosafety.
-                    </p>
-                    <p style={styles.paragraph}>
-                        We replaced the constitutive expression of lcnG in EcN with arabinose induction and constructed a nisin-inducible lagC (lcnG immune gene) gene expression circuit in the levodopa-producing bacteria.
-                        Compared to the initial design, this change provides Spidey Microbe with a greater variety of regulatory strategies.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design11.png'}
-                        caption={'Figure 11 Improved Design of the Quorum Sensing Module Gene Circuit'}>
-                    </ImageWithCaption>
-                    <br />
-                    <p style={styles.paragraph}>
-                        Spidey Microbe possesses four regulatory strategies, enabling the system to pause, start, switch, and end, enhancing system controllability.
-                    </p>
-                    <p style={styles.paragraph}>
-                        In the absence of  both arabinose and nisin, the system enters a paused state, producing only butyrate to alleviate inflammatory responses.
-                        Upon the addition of nisin, the system initiates, producing butyrate, serotonin, and levodopa.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When both arabinose and nisin are present, the system switches to produce only levodopa in response to different stages of Parkinson's disease.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When both arabinose and nisin are present, the system switches to produce only levodopa in response to different stages of Parkinson's disease.
-                    </p>
-                    <p style={styles.paragraph}>
-                        When the nisin environment is removed and arabinose is added, the Spidey Microbe system concludes, with the bacteria producing therapeutic components being killed , ensuring biosafety. Concurrently, by controllable regulation of the adhesion system, without IPTG induction, EcN loses its adherence to the gut, further ensuring safety.
-                    </p>
-                    <br />
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design12.png'}
-                        caption={'Figure 12 Quorum Sensing Regulation Strategies and Their Outputs'}>
-                    </ImageWithCaption>
-                    <br />
-                </Element>
-                <Element name="section5" style={styles.section}>
-                    <h2 style={styles.heading}>Community Characterization Methods</h2>
-                    <p style={styles.paragraph}>
-                        To characterize the growth of each bacterium in Spidey Microbe, we used three fluorescent proteins from the iGEM 2024 Distribution: TannenRFP, mTagBFP, and SYFP2.
-                    </p>
+                <aside style={styles.sidebar}>
+                    <ul style={{ listStyle: 'none', padding: 0 }}>
+                        {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
+                            <li key={index} style={styles.sidebarItem}>
+                                <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
+                                    <Link
+                                        to={`section${index + 1}`}
+                                        smooth={true}
+                                        duration={50}
+                                        offset={-20}
+                                        spy={true}
+                                        activeClass="active"
+                                        onMouseOver={(e) => e.currentTarget.style.color = '#955321'}
+                                        onMouseOut={(e) => e.currentTarget.style.color = '#c67e38'}
+                                    >
+                                        {item}
+                                    </Link>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </aside>
+                <main style={styles.content}>
+                    <BackToTopButton />
+                    <Element name="section1" style={styles.section}>
+                        <h2 style={styles.heading}>Overview</h2>
+                        <p style={styles.paragraph}>
+                            In this project, we aim to engineer the gut microbiota by
+                            utilizing Escherichia coli to produce butyrate, while also
+                            enabling Lactococcus lactis to generate levodopa and serotonin
+                            . These metabolites will be delivered through the gut-brain
+                            axis with the goal of achieving a combined treatment for
+                            Parkinson's disease. Ensuring the safety of the project
+                            is our top priority throughout this process. The following
+                            sections will provide a detailed explanation of our
+                            project from five aspects: project design safety,
+                            laboratory safety, biosafety, human practice safety,
+                            and risk identification and policy.
+                        </p>
+                    </Element>
+                    <Element name="section2" style={styles.section}>
+                        <h2 style={styles.heading}>Project Design Safety</h2>
+                        <p style={styles.paragraph}>
+                            During the project design phase, we have given full consideration to the safety of different aspects.
+                        </p>
+                        <p style={styles.paragraph}>
+                            Firstly, in the selection of engineered bacterial strains
+                            , we have prioritized strains that have been extensively
+                            studied and are considered relatively<strong style={{ color: '#c67e38' }}> safe</strong>, such as E.
+                            coli and Lactococcus lactis. We have chosen the E.
+                            coli Nissle 1917 and Lactococcus lactis F44, which
+                            have a long history of use in the food industry,
+                            have a good safety record, and have been proven
+                            to be <strong style={{ color: '#c67e38' }}>harmless</strong> to humans.
+                        </p>
+                        <p style={styles.paragraph}>
+                            Secondly, we have designed the biosynthetic pathways to avoid the use or production of any known high-risk chemical substances, ensuring the purity and safety of the final product.
+                        </p>
+                        <p style={styles.paragraph}>
+                            Furthermore, to prevent the spread of the microbiome to non-intestinal parts of the human body, such as the bloodstream, we have enhanced the colonization ability of the microbiome to the gut through genetic editing technology. At the same time, we have introduced an inducible promoter to control the synthesis of serotonin and levodopa. In addition, we have designed a quorum sensing module to directly kill Lactococcus lactis in emergency situations.
+                        </p>
+                    </Element>
+                    <Element name="section3" style={styles.section}>
+                        <h2 style={styles.heading}>Laboratory Safety</h2>
+                        <p style={styles.paragraph}>
+                            In terms of laboratory operations, we have established detailed laboratory safety protocols. All researchers involved in the project have undergone professional training and are familiar with biosafety standards and laboratory operation specifications. We strictly follow the following principles:
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Personal Protection</strong>: All researchers must wear appropriate personal protective equipment (PPE) in the laboratory, including lab coats, gloves, and goggles, to prevent direct contact with biological materials.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Waste Disposal</strong>: Biological waste generated during the experiment will be processed in accordance with biological hazard waste procedures to ensure that it does not pollute the environment.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Equipment Safety</strong>: All laboratory instruments and equipment are regularly inspected and maintained to ensure their proper operation and reduce the risk of accidents.
+                        </p>
+                    </Element>
+                    <Element name="section4" style={styles.section}>
+                        <h2 style={styles.heading}>Biosafety</h2>
+                        <p style={styles.paragraph}>
+                            For biosafety, we follow international and national biosafety standards and have conducted a comprehensive assessment. The microorganisms used in the project belong to a low-risk level and are restricted genomic. The main biosafety measures we take include:
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Isolation and Monitoring</strong>: We strictly store the strains in the laboratory to prevent the leakage of microorganisms and regularly inventory the chemicals to ensure safety.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Genetic Modification Control</strong>: The genetic modification operations involved in the project comply with ethical requirements. At the same time, the genetically modified strains are cultured outside the body to prevent any possible environmental release, including the killing of strains when disposing of waste.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Emergency Plan</strong>: In response to potential biosafety incidents, we have established an emergency response mechanism in reference to the "Tianjin University Laboratory Safety Management Measures," ensuring that problems can be dealt with quickly and effectively in the event of an accident.
+                        </p>
+                    </Element>
+                    <Element name="section5" style={styles.section}>
+                        <h2 style={styles.heading}>Human Practice Safety</h2>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Transparent Communication</strong>: Each stage of the project will disclose information to the public to ensure transparency and let the community understand the purpose and potential impact of our research.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Privacy Confidentiality</strong>: The results of all questionnaires are strictly confidential to ensure the privacy of participants. If a participant complains about a privacy leak, we will immediately withdraw the questionnaire information and further strengthen the confidentiality of private information.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Ethical Consideration</strong>: All research activities follow ethical principles to ensure that they do not have a negative impact on participants and the community, and respect their rights and opinions.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Education and Training</strong>: We will provide the community with educational activities on microbial engineering and its potential benefits to improve the public's understanding and support for our project.
+                        </p>
+                    </Element>
+                    <Element name="section6" style={styles.section}>
+                        <h2 style={styles.heading}>Risk Identification and Policy</h2>
+                        <h3 style={styles.partheading}>
+                            Risk Identification
+                        </h3>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Technical Aspect</strong> <br />
+                            Risk:<br />
+                            Microbial engineering failure, engineered strains may not produce the desired metabolic products as expected. Harmful by-products may appear during the synthesis process, affecting product safety.<br />
+                            Solution:<br />
+                            Regular assessment, the project team will hold regular meetings to evaluate technical progress, communicate with instructors to identify and resolve technical bottlenecks in a timely manner. Analyze fermentation products to ensure no waste is produced.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Biosafety Aspect</strong> <br />
+                            Risk:<br />
+                            Strain leakage, microorganisms in the laboratory may be accidentally released into the environment. Samples from different experiments may contaminate each other, leading to inaccurate experimental results.<br />
+                            Solution:<br />
+                            Strict supervision, regularly review the implementation of laboratory operations and biosafety measures. Regularly train researchers on biosafety and conduct emergency drills to enhance the ability to respond to emergencies.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Legal and Ethical Aspect</strong> <br />
+                            Risk:<br />
+                            It may not meet the biosafety regulations and ethical review requirements of the country or region.<br />
+                            Solution:<br />
+                            Compliance review, ensure that all experimental activities comply with relevant laws and regulations, regularly communicate with legal advisors to maintain compliance. Fully conduct ethical supervision, review the design and implementation of experiments to ensure the ethical compliance of research.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Financial Risk Aspect</strong> <br />
+                            Risk:<br />
+                            Insufficient funds, the progress of project research and development may be hindered due to a break in the funding chain. Price fluctuations in some materials and equipment may lead to budget overruns.<br />
+                            Solution:<br />
+                            Budget monitoring, establish a financial monitoring mechanism, regularly review the implementation of the budget, and give early warnings of potential financial risks. Actively seek multiple sources of funding, including government grants, scientific research funds, and corporate cooperation.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Social Risk Aspect</strong> <br />
+                            Risk:<br />
+                            The public may have concerns about engineered probiotics, leading to a psychological resistance.<br />
+                            Solution:<br />
+                            We have strengthened the popularization of engineered probiotics, using the Internet and WeChat public accounts for social science popularization to enhance public understanding. At the same time, we continue to conduct social surveys to explore new uses for engineered probiotics.
+                        </p>
 
-                    {/*//放置表格*/}
-
-                    <img alt="" src="https://static.igem.wiki/teams/5376/design/design13.png"
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '40%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={styles.paragraph}>
-                        We constructed the TannenRFP expression element on the T7 RNA polymerase expression vector of EcN, the mTagBFP on the adhesion module vector of the levodopa-producing bacteria, and the SYFP2 on the adhesion module vector of the serotonin-producing bacteria.
-                    </p>
-                    <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design13.png'}
-                        caption={'Figure 13 Gene circuit of community fluorescence protein characterization'}>
-                    </ImageWithCaption>
-                </Element>
-                <Element name="section6" style={styles.section}>
-                    <h2 style={styles.heading}>Project Design Iteration</h2>
-                    <h3 style={styles.partheading}>
-                        Part 1: Preliminary Design of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design14.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        In the early stages of project research and design, we constructed the gut microbiome metabolite database - ProMetab and analyzed it, selecting EcN and Lactococcus lactis F44 from the candidate probiotics.//(Jump link to the dry experiment page)
-                    </p>
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        EcN only has the adhesion module and the preliminary quorum sensing module for expressing lcnG, while Lactococcus lactis F44 produces levodopa and can produce the lcnG immunity gene lagC under IPTG induction.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 2: Improvement of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design15.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        We attended CCiC and communicated with Professor Liu Xingyin from Nanjing Medical University //(Jump link to the HP page), realizing that having only levodopa in the system cannot further cope with the different stages of Parkinson's disease, and the effect may be poor.
-                        Based on the previous design, we added a strain of Lactococcus lactis F44 that produces serotonin, and 5-HTP can inhibit the motor disorders caused by levodopa in Parkinson's patients.
-                    </p>
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        We also interviewed Director Chen Lei, the person in charge of the Chinese Parkinson's Disease One-Stop Service Center and the Chinese Parkinson's Disease Diagnosis and Treatment Training Base at Tianjin Huanhu Hospital, and realized that for Parkinson's patients, symptoms of gut inflammatory reactions are also a thorny issue //(Jump to the HP page).
-                        We tried to construct a butyric acid expression module in EcN, which makes EcN more modular and can be used for the treatment of various diseases with gut inflammatory reactions.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 3: Restructuring of the Quorum Sensing in Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design16.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        To enhance the control of the system, we changed the design of the quorum sensing module, constructed an arabinose-induced lcnG expression circuit in EcN,
-                        and replaced the IPTG-controlled immunity gene lagC expression circuit in Lactococcus lactis F44 with Nisin control, and removed the immunity gene expression circuit in the serotonin-producing bacteria,
-                        thus achieving control over serotonin production.
-                    </p>
-                    <h3 style={styles.partheading}>
-                        Part 4: Expansion of Spidey Microbe
-                    </h3>
-                    <img alt='' src='https://static.igem.wiki/teams/5376/design/design17.png'
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '85%',
-                            borderRadius: '10px',
-                        }} />
-                    <p style={{...styles.paragraph,fontSize: '20px'}}>
-                        The dry experiment used the data from ProMetab to analyze the amino acid feeding situation of Lactobacillus plantarum, and adding Lactobacillus plantarum can strengthen the amino acid feeding relationship of the community, thereby enhancing the stability of the community //(Jump link to the dry experiment page).
-                        We tried to add Lactobacillus plantarum to the system, but due to its difficulty in genetic manipulation, we ultimately used natural Lactobacillus plantarum.
-                    </p>
-                </Element>
-                <Element name="section7" style={styles.section}>
-                    <h2 style={styles.heading}>Reference</h2>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[1]	Vargason, A. M., Santhosh, S. & Anselmo, A. C., Surface Modifications for Improved Delivery and Function of Therapeutic Bacteria. SMALL 16 e2001705 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[2]	Zandsalimi, F., Hajihassan, Z. & Hamidi, R., Denovo designing : a novel signal peptide for tat translocation pathway to transport activin A to the periplasmic space of E . coli. BIOTECHNOL LETT 42 45 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[3]	Lim SH,Jahanshiri F,Rahim RA,et al.Surfacedisplay of respiratory syncytial virus glycoproteins inLactococcus lactis NZ9000.Lett Appl Microbiol,2010,51:658-664.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[4]	Deleu S, Machiels K, Raes J, et al. Short chain fatty acids and its producing organisms: an overlooked therapy for IBD?[J]. EBioMedicine, 2021,66:103293. </p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[5]	JHA A K,LI J,YUAN Y,et al.A review on biobutyric acid production and its optimization[J].International Journal of Agriculture & Biology,2014,6(5):1019-1024.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[6]	Rekdal, V. M., Bess, E. N., Bisanz, J. E., Turnbaugh, P. J. & Balskus, E. P., Discovery and inhibition of an interspecies gut bacterial pathway for Levodopa metabolism. SCIENCE 364 1055 (2019).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[7]	Dong, X. L. et al., Polymannuronic acid prevents dopaminergic neuronal loss via brain-gut-microbiota  axis in Parkinson's disease model. INT J BIOL MACROMOL 164 994 (2020).</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[8]	TAN D X,HARDELAND R.The Reserve/Maximum Capacity of Melatonin's Synthetic Function for the Potential Dimorphism of Melatonin Production and Its Biological Significance in Mammals[J].Molecules,2021,26(23):7302.</p>
-                    <p style={{...styles.paragraph,fontSize: '15px'}}>[9]	Liu, F. et al., Interaction variability shapes succession of synthetic microbial ecosystems. NAT COMMUN 11 309 (2020).</p>
-                </Element>
-            </main>
-        </div>
+                        <h3 style={styles.partheading}>
+                            Policies and Regulations
+                        </h3>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>EcN White Paper</strong> <br />
+                            We participated in the EcN White Paper initiated by Peking University, improving the modification methods of EcN, expanding the applicable scenarios of EcN, and promoting the establishment of EcN-related regulations.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Tianjin Guidelines</strong> <br />
+                            Tianjin University took the lead in compiling the "Tianjin Guidelines," advocating responsible biological research and standardizing the biosafety behavior of scientists. Our experiments strictly follow the provisions of the "Tianjin Guidelines."
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>Tianjin University Laboratory Safety Management Measures</strong> <br />
+                            Our experimental operations strictly follow the "Tianjin University Laboratory Safety Management Measures," standardizing the experimental operations of the experimenters and managing hazardous chemicals and experimental waste.
+                        </p>
+                        <p style={styles.paragraph}>
+                            <strong style={{ color: '#c67e38' }}>The People's Republic of China Biosafety Law</strong> <br />
+                            Our experiments strictly comply with the "People's Republic of China Biosafety Law," strictly following national standards and laboratory technical specifications and operating procedures, taking safety precautions. Strengthen the management of experimental waste, legally dispose of wastewater, exhaust gases, and other waste, and take measures to prevent pollution.
+                        </p>
+                    </Element>
+                    <Element name="section7" style={styles.section}>
+                        <h2 style={styles.heading}>Conclusion</h2>
+                        <p style={styles.paragraph}>
+                            In summary, this project has taken strict safety measures in design, laboratory operations, biosafety, human practice, risk identification, and legal policy to ensure that the research activities carried out do not pose potential hazards to participants, the environment, or society. We will continue to pay attention to safety issues, regularly assess the risks of the project, and make adjustments as needed to ensure the sustainable development of the project.
+                        </p>
+                    </Element>
+                </main>
+            </div>
         </main>
-        
+
     )
         ;
 }

@@ -297,31 +297,31 @@ export function Software(): JSX.Element {
                         </div>
                         <br />
                         <p style={styles.paragraph}>
-                        Features and Advantages of the Software:</p>
+                            Features and Advantages of the Software:</p>
                         <p style={styles.paragraph}>(1) <strong>Quick Import</strong>: Capable of rapidly importing Excel data files into the graph database. The software utilizes a commonly accepted Excel file format, making it user-friendly for operation and browsing, and facilitating data addition and deletion. This feature encapsulates a series of Python methods using py2neo for data interaction.</p>
                         <p style={styles.paragraph}>(2) <strong>Categorized Filtering</strong>: Preliminary screening based on specific data nodes. Through the "Disease Dropdown Menu" in the software, one can view the types of diseases currently stored in the database. By selecting a disease, all strains associated with it can be retrieved for further screening.</p>
                         <p style={styles.paragraph}>(3) <strong>Interaction Algorithm</strong>: An algorithm for scoring and ranking selected strains. It scores based on the metabolic supply and demand relationships between strains. The algorithm includes two scores: Network Density and Minimum Feeding Quantity. Network Density refers to the total number of metabolic interaction lines between two strains, while Minimum Feeding Quantity refers to the minimum value of single-supply numbers between two strains. By comparing the values of them, we can obtain a list of strain combinations sorted in descending order of scores. </p>
                         <p style={styles.paragraph}>(4) <strong>Visualization of Results</strong>: The software visualizes the interaction situation and scores obtained from the calculations.</p>
-                        </Element>
+                    </Element>
 
-                        <Element name="section4" style={styles.section}>
+                    <Element name="section4" style={styles.section}>
                         <h2 style={styles.heading}>How does our software help with wet lab</h2>
                         <p style={styles.paragraph}>
-                        At the initial stage of project design, focusing on the current challenges
-                         and urgent needs in the treatment of mental diseases, we selected Parkinson's
-                          disease as the target disease for our project. In line with the current disease
-                           treatment needs, we referred to the ProMetab database for the rational selection
+                            At the initial stage of project design, focusing on the current challenges
+                            and urgent needs in the treatment of mental diseases, we selected Parkinson's
+                            disease as the target disease for our project. In line with the current disease
+                            treatment needs, we referred to the ProMetab database for the rational selection
                             of probiotic chassis.
                         </p>
                         <p style={styles.paragraph}>
-                        In the early stages of wet lab experiments, we decided to use two wild-type probiotics for synthetic biology 
-                        modification to construct our Spidey Microbe consortium, based on our database and software. After preliminary 
-                        screening in wet experiments, Escherichia coli and Lactococcus lactis were chosen for modification. There are 
-                        two E. coli strains available (M-17, Nissle 1917) and three L. lactis strains (F44, IL1403, KF147). By using
-                         ProMetab Tool combined with ProMetab data, we conducted amino acid feeding analysis on six combinations, and
-                          the highest-scoring strain combinations was <strong style={{ color: '#c67e38' }}>E.coli Nissle 1917 + L.lactis F44 or E.coli M-17 + L.lactis F44</strong>
-                           — we believe that the more metabolic feeding interactions, the closer the relationship between the two bacteria
-                           , meaning E. coli can provide a strong nutritional support for Lactococcus lactis, strengthening the connections
+                            In the early stages of wet lab experiments, we decided to use two wild-type probiotics for synthetic biology
+                            modification to construct our Spidey Microbe consortium, based on our database and software. After preliminary
+                            screening in wet experiments, Escherichia coli and Lactococcus lactis were chosen for modification. There are
+                            two E. coli strains available (M-17, Nissle 1917) and three L. lactis strains (F44, IL1403, KF147). By using
+                            ProMetab Tool combined with ProMetab data, we conducted amino acid feeding analysis on six combinations, and
+                            the highest-scoring strain combinations was <strong style={{ color: '#c67e38' }}>E.coli Nissle 1917 + L.lactis F44 or E.coli M-17 + L.lactis F44</strong>
+                            — we believe that the more metabolic feeding interactions, the closer the relationship between the two bacteria
+                            , meaning E. coli can provide a strong nutritional support for Lactococcus lactis, strengthening the connections
                             within the Spidey Microbe consortium.
                         </p>
                         <ImageWithCaption
@@ -331,13 +331,13 @@ export function Software(): JSX.Element {
                         </ImageWithCaption>
                         <br />
                         <p style={styles.paragraph}>
-                        Further selection of E. coli strains: For this two E. coli strains with similar amino acid synthesis
-                         capabilities, Escherichia coli Nissle 1917 and Escherichia coli M-17, the probiotic-disease data in
-                          the database was queried to select the Nissle 1917 probiotic strain with more therapeutic effects.
-                           The reason is that strains with richer therapeutic effects are generally considered to have better
+                            Further selection of E. coli strains: For this two E. coli strains with similar amino acid synthesis
+                            capabilities, Escherichia coli Nissle 1917 and Escherichia coli M-17, the probiotic-disease data in
+                            the database was queried to select the Nissle 1917 probiotic strain with more therapeutic effects.
+                            The reason is that strains with richer therapeutic effects are generally considered to have better
                             gut compatibility. At the same time, Nissle 1917 and F44 are easy to modify and common probiotic
-                             strains. The combination <strong style={{ color: '#c67e38' }}>E.coli Nissle 1917 + L.lactis F44</strong> was ultimately chosen, considering
-                              the difficulty of modification and the feasibility of wet experiments.
+                            strains. The combination <strong style={{ color: '#c67e38' }}>E.coli Nissle 1917 + L.lactis F44</strong> was ultimately chosen, considering
+                            the difficulty of modification and the feasibility of wet experiments.
                         </p>
                         <ImageWithCaption
                             src={'https://static.igem.wiki/teams/5376/software/6u.jpg'}
@@ -345,13 +345,13 @@ export function Software(): JSX.Element {
                             customWidth={'50%'}>
                         </ImageWithCaption>
                         <p style={styles.paragraph}>
-                        In the middle stage of the project, considering the smooth progress of the molecular biology
-                         of the dual-bacterial relationship, we boldly proposed the idea of adding a third strain.
-                          Through preliminary literature research, Lactobacillus plantarum was selected for addition.
-                           We used ProMetab data to analyze the amino acid feeding situation after adding Lactobacillus
+                            In the middle stage of the project, considering the smooth progress of the molecular biology
+                            of the dual-bacterial relationship, we boldly proposed the idea of adding a third strain.
+                            Through preliminary literature research, Lactobacillus plantarum was selected for addition.
+                            We used ProMetab data to analyze the amino acid feeding situation after adding Lactobacillus
                             plantarum and found that this addition could also strengthen the amino acid feeding
-                             relationships within the consortium. After database verification, we finally decided
-                              to include the probiotic Lactobacillus plantarum ATCC 8014 in the consortium.
+                            relationships within the consortium. After database verification, we finally decided
+                            to include the probiotic Lactobacillus plantarum ATCC 8014 in the consortium.
                         </p>
                         <ImageWithCaption
                             src={'https://static.igem.wiki/teams/5376/software/7u.jpg'}
@@ -359,7 +359,7 @@ export function Software(): JSX.Element {
                             customWidth={'100%'}>
                         </ImageWithCaption>
                     </Element>
-                    
+
                     <Element name="section5" style={styles.section}>
                         <h2 style={styles.heading}>Reference</h2>
                         <p style={{ ...styles.paragraph, fontSize: '15px' }}>[1]    Taolin, Wang Bohua, et al. Database and Bioinformatics Studies of Probiotics[J]. JOURNAL OF AGRICULTURAL AND FOOD CHEMISTRY, 2017, 65(35): 7600-7603.</p>

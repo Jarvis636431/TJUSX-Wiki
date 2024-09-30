@@ -1,6 +1,5 @@
 import { Link, Element } from 'react-scroll';
-import ImageWithCaption from "../components/ImageWithCaption.tsx";
-import Question from "../components/Question.tsx";
+
 // 使用内联样式
 const styles = {
     container: {
@@ -124,12 +123,7 @@ export function HumanPractices(): JSX.Element {
             </aside>
             <main style={styles.content}>
                 <Element name="section1" style={styles.section}>
-                <h1>单选题测试</h1>
-                <Question
-                    question={question}
-                    options={options}
-                    correctAnswer={correctAnswer}
-                />
+                
                 </Element>
             </main>
         </div>
