@@ -14,7 +14,7 @@ const styles = {
     sidebar: {
         //使用position: sticky;实现侧边栏滚动到顶端固定，必须设置top/bottom等四边属性之一，属性值就是滚动的极限距离，而且父组件不可以设置未overflow:hidden/auto
         top: '70px',
-        height: '400px',
+        height: '360px',
         marginRight: '10px',
         marginLeft: '10px',
         width: '350px',

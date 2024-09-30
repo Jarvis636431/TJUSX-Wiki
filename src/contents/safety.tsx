@@ -100,7 +100,7 @@ export function Safety(): JSX.Element {
             <div style={styles.container}>
                 <aside style={styles.sidebar}>
                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                        {['Overview', 'Adhension Module', 'Therapeutic Modules', 'Quorum Sensing Module', 'Community Characterization Methods', 'Project Design Iteration', 'Reference'].map((item, index) => (
+                        {['Overview', 'Project Design Safety', 'Laboratory Safety', 'Biosafety', 'Human Practice Safety', 'Risk Identification and Policy', 'Conclusion'].map((item, index) => (
                             <li key={index} style={styles.sidebarItem}>
                                 <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                                     <Link
