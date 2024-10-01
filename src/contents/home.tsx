@@ -2,6 +2,8 @@ import { useState, useEffect, SetStateAction } from 'react';
 import BackToTopButton from '../components/BackButton.tsx';
 
 export function Home() {
+
+    //设置滚动
     const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
@@ -15,19 +17,19 @@ export function Home() {
         };
     }, []);
 
-    const maxScrollY = 400; // 你可以根据需要调整这个值
+    const maxScrollY = 400; // 触发动画的滚动距离(最大)
 
     //区分状态管理
 
     // 状态管理：控制第一个图片容器的GIF显示和来源
     const [showGif1, setShowGif1] = useState(false);
     const [gifSrc1, setGifSrc1] = useState('');
-    const [isGifShowing1, setIsGifShowing1] = useState(false); // 新增状态
+    const [isGifShowing1, setIsGifShowing1] = useState(false);
 
     // 状态管理：控制第二个图片容器的GIF显示和来源
     const [showGif2, setShowGif2] = useState(false);
     const [gifSrc2, setGifSrc2] = useState('');
-    const [isGifShowing2, setIsGifShowing2] = useState(false); // 新增状态
+    const [isGifShowing2, setIsGifShowing2] = useState(false);
 
     // 点击事件处理函数：设置第一个图片容器的GIF的路径并显示
     const handleClick1 = (gifUrl: SetStateAction<string>) => {
@@ -63,13 +65,11 @@ export function Home() {
 
     return (
         <main style={{ backgroundColor: '#fff8f0', height: '9200px', position: 'relative' }}>
-            {/* Container for title, subtitle, and images */}
             <div style={{
                 position: 'relative',
                 height: '100vh',
                 overflow: 'hidden'
             }}>
-                {/* Overlay Title */}
                 <img
                     src="https://static.igem.wiki/teams/5376/titlenew.png"
                     alt="Overlay Title"
@@ -83,7 +83,6 @@ export function Home() {
                         zIndex: 10,
                     }}
                 />
-                {/* Overlay Subtitle */}
                 <img
                     src="https://static.igem.wiki/teams/5376/subtitlenew.png"
                     alt="Overlay Subtitle"
@@ -97,15 +96,15 @@ export function Home() {
                         zIndex: 10,
                     }}
                 />
-                {/* Images with scroll effect */}
+                {/*视差滚动部分*/}
                 <img
                     src="https://static.igem.wiki/teams/5376/home/m1left.png"
                     alt="Overlay Subtitle"
                     style={{
                         position: 'absolute',
-                        top: '52%',  // 位置调整为靠近第一张图片的下方
+                        top: '52%',
                         left: `${-scrollY * 0.3}px`,
-                        maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
+                        maxWidth: '100%',
                         height: 'auto',
                     }}
                 />
@@ -114,9 +113,9 @@ export function Home() {
                     alt="Overlay Subtitle"
                     style={{
                         position: 'absolute',
-                        top: '25%',  // 位置调整为靠近第一张图片的下方
+                        top: '25%',
                         left: `${scrollY * 0.5 + 70}px`,
-                        maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
+                        maxWidth: '100%',
                         height: 'auto',
                     }}
                 />
@@ -125,9 +124,9 @@ export function Home() {
                     alt="Overlay Subtitle"
                     style={{
                         position: 'absolute',
-                        top: '52%',  // 位置调整为靠近第一张图片的下方
+                        top: '52%',
                         left: `${-scrollY * 0.7}px`,
-                        maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
+                        maxWidth: '100%',
                         height: 'auto',
                     }}
                 />
@@ -136,9 +135,9 @@ export function Home() {
                     alt="Overlay Subtitle"
                     style={{
                         position: 'absolute',
-                        top: '44.5%',  // 位置调整为靠近第一张图片的下方
+                        top: '44.5%',
                         left: `${scrollY * 0.7 + 10}px`,
-                        maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
+                        maxWidth: '100%',
                         height: 'auto',
                     }}
                 />
@@ -147,9 +146,9 @@ export function Home() {
                     alt="Overlay Subtitle"
                     style={{
                         position: 'absolute',
-                        top: '51.5%',  // 位置调整为靠近第一张图片的下方
+                        top: '51.5%',
                         left: `${scrollY + 520}px`,
-                        maxWidth: '70%', // 确保图片在较小屏幕上不会超出宽度
+                        maxWidth: '70%',
                         height: 'auto',
                     }}
                 />
@@ -158,19 +157,18 @@ export function Home() {
                     alt="Overlay Subtitle"
                     style={{
                         position: 'absolute',
-                        top: '58%',  // 位置调整为靠近第一张图片的下方
+                        top: '58%',
                         left: `${(-scrollY)}px`,
-                        maxWidth: '70%', // 确保图片在较小屏幕上不会超出宽度
+                        maxWidth: '70%',
                         height: 'auto',
                     }}
                 />
 
             </div>
 
-            {/* 新增的图片容器 */}
             <div style={{
                 position: 'absolute',
-                top: '100vh', // 或者更改为你需要的值
+                top: '100vh',
                 left: '50%',
                 transform: 'translateX(-50%)',
                 transition: 'opacity 0.3s ease',
@@ -180,7 +178,6 @@ export function Home() {
                 alignItems: 'center',
                 opacity: scrollY > maxScrollY ? 1 : 0,
             }}>
-                {/* 纵向排列的图片 */}
                 <img src="https://static.igem.wiki/teams/5376/home/group1.png" alt="Image 1"
                      style={{ margin: ' 0', maxWidth: '100%', height: 'auto' }} />
                 <img src="https://static.igem.wiki/teams/5376/home/gutleft.jpg" alt="Image 2"
@@ -200,14 +197,14 @@ export function Home() {
                              top: '50.3%',
                              left: '52.5%',
                              transform: 'translate(-50%, -50%)',
-                             maxWidth: '24%', // 根据需要调整大小
+                             maxWidth: '24%',
                              height: 'auto'
                          }} />
                 </div>
                 <div style={{ position: 'relative', textAlign: 'center' }}>
                     {/* 背景图片 */}
                     <img
-                        src="https://static.igem.wiki/teams/5376/home/7-1.png" // 替换为你的图片路径
+                        src="https://static.igem.wiki/teams/5376/home/7-1.png"
                         alt="Interactive Background"
                         style={{ maxWidth: '100%', height: 'auto' }}
                     />
@@ -216,8 +213,8 @@ export function Home() {
                     <div
                         style={{
                             position: 'absolute',
-                            top: '36%', // 调整位置
-                            left: '30%', // 调整位置
+                            top: '36%',
+                            left: '30%',
                             width: '120px',
                             height: '120px',
                             cursor: 'pointer',
@@ -230,8 +227,8 @@ export function Home() {
                     <div
                         style={{
                             position: 'absolute',
-                            top: '32%', // 调整位置
-                            left: '51%', // 调整位置
+                            top: '32%',
+                            left: '51%',
                             width: '120px',
                             height: '120px',
                             cursor: 'pointer',
@@ -244,8 +241,8 @@ export function Home() {
                     <div
                         style={{
                             position: 'absolute',
-                            top: '55%', // 调整位置
-                            left: '48.5%', // 调整位置
+                            top: '55%',
+                            left: '48.5%',
                             width: '120px',
                             height: '120px',
                             cursor: 'pointer',
@@ -281,12 +278,12 @@ export function Home() {
                         style={{ maxWidth: '100%', height: 'auto' }}
                     />
 
-                    {/* 第一个可点击区域（左侧方块） */}
+                    {/* 左侧方块 */}
                     <div
                         style={{
                             position: 'absolute',
-                            top: '12%', // 调整位置
-                            left: '37%', // 调整位置
+                            top: '12%',
+                            left: '37%',
                             width: '120px',
                             height: '120px',
                             cursor: 'pointer',
@@ -295,12 +292,12 @@ export function Home() {
                         onClick={() => handleClick2('https://static.igem.wiki/teams/5376/home/gif/7-2-1.gif')}
                     />
 
-                    {/* 第二个可点击区域（右侧方块） */}
+                    {/* 右侧方块 */}
                     <div
                         style={{
                             position: 'absolute',
-                            top: '12%', // 调整位置
-                            right: '30.5%', // 调整位置
+                            top: '12%',
+                            right: '30.5%',
                             width: '120px',
                             height: '120px',
                             cursor: 'pointer',
@@ -340,7 +337,7 @@ export function Home() {
                              top: '43%',
                              left: '54%',
                              transform: 'translate(-50%, -50%)',
-                             maxWidth: '30%', // 根据需要调整大小
+                             maxWidth: '30%',
                              height: 'auto'
                          }} />
                 </div>
