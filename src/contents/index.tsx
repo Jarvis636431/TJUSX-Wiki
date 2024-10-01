@@ -17,3 +17,4 @@ export * from "./parts.tsx";
 export * from "./model.tsx";
 export * from "./software.tsx";
 export * from "./implement.tsx";
+export * from "./attributions.tsx";

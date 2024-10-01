@@ -187,8 +187,10 @@ export function Description(): JSX.Element {
                         </p>
                         <ImageWithCaption
                             src={'https://static.igem.wiki/teams/5376/description/description2.jpg'}
-                            caption={'Figure 2 Microbiota-Gut-Brain Axis'}>
+                            caption={'Figure 2 Microbiota-Gut-Brain Axis'}
+                            customWidth={'50%'}>
                         </ImageWithCaption>
+                        <br />
                         <p style={styles.paragraph}>
                             In the pathogenesis of Parkinson's disease, the <strong style={{ color: '#c67e38' }}>gut-brain axis</strong> plays
                             a critically important role. Pathological processes of gut microbiota
@@ -245,6 +247,7 @@ export function Description(): JSX.Element {
                             engineering. Based on these insights, we propose
                             a novel treatment approach termed <strong style={{ color: '#c67e38' }}>"Spidey Microbe"</strong>.
                         </p>
+                        <br />
                     </Element>
                     <Element name="section2" style={styles.section}>
                         <br />
@@ -263,7 +266,7 @@ export function Description(): JSX.Element {
                             src={'https://static.igem.wiki/teams/5376/description/description3.gif'}
                             caption={'Figure 3 Example of Probiotic Metabolite Database'}>
                         </ImageWithCaption>
-
+                        <br />
                         <p style={styles.paragraph}>
                             Referring to the structure and style of existing probiotic
                             databases, we designed and built our own probiotic
@@ -276,12 +279,16 @@ export function Description(): JSX.Element {
                         <p style={styles.paragraph}>
                             We designed an interactive and user-friendly search website
                             for ProMetab, capable of supporting queries on six different
-                            entities: strains, metabolites, diseases, and EC number.<a href="https://gitlab.igem.org/2024/software-tools/tjusx">(Click to jump to ProMetab)</a>
+                            entities: strains, metabolites, diseases, and EC number.<a href="https://gitlab.igem.org/2024/software-tools/tjusx"><img
+                            src={'https://static.igem.wiki/teams/5376/jump.png'}
+                            width={'270px'}>
+                        </img></a>
                         </p>
                         <ImageWithCaption
                             src={'https://static.igem.wiki/teams/5376/description/description4.png'}
                             caption={'Figure 4 Schematic Diagram of ProMetab Database'}>
                         </ImageWithCaption>
+                        <br />
                         <p style={styles.paragraph}>
                             Additionally, to further expand its usability, we developed ProMetab Tool, an operational tool for batch processing of species interaction data in the ProMetab graph database. ProMetab Tool assists users in achieving direct interaction, computation, and query operations with graph database data. The software offers two modes of interaction: Python command-line interface and Graphical User Interface (GUI) operations.
                         </p>
@@ -328,6 +335,7 @@ export function Description(): JSX.Element {
                             src={'https://static.igem.wiki/teams/5376/description/description6-1.png'}
                             caption={'Figure 6 Biotinylation of Cell Surface and Adhesion Principle'}>
                         </ImageWithCaption>
+                        <br />
                         <p style={styles.paragraph}>
                         We constructed a fusion protein of mucin-binding protein and streptavidin
                         , hoping that this fusion protein can be excreted by EcN. After the surface
@@ -355,6 +363,7 @@ export function Description(): JSX.Element {
                             src={'https://static.igem.wiki/teams/5376/description/description7.jpg'}
                             caption={'Figure 7 Three Protein Secretion Pathways in Escherichia coli '}>
                         </ImageWithCaption>
+                        <br />
                         <p style={styles.paragraph}>
                         Researchers used the ClustalW program and HADDOCK and other computational simulation methods to optimize the Tat transport signal peptide of E. coli, designing the NDSP signal peptide, which achieved a transport efficiency of up to approximately 70% for recombinant activin A [14]. We selected this signal peptide to mediate the transport of the mucin-binding protein and streptavidin fusion protein.
                         </p>
@@ -389,6 +398,7 @@ export function Description(): JSX.Element {
                             src={'https://static.igem.wiki/teams/5376/description/description8.png'}
                             caption={'Figure 8 Schematic diagram of surface display of Lactobacillus F44'}>
                         </ImageWithCaption>
+                        <br />
                         <p style={styles.paragraph}>
                         We constructed the Usp45 signal peptide and 3Lys M motif
                          at the N-terminus of streptavidin, which can mediate
@@ -425,6 +435,7 @@ export function Description(): JSX.Element {
                             src={'https://static.igem.wiki/teams/5376/description/description9.png'}
                             caption={'Figure 9 Treatment principle of levodopa'}>
                         </ImageWithCaption>
+                        <br />
                         <p style={styles.paragraph}>
                         The biosynthetic pathway of levodopa is mainly based on the production of
                          L-tyrosine by cells, which can be hydroxylated to <strong style={{ color: '#c67e38' }}>L-tyrosine</strong> by
@@ -438,6 +449,7 @@ export function Description(): JSX.Element {
                             src={'https://static.igem.wiki/teams/5376/description/description10.png'}
                             caption={'Figure 10  Treatment Module and Gene Circuit of Lactococcus lactis F44'}>
                         </ImageWithCaption>
+                        <br />
                         <p style={styles.paragraph}>
                         Serotonin can inhibit motor disorders in Parkinson's patients
                          caused by levodopa. In order to further cooperate with levodopa

@@ -194,7 +194,7 @@ export function Contribution(): JSX.Element {
                     <p style={styles.paragraph}>
                     In this module, we also characterized an important domain of <strong style={{ color: '#c67e38' }}>mucin-binding protein MBD93</strong> and tested the display strategy of biotinylated cell surface-streptavidin labeled MBD93 for binding to Mucin. The results and data from these experiments will provide assistance and troubleshooting for other teams and similar research.
                     </p>
-
+                    <br />
                     <h3 style={styles.partheading}>Therapeutic Module</h3>
                     <p style={styles.paragraph}>
                     In the therapeutic module, we attempted to produce <strong style={{ color: '#c67e38' }}>three therapeutic factors: butyrate, levodopa, and serotonin</strong>. We measured the impact of overexpressing acetyl-CoA acetyltransferase on cell growth to increase butyrate production.
@@ -205,7 +205,7 @@ export function Contribution(): JSX.Element {
                     <p style={styles.paragraph}>
                     We also attempted the expression of serotonin, constructed a plasmid overexpressing N-acetyltransferase in Lactococcus lactis F44, and tested whether this approach could increase the serotonin production of Lactococcus lactis F44. We also measured the impact of this enzyme expression on cells and the drug release curve.
                     </p>
-
+                    <br />
                     <h3 style={styles.partheading}>Quorum Sensing Module</h3>
                     <p style={styles.paragraph}>
                     In this module, we verified the <strong style={{ color: '#c67e38' }}>bactericidal effect</strong> of class II bacteriocin lcnG on Lactococcus lactis F44 and the <strong style={{ color: '#c67e38' }}>immune effect</strong> of lagC against this bactericidal action.
@@ -218,6 +218,7 @@ export function Contribution(): JSX.Element {
                     </p>
                 </Element>
                 <Element name="section3" style={styles.section}>
+                <br />
                     <h2 style={styles.heading}>Community Characterization</h2>
                     <p style={styles.paragraph}>
                     To establish a convenient method for microbial community characterization, we selected three fluorescent proteins from the iGEM 2024 Distribution, which not only <strong style={{ color: '#c67e38' }}>verified the great usability of the iGEM Distribution</strong> but also provided a reference for other teams to select iGEM Distribution.

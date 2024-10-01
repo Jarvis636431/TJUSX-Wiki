@@ -13,6 +13,7 @@ import {
     Model,
     Software,
     Implement,
+    Attributions,
 } from "./contents";
 
 interface Base {
@@ -48,6 +49,13 @@ const Pages: (Page | Folder)[] = [
                 title: "Members",
                 path: "/members",
                 component: Members,
+                lead: "On this page you can introduce your team members, instructors, and advisors.",
+            },
+            {
+                name: "Attributions",
+                title: "Attributions",
+                path: "/attributions",
+                component: Attributions,
                 lead: "On this page you can introduce your team members, instructors, and advisors.",
             },
         ],

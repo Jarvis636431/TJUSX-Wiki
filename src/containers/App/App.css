@@ -101,7 +101,7 @@ footer a:hover {
 .navbar-transparent {
   color: #c67e38;
   font-weight: bold;
-  font-size: 1.5rem; 
+  font-size: 1.8rem; 
   backdrop-filter: blur(5px); /* 添加高斯模糊 */
   position: fixed; /* 固定在顶部 */
   top: 0;
@@ -112,7 +112,14 @@ footer a:hover {
   background-color: rgba(255,235,211, 0.4); /* 半透明背景色 */
   transition: background-color 0.3s; /* 背景颜色变化时的过渡效果 */
 }
+.navbar-transparent .nav-link {
+  color: #c67e38; /* 替换为你想要的颜色 */
+}
+.navbar-transparent .nav-link:hover {
+  color: rgba(163,122,102); /* 鼠标悬停时的字体颜色 */
+}
 .custom-dropdown .dropdown-menu {
+  
   border: none; /* 去掉边框 */
   padding: 0; /* 去掉内边距 */
   background-color: rgba(255,235,211, 0.5); /* 设置背景色 */
@@ -129,4 +136,13 @@ footer a:hover {
 .custom-dropdown .dropdown-item:hover {
   background-color: rgba(43, 93, 111, 0.1); /* 悬停时改变背景颜色 */
   color: #A47A6C; /* 悬停时字体颜色 */
+}
+.navbar-transparent .dropdown-item:hover {
+  color: rgba(163,122,102); /* 下拉菜单项悬停时的字体颜色 */
+}
+.navbar-transparent .nav-link {
+  margin-right: 15px; /* 设置右边距 */
+}
+.navbar-transparent .nav-link {
+  white-space: nowrap; /* 避免换行 */
 }

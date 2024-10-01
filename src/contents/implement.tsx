@@ -185,6 +185,7 @@ export function Implement(): JSX.Element {
             < p style={styles.paragraph}>
               As <strong style={{ color: '#c67e38' }}>a highly safe autonomous regulatory treatment system</strong>, Spidey Microbe has tremendous potential and various possibilities in disease treatment.
             </p>
+            
             <h3 style={styles.partheading}>Diverse Dosage Forms</h3>
             <p style={styles.paragraph}>
               <strong style={{ color: '#c67e38' }}>Drug delivery systems (DDS)</strong> achieve maximum therapeutic effect and minimum
@@ -215,9 +216,10 @@ export function Implement(): JSX.Element {
             </p>
             <ImageWithCaption
               src={'https://static.igem.wiki/teams/5376/implement/implement2.jpg'}
-              caption={'Figure 2 The Most Common Tablet and Capsule Formulations in Oral Administration'}>
+              caption={'Figure 2 The Most Common Tablet and Capsule Formulations in Oral Administration'}
+              customWidth={'80%'}>
             </ImageWithCaption>
-
+            <br />
             <h3 style={{ ...styles.heading, fontSize: '28px' }}>Mucosal Administration</h3>
 
             <p style={styles.paragraph}>
@@ -229,7 +231,7 @@ export function Implement(): JSX.Element {
               system to improve the <strong style={{ color: '#c67e38' }}>retention time</strong> and
               <strong style={{ color: '#c67e38' }}>bioavailability of drugs</strong> on the mucosal membrane.
             </p>
-
+            <br />
             <h3 style={{ ...styles.heading, fontSize: '28px' }}>Yogurt</h3>
             <p style={styles.paragraph}>
               In the process of disease treatment, psychological support and
@@ -246,7 +248,7 @@ export function Implement(): JSX.Element {
               caption={'Figure 3 Yogurt may serve as an innovation drug delivery form'}
               customWidth={'50%'}>
             </ImageWithCaption>
-
+            <br />
             <h3 style={styles.partheading}>Various Therapeutic Diseases</h3>
             <p style={styles.paragraph}>
               Spidey Microbe can not only be used as a new method for <strong style={{ color: '#c67e38' }}>treating Parkinson's
@@ -257,7 +259,7 @@ export function Implement(): JSX.Element {
               caption={'Figure 4 Various Diseases That Can Be Treated by Spidey Microbe Using Gut Microbiota'}
               customWidth={'100%'}>
             </ImageWithCaption>
-
+            <br />
             <h3 style={{ ...styles.heading, fontSize: '28px' }}>Gastrointestinal Inflammatory Diseases</h3>
             <p style={styles.paragraph}>
               We can use the microbial community regulation of Spidey
@@ -267,7 +269,7 @@ export function Implement(): JSX.Element {
               reducing inflammatory responses and treating
               inflammatory bowel diseases (IBD) and other diseases.
             </p>
-
+            <br />
             <h3 style={{ ...styles.heading, fontSize: '28px' }}> Neurological Diseases</h3>
             <p style={styles.paragraph}>
               In the treatment of depression, by regulating the metabolic products
@@ -293,6 +295,7 @@ export function Implement(): JSX.Element {
               Microbe may help <strong style={{ color: '#c67e38' }}>improve the metabolic
                 status of the liver</strong> and reduce the occurrence and development of fatty liver.
             </p>
+            <br />
             <h3 style={{ ...styles.heading, fontSize: '28px' }}> Chronic Kidney Disease</h3>
             <p style={styles.paragraph}>
               Patients with chronic kidney disease (CKD) often have a disorder of the gut microbiota, which can accelerate the progression of kidney disease. Spidey Microbe, by regulating the composition of the gut microbiota, can help slow down the progression of CKD. Uremic patients accumulate various toxins in their bodies, such as indoxyl sulfate (IS), p-cresyl sulfate (PCS), etc. Spidey Microbe helps reduce the levels of these uremic toxins and alleviate the burden on the kidneys.

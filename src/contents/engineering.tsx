@@ -1,6 +1,7 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
 import { useEffect, useState } from 'react';
+import BackToTopButton from '../components/BackButton.tsx';
 
 // 使用内联样式
 const styles = {
@@ -151,6 +152,7 @@ export function Engineering(): JSX.Element {
                </ul>
             </aside>
             <main style={styles.content}>
+            <BackToTopButton />
                <Element name="section1" style={styles.section}>
                   <h2 style={styles.heading}>Overview</h2>
                   <p style={styles.paragraph}>
@@ -178,20 +180,21 @@ export function Engineering(): JSX.Element {
                   <strong style={{ color: '#c67e38' }}> Build</strong>
                   </p>
                   <br />
-                  <h4 style={{ ...styles.partheading, fontSize: '28px' }}>cycle2</h4>
                   <p style={styles.paragraph}>
                      The lab already possessed the pETDuet-1 plasmid with a T7 (lacO) promoter and dual gene expression frames. To create a constitutive expression vector of SA and MBD93, we first replaced the T7 (lacO) promoter with the J23119 promoter via PCR, and assembled it into the circular plasmid, pETDuet-1-J23119, through seamless cloning .
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng2.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We obtained plasmids with replaced promoters in the transformed E. coli.
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng3.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      Then, we constructed expression frames for SA and MBD93 in the pETDuet-1-J23119 plasmid through seamless cloning, and constructed pETDuet-1-J23119-SA and pETDuet-1-J23119-MBD93, hoping to verify their expression through SDS-PAGE.
@@ -201,7 +204,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng4.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We chemically transformed the constructed pETDuet-1-J23119-SA and pETDuet-1-J23119-MBD93 into EcN, and screened the correct transformants by coating them on carbenicillin resistant medium.
@@ -232,14 +236,16 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng7.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      Due to the lack of T7 RNA polymerase in the EcN strain, we were unable to utilize the T7 promoter. Therefore, we planned to construct a plasmid containing T7 RNA polymerase and co-transform EcN with pETDuet-1-T7-SA-RFP.
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng8.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Build</strong>
@@ -249,7 +255,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng9.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We used the pETDuet-1 plasmid and first constructed pETDuet-1-T7-SA using seamless cloning. Then, we continued to construct RFP with linker fragments on the pETDuet-1-T7-SA plasmid, thus successfully constructing pETDuet-1-T7-SA-RFP.
@@ -259,7 +266,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng10.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Test</strong>
@@ -304,7 +312,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng12.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We will culture the obtained strains in a test tube containing 20 ml of LB for 12 hours, measuring their OD and fluorescence values every 2 hours. For detailed results, please visit the Results page (link).
@@ -329,7 +338,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng16.png'}
-                     caption={''}>
+                     caption={''}
+                    >
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Build</strong>
@@ -365,7 +375,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng14.png'}
-                     caption={''}>
+                     caption={''}
+                     >
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Build</strong>
@@ -401,7 +412,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng18.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Build</strong>
@@ -427,7 +439,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng20.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      At the same time, we also performed laser confocal observation on the 48-hour culture medium, where there was red fluorescence outside the cell wall. For detailed results, please refer to the Results page.
@@ -447,7 +460,7 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng21.png'}
-                     caption={''}>
+                     caption={''}customWidth={'80%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      To characterize, we plan to use fluorescent protein labeling of Lactococcus lactis F44 and EcN, incorporating expression cassettes for YFP and BFP into this plasmid. For detailed procedures, please refer to the community characterization section.
@@ -488,7 +501,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng22.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Build</strong>
@@ -504,7 +518,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng23.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We inoculated the correct transformant into 50 ml of LB medium and cultured it for 48 hours. The OD value was measured every 6 hours, and samples of the final fermentation broth were taken for product detection. For detailed results, please refer to the Results page.
@@ -537,14 +552,16 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng24.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We inoculated the correct transformant into 50 ml of LB medium for 48 hours and observed the color changes of the medium. After 48 hours, the medium of the EcN strain containing the pETDuet-1-T7-hpaBC plasmid turned black.
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng25.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      Due to the structure of L-DOPA, which contains a catechol moiety, it is highly susceptible to oxidation by oxygen in the air, leading to discoloration that can progress from yellow to red-purple and eventually to black. Therefore, the EcN strain carrying the pETDuet-1-T7-hpaBC plasmid can produce L-DOPA after fermentation.
@@ -564,7 +581,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng26.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Build</strong>
@@ -580,7 +598,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng27.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We inoculated the correct transformants into 50 ml of MRS medium containing Lactobacillus casei F44 and cultured them in a shaking flask for 48 hours. The optical density (OD) was measured every 2 hours until the stationary phase was reached. For detailed results, please refer to the Results page.
@@ -600,7 +619,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng28.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Build</strong>
@@ -616,7 +636,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng29.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We will inoculate the correct transformants into conical flasks containing 50ml of Lactococcus lactis F44 seed culture medium and culture for 48 hours. The OD will be measured every 2 hours until the plateau period. Please refer to the Results page for detailed results.
@@ -663,7 +684,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng32.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We designed three sgRNAs for gene editing and performed PCR on plasmid pRGB using primers with sgRNAs. We obtained a circular vector through seamless cloning. Finally, three sgRNA plasmids were successfully obtained: pRGB-F44-sg1, pRGB-F44-sg2, and pRGB-F44-sg3.
@@ -683,7 +705,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng42.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Learn</strong>
@@ -700,7 +723,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng34.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'70%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Build</strong>
@@ -736,7 +760,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng36.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Build</strong>
@@ -759,7 +784,8 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng38.jpg'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We will inoculate the correct transformant into a test tube containing 20ml LB and culture it for 26 hours. The OD and fluorescence values will be measured every 2 hours. For detailed results, please refer to the Results page.
@@ -784,14 +810,16 @@ export function Engineering(): JSX.Element {
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng39.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                      We assembled the lagC gene into the hpaBC gene cluster of the levodopa production plasmid.
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng40.png'}
-                     caption={''}>
+                     caption={''}
+                     customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Build</strong>
@@ -819,16 +847,19 @@ export function Engineering(): JSX.Element {
                      We set up four groups:
                   </p>
                   <p style={styles.paragraph}>
-                     EcN induced with arabinose and lactobacillus F44 induced with nisin;
+                     (1)EcN induced with arabinose and lactobacillus F44 induced with nisin;
                   </p>
                   <p style={styles.paragraph}>
-                     EcN induced with arabinose and lactobacilli F44 induced without nisin;
+                  (2)EcN induced with arabinose and lactobacilli F44 induced without nisin;
                   </p>
                   <p style={styles.paragraph}>
-                     EcN without adding arabinose induction+Lactococcus lactis F44 with nisin induction;
+                  (3)EcN without adding arabinose induction+Lactococcus lactis F44 with nisin induction;
                   </p>
                   <p style={styles.paragraph}>
-                     EcN induction without adding arabinose+lactobacilli F44 induction without adding nisin; Cultivate for 10 hours and measure the OD and red fluorescent protein fluorescence values every two hours.
+                  (4)EcN induction without adding arabinose+lactobacilli F44 induction without adding nisin.
+                  </p>
+                  <p style={styles.paragraph}>
+                     Cultivate for 10 hours and measure the OD and red fluorescent protein fluorescence values every two hours.
                   </p>
                   <p style={styles.paragraph}>
                      We have analyzed the results, please refer to the Results page for detailed results.
