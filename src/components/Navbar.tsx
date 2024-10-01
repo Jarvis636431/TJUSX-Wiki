@@ -34,7 +34,7 @@ export function Navbar() {
       );
     } else if ("path" in item && item.path) {
       return (
-        <Nav.Link key={`page-${pageIndex}`} as={Link} to={item.path}>
+        <Nav.Link className="custom-nav-link" key={`page-${pageIndex}`} as={Link} to={item.path} >
           {item.name}
         </Nav.Link>
       );
@@ -53,7 +53,6 @@ export function Navbar() {
               alt="React Bootstrap logo"
           />
         </BootstrapNavbar.Brand>
-
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="left-aligned">{pages}</Nav>

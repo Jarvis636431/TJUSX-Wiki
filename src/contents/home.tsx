@@ -138,21 +138,21 @@ export function Home() {
                 opacity: scrollY > maxScrollY ? 1 : 0,
             }}>
                 {/* 纵向排列的图片 */}
-                <img src="https://static.igem.wiki/teams/5376/home/newgroup-1.png" alt="Image 1"
+                <img src="https://static.igem.wiki/teams/5376/home/group1.png" alt="Image 1"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/gutleft.jpg" alt="Image 2"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group-3.png" alt="Image 3"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
-                <img src="https://static.igem.wiki/teams/5376/home/group-4.png" alt="Image 4"
+                <img src="https://static.igem.wiki/teams/5376/home/group4.png" alt="Image 4"
                      style={{margin: 'x 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group-5.png" alt="Image 5"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
-                <img src="https://static.igem.wiki/teams/5376/home/group-6.png" alt="Image 6"
+                <img src="https://static.igem.wiki/teams/5376/home/group6.png" alt="Image 6"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group-7-1.png" alt="Image 7.1"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
-                <img src="https://static.igem.wiki/teams/5376/home/newgroup-7-2.png" alt="Image 7.2"
+                <img src="https://static.igem.wiki/teams/5376/home/group7-2.png" alt="Image 7.2"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group6-7-3.png" alt="Image 7.3"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
