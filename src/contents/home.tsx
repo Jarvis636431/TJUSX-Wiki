@@ -138,7 +138,7 @@ export function Home() {
                 opacity: scrollY > maxScrollY ? 1 : 0,
             }}>
                 {/* 纵向排列的图片 */}
-                <img src="https://static.igem.wiki/teams/5376/home/group-1.png" alt="Image 1"
+                <img src="https://static.igem.wiki/teams/5376/home/newgroup-1.png" alt="Image 1"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/gutleft.jpg" alt="Image 2"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
@@ -152,7 +152,7 @@ export function Home() {
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group-7-1.png" alt="Image 7.1"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
-                <img src="https://static.igem.wiki/teams/5376/home/group6-7-2.png" alt="Image 7.2"
+                <img src="https://static.igem.wiki/teams/5376/home/newgroup-7-2.png" alt="Image 7.2"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group6-7-3.png" alt="Image 7.3"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
