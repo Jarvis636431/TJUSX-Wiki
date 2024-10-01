@@ -122,7 +122,7 @@ export function Home() {
                     style={{
                         position: 'absolute',
                         top: '51.5%',  // 位置调整为靠近第一张图片的下方
-                        left: `${scrollY * 1.0 + 520}px`,
+                        left: `${scrollY + 520}px`,
                         maxWidth: '70%', // 确保图片在较小屏幕上不会超出宽度
                         height: 'auto',
                     }}
@@ -133,7 +133,7 @@ export function Home() {
                     style={{
                         position: 'absolute',
                         top: '58%',  // 位置调整为靠近第一张图片的下方
-                        left: `${-scrollY * 1.0}px`,
+                        left: `${(-scrollY)}px`,
                         maxWidth: '70%', // 确保图片在较小屏幕上不会超出宽度
                         height: 'auto',
                     }}
@@ -165,8 +165,22 @@ export function Home() {
                      style={{margin: 'x 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group-5.png" alt="Image 5"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
-                <img src="https://static.igem.wiki/teams/5376/home/group6.png" alt="Image 6"
-                     style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
+
+                //放置GIF
+
+                <div style={{position: 'relative', display: 'inline-block'}}>
+                    <img src="https://static.igem.wiki/teams/5376/home/group6.png" alt="Image 6"
+                         style={{margin: '0', maxWidth: '100%', height: 'auto'}}/>
+                    <img src="https://static.igem.wiki/teams/5376/home/gif/gif-6.gif" alt="GIF"
+                         style={{
+                             position: 'absolute',
+                             top: '50.3%',
+                             left: '52.5%',
+                             transform: 'translate(-50%, -50%)',
+                             maxWidth: '24%', // 根据需要调整大小
+                             height: 'auto'
+                         }}/>
+                </div>
                 <div style={{position: 'relative', textAlign: 'center'}}>
                     {/* 背景图片 */}
                     <img
@@ -294,8 +308,19 @@ export function Home() {
                 </div>
                 <img src="https://static.igem.wiki/teams/5376/home/7-3.png" alt="Image 7.3"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
-                <img src="https://static.igem.wiki/teams/5376/home/7-4.png" alt="Image 7.4"
-                     style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
+                <div style={{position: 'relative', display: 'inline-block'}}>
+                    <img src="https://static.igem.wiki/teams/5376/home/7-4.png" alt="Image 7.4"
+                         style={{margin: '0', maxWidth: '100%', height: 'auto'}}/>
+                    <img src="https://static.igem.wiki/teams/5376/home/gif/7-4.gif" alt="GIF"
+                         style={{
+                             position: 'absolute',
+                             top: '43%',
+                             left: '54%',
+                             transform: 'translate(-50%, -50%)',
+                             maxWidth: '30%', // 根据需要调整大小
+                             height: 'auto'
+                         }}/>
+                </div>
             </div>
             <BackToTopButton></BackToTopButton>
         </main>
