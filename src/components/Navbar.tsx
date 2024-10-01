@@ -34,7 +34,7 @@ export function Navbar() {
       );
     } else if ("path" in item && item.path) {
       return (
-        <Nav.Link className="custom-nav-link" key={`page-${pageIndex}`} as={Link} to={item.path} >
+        <Nav.Link key={`page-${pageIndex}`} as={Link} to={item.path} >
           {item.name}
         </Nav.Link>
       );
