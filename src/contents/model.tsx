@@ -77,30 +77,32 @@ export function Model(): JSX.Element {
 
     return (
         <main style={{ backgroundColor: '#FFF8F0', minHeight: '100vh' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px' }}>
+            <div style={{ "backgroundImage": "url('https://static.igem.wiki/teams/5376/background.png')", backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', justifyContent: 'center', padding: '20px', position: 'relative' }}>
                 <img
-                    src="https://static.igem.wiki/teams/5376/viruse1.png"
+                    src="https://static.igem.wiki/teams/5376/logo1-2.png"
                     alt="Left Image"
-                    style={{ maxWidth: '200px', height: 'auto' }}
+                    style={{ maxWidth: '750px', height: 'auto', zIndex: 0 }}
                 />
-
                 <img
                     src="https://static.igem.wiki/teams/5376/model/modellogo.png"
                     alt="TITLE"
-                    style={{ width: '421px', height: '150px', objectFit: 'cover' }}
+                    style={{ maxWidth: '750px', height: 'auto', position: 'absolute', top: '45%', zIndex: 1 }}
                 />
-
-
                 <img
-                    src="https://static.igem.wiki/teams/5376/viruse2.png"
-                    alt="Right Image"
-                    style={{ maxWidth: '200px', height: 'auto' }}
+                    src="https://static.igem.wiki/teams/5376/viruse3.png"
+                    alt="Left Image"
+                    style={{ position:'absolute',maxWidth: '220px',left:'100px',top:'120px', height: 'auto' }}
+                />
+                <img
+                    src="https://static.igem.wiki/teams/5376/viruse4.png"
+                    alt="Left Image"
+                    style={{  position:'absolute',maxWidth: '220px',right:'80px',top:'200px', height: 'auto' }}
                 />
             </div>
             <div style={styles.container}>
                 <aside style={styles.sidebar}>
                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                        {['Overview', 'Simulation of Biofilm Growth in Gut', 'Optimizer Program Based on SVM Model', 'Machine Learning', 'Optimizer Program', 'Optimize Results', 'Reference'].map((item, index) => (
+                        {['Overview', 'Simulation of Biofilm Growth in Gut', 'Optimizer Program Based on SVM Model', 'Reference'].map((item, index) => (
                             <li key={index} style={styles.sidebarItem}>
                                 <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                                     <Link
@@ -121,7 +123,7 @@ export function Model(): JSX.Element {
                     </ul>
                 </aside>
                 <main style={styles.content}>
-                <BackToTopButton />
+                    <BackToTopButton />
                     <Element name="section1" style={styles.section}>
                         <h2 style={styles.heading}>Overview</h2>
                         <p style={styles.paragraph}>
@@ -286,7 +288,7 @@ export function Model(): JSX.Element {
                             src={'https://static.igem.wiki/teams/5376/model/gs2.png'}
                             caption={''}
                             customWidth={'60%'}
-                            >
+                        >
                         </ImageWithCaption>
                         <p style={styles.paragraph}>
                             In Formula (3), the p(NA), p(NG), p(NT) and p(NC) represent the corresponding 2-mer content in the DNA sequence. If all the Z-Curve transformation method are combined, any DNA sequence is able to be converted into a unique 24-dimensional vector for model trainning usage.
@@ -310,17 +312,17 @@ export function Model(): JSX.Element {
                             customWidth={'50%'}>
                         </ImageWithCaption>
                         <p style={styles.paragraph}>
-                        The result shows that the AUC of PT model is higher than that of DT model, which means a better classification performance, and their combination reaches the highest AUC. We note that although NT does not perform well when used alone (not shown in Fig. 6), its introduction can improve the performance of other models. In this experiment, the introduction of NT increased the AUC of the three models on the test dataset by 0.38%, 0.29% and 0.12% respectively. So the final model we used reaches an AUC of 0.995 on the test dataset.
+                            The result shows that the AUC of PT model is higher than that of DT model, which means a better classification performance, and their combination reaches the highest AUC. We note that although NT does not perform well when used alone (not shown in Fig. 6), its introduction can improve the performance of other models. In this experiment, the introduction of NT increased the AUC of the three models on the test dataset by 0.38%, 0.29% and 0.12% respectively. So the final model we used reaches an AUC of 0.995 on the test dataset.
                         </p>
                     </Element>
                     <Element name="section5" style={styles.section}>
                         <h2 style={styles.heading}>Optimizer Program</h2>
                         <br />
                         <h3 style={styles.partheading}>
-                        CAI Calculation
+                            CAI Calculation
                         </h3>
                         <p style={styles.paragraph}>
-                        Codon Adaptation Index (CAI) refers to the degree of consistency between the frequency of using synonymous codons and the optimal codon in the encoding area, and its value ranges from 0 to 1. CAI can be used to evaluate the expression level of exogenous genes in the host, and it is generally agreed that the higher the CAI, the higher the expression level of exogenous genes in the host. We collected the 1853 CDS sequences and calculated CAI for synonymous codons, which is shown in Fig. 7. 
+                            Codon Adaptation Index (CAI) refers to the degree of consistency between the frequency of using synonymous codons and the optimal codon in the encoding area, and its value ranges from 0 to 1. CAI can be used to evaluate the expression level of exogenous genes in the host, and it is generally agreed that the higher the CAI, the higher the expression level of exogenous genes in the host. We collected the 1853 CDS sequences and calculated CAI for synonymous codons, which is shown in Fig. 7.
                         </p>
                         <ImageWithCaption
                             src={'https://static.igem.wiki/teams/5376/model/7.png'}
@@ -328,10 +330,10 @@ export function Model(): JSX.Element {
                             customWidth={'50%'}>
                         </ImageWithCaption>
                         <h3 style={styles.partheading}>
-                        Monte Carlo Method
+                            Monte Carlo Method
                         </h3>
                         <p style={styles.paragraph}>
-                        The CAI of CDS sequence is calculated by Formula (4): 
+                            The CAI of CDS sequence is calculated by Formula (4):
                         </p>
                         <ImageWithCaption
                             src={'https://static.igem.wiki/teams/5376/model/gs3.png'}
@@ -339,20 +341,20 @@ export function Model(): JSX.Element {
                             customWidth={'35%'}>
                         </ImageWithCaption>
                         <p style={styles.paragraph}>
-                        In Formula (4), CAIi represents the CAI value of the i-th codon and n represents the total number of codons owned by the CDS sequence. In order to simplify the algorithm and improve the performance as much as possible, we developed a Monte Carlo method to generate a large number of synonymous CDS sequences that are likely to have a high CAI in a short period of time. First, CAI values of synonymous codons are normalized so that they can be used as probabilities. Second, the input DNA sequence will be converted into polypeptide sequence based on the Bacterial, Archaeal and Plant Plastid Code Table (Table 11). Third, the algorithm will extend a codon (three bases) at once according to the polypeptide sequence and probabilities calculated above, eventually forming a synonymous CDS sequence. 
+                            In Formula (4), CAIi represents the CAI value of the i-th codon and n represents the total number of codons owned by the CDS sequence. In order to simplify the algorithm and improve the performance as much as possible, we developed a Monte Carlo method to generate a large number of synonymous CDS sequences that are likely to have a high CAI in a short period of time. First, CAI values of synonymous codons are normalized so that they can be used as probabilities. Second, the input DNA sequence will be converted into polypeptide sequence based on the Bacterial, Archaeal and Plant Plastid Code Table (Table 11). Third, the algorithm will extend a codon (three bases) at once according to the polypeptide sequence and probabilities calculated above, eventually forming a synonymous CDS sequence.
                         </p>
 
                         <h3 style={styles.partheading}>
-                        Hard filtration
+                            Hard filtration
                         </h3>
                         <p style={styles.paragraph}>
-                        In this process, the final output will be filtered out layer by layer from candidate sequences. First, the sequences with CAI value below the CAI of original input CDS will be eliminated. Second, the sequences containing BioBrick restriction enzyme (EcoRI, XbaI, SpeI and PstI) cleavage sites will be dropped. Third, the SVM model will be used to determine whether the sequence will be a medium to high expression CDS in the host. Finally, sequence that has passed the three filters and has a highest CAI score will be the final output of the program.
+                            In this process, the final output will be filtered out layer by layer from candidate sequences. First, the sequences with CAI value below the CAI of original input CDS will be eliminated. Second, the sequences containing BioBrick restriction enzyme (EcoRI, XbaI, SpeI and PstI) cleavage sites will be dropped. Third, the SVM model will be used to determine whether the sequence will be a medium to high expression CDS in the host. Finally, sequence that has passed the three filters and has a highest CAI score will be the final output of the program.
                         </p>
                     </Element>
                     <Element name="section6" style={styles.section}>
                         <h2 style={styles.heading}>Optimize Results</h2>
                         <p style={styles.paragraph}>
-                        We used this program to optimize six genes from two plasmids of L. lactis F44 and provided the optimized sequences to wet experiment. Taking the lagA gene as an example: As shown in the figure below, we successfully optimized the CAI value of the lagA gene from 0.85 to 0.93.
+                            We used this program to optimize six genes from two plasmids of L. lactis F44 and provided the optimized sequences to wet experiment. Taking the lagA gene as an example: As shown in the figure below, we successfully optimized the CAI value of the lagA gene from 0.85 to 0.93.
                         </p>
                         <ImageWithCaption
                             src={'https://static.igem.wiki/teams/5376/model/8.png'}
@@ -360,7 +362,7 @@ export function Model(): JSX.Element {
                             customWidth={'50%'}>
                         </ImageWithCaption>
                         <p style={styles.paragraph}>
-                        The code of the model was stored in our <a href='https://gitlab.igem.org/2024/software-tools/tjusx'>Gitlab</a>.
+                            The code of the model was stored in our <a href='https://gitlab.igem.org/2024/software-tools/tjusx'>Gitlab</a>.
                         </p>
                     </Element>
                     <Element name="section7" style={styles.section}>

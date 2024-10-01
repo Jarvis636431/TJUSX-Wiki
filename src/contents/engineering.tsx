@@ -122,24 +122,38 @@ export function Engineering(): JSX.Element {
             </aside>
             <main style={styles.content}>
                 <Element name="section1" style={styles.section}>
+
                     <h2 style={styles.heading}>Overview</h2>
+
+                    <h3 style={styles.partheading}>Adhesion Module</h3>
+                    <h3 style={styles.partheading}>cycle1</h3>
+
                     <p style={styles.paragraph}>
-                        To provide treatment for Parkinson's disease, we designed the Spidey Microbe consortium,
-                        which consists of three main modules:adhesion module, quorum Sensing module, therapeutic
-                        module.
-                        Throughout the iterations of our project,
-                        we continuously refined the Spidey Microbe consortium following the DBTL (Design, Build,
-                        Test, Learn) framework recommended by iGEM.
+                    Based on our design, we aim to express a fusion
+                     protein of streptavidin (SA) and adhesive protein
+                      binding protein (MBD93) in EcN (Design Page). To
+                       verify whether SA and MBD93 can be expressed in 
+                       EcN, we plan to use a strong constitutive promoter
+                        J23119 for expression.
                     </p>
-                    <br />
+                    <p style={styles.paragraph}>
+                    Based on our design, we aim to express a fusion
+                     protein of streptavidin (SA) and adhesive protein
+                      binding protein (MBD93) in EcN (Design Page). To
+                       verify whether SA and MBD93 can be expressed in 
+                       EcN, we plan to use a strong constitutive promoter
+                        J23119 for expression.
+                    </p>
                     <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/design/design1.png'}
-                        caption={'Figure 1 Flowchart of Wet Lab Experimental Design'}>
+                        src={'https://static.igem.wiki/teams/5376/engineering/eng2.png'}
+                        caption={''}>
                     </ImageWithCaption>
-                    <br />
+
                 </Element>
+
                 <Element name="section2" style={styles.section}>
                     <h2 style={styles.heading}>Adhension Module</h2>
+                    <h3 style={styles.partheading}>cycle1</h3>
                     <p style={styles.paragraph}>
                         The ability to colonize in the gut is crucial for probiotics’ effects. To further enhance
                         this ability and improve the controllability of colonization to reduce the risk of bacterial

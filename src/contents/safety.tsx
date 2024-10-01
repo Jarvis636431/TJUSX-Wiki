@@ -257,19 +257,22 @@ export function Safety(): JSX.Element {
                         <p style={styles.paragraph}>
                             <strong style={{ color: '#c67e38' }}>EcN White Paper</strong> <br />
                             We participated in the EcN White Paper initiated by Peking University, improving the modification methods of EcN, expanding the applicable scenarios of EcN, and promoting the establishment of EcN-related regulations.
-                            <br /> <a href='https://static.igem.wiki/teams/5376/humanpractices/ecn-en.pdf' download>Download</a>
+                            <br /> <a href='https://static.igem.wiki/teams/5376/humanpractices/ecn-en.pdf' download> <img src="https://static.igem.wiki/teams/5376/download.png" alt="Icon" style={{ width: '212px', height: '80px' }} /></a>
                         </p>
                         <p style={styles.paragraph}>
                             <strong style={{ color: '#c67e38' }}>Tianjin Guidelines</strong> <br />
                             Tianjin University took the lead in compiling the "Tianjin Guidelines," advocating responsible biological research and standardizing the biosafety behavior of scientists. Our experiments strictly follow the provisions of the "Tianjin Guidelines."
+                            <br /><a href='https://static.igem.wiki/teams/5376/safety/tinjin-guidelines.pdf' download> <img src="https://static.igem.wiki/teams/5376/download.png" alt="Icon" style={{ width: '212px', height: '80px' }} /></a>
                         </p>
                         <p style={styles.paragraph}>
                             <strong style={{ color: '#c67e38' }}>Tianjin University Laboratory Safety Management Measures</strong> <br />
                             Our experimental operations strictly follow the "Tianjin University Laboratory Safety Management Measures," standardizing the experimental operations of the experimenters and managing hazardous chemicals and experimental waste.
+                            <br /><a href='https://static.igem.wiki/teams/5376/safety/tjusafety.pdf' download> <img src="https://static.igem.wiki/teams/5376/download.png" alt="Icon" style={{ width: '212px', height: '80px' }} /></a>                        
                         </p>
                         <p style={styles.paragraph}>
                             <strong style={{ color: '#c67e38' }}>The People's Republic of China Biosafety Law</strong> <br />
                             Our experiments strictly comply with the "People's Republic of China Biosafety Law," strictly following national standards and laboratory technical specifications and operating procedures, taking safety precautions. Strengthen the management of experimental waste, legally dispose of wastewater, exhaust gases, and other waste, and take measures to prevent pollution.
+                            <br /><a href='https://static.igem.wiki/teams/5376/safety/chinasafety.pdf' download> <img src="https://static.igem.wiki/teams/5376/download.png" alt="Icon" style={{ width: '212px', height: '80px' }} /></a>
                         </p>
                     </Element>
                     <Element name="section7" style={styles.section}>

@@ -19,7 +19,7 @@ export function Home() {
     const maxScrollY = 400; // 你可以根据需要调整这个值
 
     return (
-        <main style={{backgroundColor: '#fff8f0', height: '8200px', position: 'relative'}}>
+        <main style={{backgroundColor: '#fff8f0', height: '9500px', position: 'relative'}}>
             {/* Container for title, subtitle, and images */}
             <div style={{
                 position: 'relative',
