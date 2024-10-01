@@ -26,6 +26,7 @@ export function Navbar() {
           key={`page-${pageIndex}`}
           title={item.name}
           id="basic-nav-dropdown"
+          className="custom-dropdown"
         >
           {folderItems}
         </NavDropdown>
@@ -40,11 +41,16 @@ export function Navbar() {
   });
 
   return (
-    <BootstrapNavbar expand="lg" className="bg-body-tertiary" fixed="top"  style={{ backgroundColor: '#FFF8F0' }}
-    >
+    <BootstrapNavbar expand="lg" className="navbar-transparent" fixed="top" >
       <Container>
         <BootstrapNavbar.Brand>
-          {import.meta.env.VITE_TEAM_NAME}
+          <img
+            src="https://static.igem.wiki/teams/5376/home/homelogo.png" // 图片路径
+            width="94"
+            height="60"
+            className="d-inline-block align-top"
+            alt="React Bootstrap logo"
+          />
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
         <BootstrapNavbar.Collapse id="basic-navbar-nav">

@@ -92,7 +92,36 @@ footer a:hover {
   height:300px; /* 图片高度 */
   object-fit: contain; /* 确保图片内容完整显示 */
 }
-/* styles.css */
-.navbar {
-  background-color: #ffebd3; /* 你希望的颜色，例如深灰色 */
+
+.navbar-transparent:hover {
+  backdrop-filter: blur(5px); /* 添加高斯模糊 */
+  background-color: rgba(255,235,211, 0.8); /* 可以加一点透明度来突出效果 */
+}
+.navbar-transparent {
+  font-size: 1.5rem; 
+  backdrop-filter: blur(5px); /* 添加高斯模糊 */
+  position: fixed; /* 固定在顶部 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 宽度占满 */
+  height: 70px;
+  z-index: 1030; /* 确保在内容上方 */
+  background-color: rgba(255,235,211, 0.4); /* 半透明背景色 */
+  transition: background-color 0.3s; /* 背景颜色变化时的过渡效果 */
+}
+.custom-dropdown .dropdown-menu {
+  background-color: rgba(255, 248, 240, 0.9); /* 自定义背景颜色 */
+  border: none; /* 去掉边框 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.custom-dropdown .dropdown-item {
+  color: #2B5D6F; /* 自定义字体颜色 */
+  padding: 10px 15px; /* 自定义内边距 */
+  transition: background-color 0.3s; /* 添加过渡效果 */
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: rgba(43, 93, 111, 0.1); /* 悬停时改变背景颜色 */
+  color: #2B5D6F; /* 悬停时字体颜色 */
 }
