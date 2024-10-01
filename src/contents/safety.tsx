@@ -257,6 +257,7 @@ export function Safety(): JSX.Element {
                         <p style={styles.paragraph}>
                             <strong style={{ color: '#c67e38' }}>EcN White Paper</strong> <br />
                             We participated in the EcN White Paper initiated by Peking University, improving the modification methods of EcN, expanding the applicable scenarios of EcN, and promoting the establishment of EcN-related regulations.
+                            <br /> <a href='https://static.igem.wiki/teams/5376/humanpractices/ecn-en.pdf' download>Download</a>
                         </p>
                         <p style={styles.paragraph}>
                             <strong style={{ color: '#c67e38' }}>Tianjin Guidelines</strong> <br />

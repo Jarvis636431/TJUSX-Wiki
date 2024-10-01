@@ -1,6 +1,6 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
-
+import BackToTopButton from '../components/BackButton.tsx';
 // 使用内联样式
 const styles = {
     container: {
@@ -121,6 +121,7 @@ export function Model(): JSX.Element {
                     </ul>
                 </aside>
                 <main style={styles.content}>
+                <BackToTopButton />
                     <Element name="section1" style={styles.section}>
                         <h2 style={styles.heading}>Overview</h2>
                         <p style={styles.paragraph}>
@@ -148,15 +149,6 @@ export function Model(): JSX.Element {
                             researchers. Here we use McComedy<sup>[1]</sup>, a modeling tool designed for individual-base
                             d modeling of microbial consumer-resource systems. This tool allows flexibly combining
                             pre-implemented building blocks that represent physical and biological processes.
-                        </p>
-                        <p style={styles.paragraph}>
-                            Since EcN lacks T7 RNA polymerase, we constructed a T7 RNA polymerase (T7RNP) expression
-                            framework using the Cloning Vector pJUMP27-1A(sfGFP) from the iGEM 2024 Distribution, which
-                            has compatible biobrick restriction sites.
-                            This expression plasmid has a replication origin of PSC101 and confers resistance to
-                            kanamycin, making it compatible with most protein expression vectors (such as PET series),
-                            thus expanding the available vectors for EcN and enabling transfer to other E. coli strains
-                            that do not contain T7 RNA polymerase.
                         </p>
                         <p style={styles.paragraph}>
                             In the intestine, probiotics do not directly come into contact with intestinal cells,

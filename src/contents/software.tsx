@@ -155,7 +155,7 @@ export function Software(): JSX.Element {
                     <Element name="section2" style={styles.section}>
                         <h2 style={styles.heading}>Probiotic Metabolite—ProMetab</h2>
                         <br />
-                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '30px' }}>1.Preliminary Ideas</h3>
+                        <h3 style={styles.partheading}>Preliminary Ideas</h3>
                         <p style={styles.paragraph}>
                             Our team's program is related to probiotics and gut health. While reading through iGEM's previous
                             competition projects, we found that different teams had conducted research related to different
@@ -173,22 +173,22 @@ export function Software(): JSX.Element {
                                 acids and vitamins</strong> among them, which makes our database more specialized and can be used as a data
                             reference for wet-lab and probiotic researchers.
                         </p>
-
-                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '30px' }}>2.Data Collection</h3>
+                        <br />
+                        <h3 style={styles.partheading}>Data Collection</h3>
 
                         <p style={styles.paragraph}>
                             The database was constructed in terms of intestinal probiotic strains, and relevant information
                             was collected through open source databases.
                         </p>
-                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(1) Determination of the List of Probiotic Strains</h3>
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>Determination of the List of Probiotic Strains</h3>
                         <p style={styles.paragraph}>
                             Based on the <i>BIDD Probio's</i> list of probiotic strains, we combined data from major online open-source probiotic
                             databases as well as probiotic data published by official organizations (like <i>National Health Commission of the People's
                                 Republic of China</i>) in the past few years. The strains we selected are not only limited to those already on the market, but
                             also include strains that are not on the market or have probiotic potential.
                         </p>
-
-                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(2) Metabolite Data</h3>
+                        
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>Metabolite Data</h3>
 
                         <p style={styles.paragraph}>
                             Obtaining the EC numbers of the enzymes: For strains for which the complete EC number can be queried
@@ -213,7 +213,7 @@ export function Software(): JSX.Element {
                             customWidth={'60%'}>
                         </ImageWithCaption>
 
-                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(3) Synthesis Capacity Data of Amino Acid and Vitamin</h3>
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>Synthesis Capacity Data of Amino Acid and Vitamin</h3>
                         <p style={styles.paragraph}>
                             Amino acids and vitamins are two very important categories of probiotic metabolites, and they are
                             considered as the main metabolites exchanged between colonies and between colonies and the environment <sup>[5]</sup>. Therefore,
@@ -226,14 +226,14 @@ export function Software(): JSX.Element {
                             Amino acid synthesis capacity data: Amino acid synthesis capacity was predicted using GapMind, an amino acid auxotroph prediction framework developed by Morgan Price et al <sup>[6]</sup>.<i>GapMind</i>specifically analyzes amino acid synthesis pathways, and the resulting amino acid auxotroph predictions are more comprehensive and accurate than our metabolite data. GapMind's input data is the strain's genome or proteome, and the output is a prediction of the synthesis capacity of 18 amino acids.
                         </p>
 
-                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(4) Corresponding Data of Probiotic Strains and Diseases They Treat</h3>
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>Corresponding Data of Probiotic Strains and Diseases They Treat</h3>
                         <p style={styles.paragraph}>
                             The data in this category are primarily referenced and integrated from <i>BIDD Probio, MicrobiomeHUB</i> and related references.
                         </p>
+                        <br />
+                        <h3 style={styles.partheading}>Database Structure Design & Search Platform Design</h3>
 
-                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '30px' }}>3.Database Structure Design & Search Platform Design</h3>
-
-                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(1)	Database Structure Design</h3>
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>Database Structure Design</h3>
                         <p style={styles.paragraph}>
                             For database structure design, we use a <strong style={{ color: '#c67e38' }}>graph database</strong> <sup>[7]</sup> instead of a relational database to store data. The reason
                             we use a graph database is that ProMetab contains more complex data relationships, so it is difficult to maintain
@@ -257,7 +257,7 @@ export function Software(): JSX.Element {
                             customWidth={'80%'}>
                         </ImageWithCaption>
 
-                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>(2) Search Platform Design</h3>
+                        <h3 style={{ ...styles.heading, textAlign: 'left' as const, fontSize: '28px' }}>Search Platform Design</h3>
                         <p style={styles.paragraph}>
                             We designed four interfaces for <strong style={{ color: '#c67e38' }}>ProMetab--HOME, OVERVIEW, SEARCH, and CONTACT</strong>.
                             In the SEARCH interface, six different entity queries are supported, including

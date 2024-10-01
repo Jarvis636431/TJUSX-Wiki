@@ -14,7 +14,7 @@ const styles = {
     sidebar: {
         //使用position: sticky;实现侧边栏滚动到顶端固定，必须设置top/bottom等四边属性之一，属性值就是滚动的极限距离，而且父组件不可以设置未overflow:hidden/auto
         top: '70px',
-        height: '450px',
+        height: '500px',
         marginRight: '10px',
         marginLeft: '10px',
         width: '350px',
@@ -99,7 +99,7 @@ export function HumanPractices(): JSX.Element {
             <div style={styles.container}>
                 <aside style={styles.sidebar}>
                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                        {['Questionnaire', 'Market Research', 'China gut festival', 'CCiC Conference', 'Dialogue with Experts', 'Dialogues with Doctors', 'RDialogue with Patients','International Symposia','“ProMetab” Database'].map((item, index) => (
+                        {['Questionnaire', 'Market Research', 'China gut festival', 'CCiC Conference', 'Dialogue with Experts', 'Dialogues with Doctors', 'RDialogue with Patients','International Symposia','“ProMetab” Database','Education'].map((item, index) => (
                             <li key={index} style={styles.sidebarItem}>
                                 <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                                     <Link
@@ -485,6 +485,96 @@ export function HumanPractices(): JSX.Element {
                             src={'https://static.igem.wiki/teams/5376/humanpractices/hp25.png'}
                             caption={''}
                             customWidth={'50%'}>
+                        </ImageWithCaption>
+                    </Element>
+                    <Element name="section10" style={styles.section}>
+                        <h2 style={styles.heading}>Education</h2>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/humanpractices/hp1.png'}
+                            caption={''}>
+                        </ImageWithCaption>
+                        <h3 style={styles.partheading}>Explanation of Science Popularization</h3>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/humanpractices/hp2-1.png'}
+                            caption={''}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        We organized a scientific talk on <strong style={{ color: '#c67e38' }}>“Gut Health and Probiotics”</strong>. 
+                        Through well-designed exhibition boards, we explained in detail the
+                         biological roles and metabolic pathways of probiotics, and introduced
+                          how to maintain intestinal health through diet and lifestyle in an 
+                          easy-to-understand manner. We actively interacted with the audience and
+                           answered their questions about probiotics, further promoting the popularization
+                            of probiotic knowledge.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/humanpractices/hp3.png'}
+                            caption={''}>
+                        </ImageWithCaption>
+                        <h3 style={styles.partheading}>Probiotic knowledge quiz</h3>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/humanpractices/hp4.png'}
+                            caption={''}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        We also conducted a <strong style={{ color: '#c67e38' }}>probiotic knowledge quiz with prizes</strong>, in which participants
+                         tested their knowledge base by answering questions on the health benefits of
+                          probiotics, metabolites and their effects. This session effectively increased
+                           public participation and stimulated more people's interest in probiotics and
+                            learning by setting up a reward mechanism.
+                        </p>
+                        <h3 style={styles.partheading}>Microscopic Observation</h3>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/humanpractices/hp5.jpg'}
+                            caption={''}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        We brought <strong style={{ color: '#c67e38' }}>electron microscopes</strong> and prepared <strong style={{ color: '#c67e38' }}>hundreds of microscopical
+                         sections</strong> for observation, allowing visitors to explore the world of
+                          microorganisms in a fun way. A lot of children are participated in
+                           this activity and we taught the children how to use the microscope.
+                            This process raises the public's awareness of microorganisms and
+                             allows them to learn more about microorganisms through microscopic
+                              observation.
+                        </p>
+                        <h3 style={styles.partheading}>Microbial Painting</h3>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/humanpractices/hp6.png'}
+                            caption={''}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        We also brought along <strong style={{ color: '#c67e38' }}>drawings of microorganisms</strong> to 
+                        introduce visitors to fluorescent proteins, colored
+                         metabolic secretions, and other magical “drawing
+                          gadgets” that show the infinite possibilities of
+                           the world of microorganisms.
+                        </p>
+                        <h3 style={styles.partheading}>Hands-on Cooperation</h3>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/humanpractices/hp7.png'}
+                            caption={''}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        The most widely spread probiotic food is <strong style={{ color: '#c67e38' }}>yogurt</strong>, and we designed a
+                        <strong style={{ color: '#c67e38' }}>homemade yogurt experience</strong>. Many visitors were attracted to stop by
+                          and taste and make yogurt themselves. With our assistance, visitors
+                           experienced the joy of making yogurt with their own hands, tasted
+                            the deliciousness of yogurt, and learned about the application and
+                             benefits of probiotic flora.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/humanpractices/hp8.png'}
+                            caption={''}>
+                        </ImageWithCaption>
+                        <p style={styles.paragraph}>
+                        Finally, visitors <strong style={{ color: '#c67e38' }}>drew spring</strong> marks on the kites to express their
+                         understanding of the microbial world in nature, harboring deep blessings
+                          for our team and great expectations for the future development of
+                           synthetic biology.
+                        </p>
+                        <ImageWithCaption
+                            src={'https://static.igem.wiki/teams/5376/humanpractices/hp9.png'}
+                            caption={''}>
                         </ImageWithCaption>
                     </Element>
                 </main>

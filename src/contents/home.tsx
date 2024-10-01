@@ -72,7 +72,7 @@ export function Home() {
                     style={{
                         position: 'absolute',
                         top: '25%',  // 位置调整为靠近第一张图片的下方
-                        left: `${scrollY * 0.3 + 70}px`,
+                        left: `${scrollY * 0.5 + 70}px`,
                         maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
                         height: 'auto',
                     }}
@@ -83,7 +83,7 @@ export function Home() {
                     style={{
                         position: 'absolute',
                         top: '52%',  // 位置调整为靠近第一张图片的下方
-                        left: `${-scrollY * 0.5}px`,
+                        left: `${-scrollY * 0.7}px`,
                         maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
                         height: 'auto',
                     }}
@@ -94,7 +94,7 @@ export function Home() {
                     style={{
                         position: 'absolute',
                         top: '44.5%',  // 位置调整为靠近第一张图片的下方
-                        left: `${scrollY * 0.5 + 10}px`,
+                        left: `${scrollY * 0.7 + 10}px`,
                         maxWidth: '100%', // 确保图片在较小屏幕上不会超出宽度
                         height: 'auto',
                     }}
@@ -105,7 +105,7 @@ export function Home() {
                     style={{
                         position: 'absolute',
                         top: '51.5%',  // 位置调整为靠近第一张图片的下方
-                        left: `${scrollY * 0.8 + 520}px`,
+                        left: `${scrollY * 1.0 + 520}px`,
                         maxWidth: '70%', // 确保图片在较小屏幕上不会超出宽度
                         height: 'auto',
                     }}
@@ -116,7 +116,7 @@ export function Home() {
                     style={{
                         position: 'absolute',
                         top: '58%',  // 位置调整为靠近第一张图片的下方
-                        left: `${-scrollY * 0.8}px`,
+                        left: `${-scrollY * 1.0}px`,
                         maxWidth: '70%', // 确保图片在较小屏幕上不会超出宽度
                         height: 'auto',
                     }}
@@ -127,7 +127,7 @@ export function Home() {
             {/* 新增的图片容器 */}
             <div style={{
                 position: 'absolute',
-                bottom: '0', // 或者更改为你需要的值
+                top:'100vh', // 或者更改为你需要的值
                 left: '50%',
                 transform: 'translateX(-50%)',
                 transition: 'opacity 0.3s ease',
