@@ -1,6 +1,7 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
 import BackToTopButton from '../components/BackButton.tsx';
+import { useEffect, useState } from 'react';
 // 使用内联样式
 const styles = {
     container: {
@@ -74,29 +75,55 @@ const styles = {
 };
 
 export function Safety(): JSX.Element {
-
+    const [scrollY, setScrollY] = useState(0);
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+        
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <main style={{ backgroundColor: '#FFF8F0', minHeight: '100vh' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px' }}>
+            <div style={{ overflow: 'hidden',backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', justifyContent: 'center', padding: '20px', position: 'relative' }}>
                 <img
-                    src="https://static.igem.wiki/teams/5376/viruse1.png"
+                    src="https://static.igem.wiki/teams/5376/logo1-2.png"
                     alt="Left Image"
-                    style={{ maxWidth: '200px', height: 'auto' }}
+                    style={{ maxWidth: '760px', height: 'auto', zIndex: 1 }}
                 />
-
                 <img
                     src="https://static.igem.wiki/teams/5376/safety/safetylogo.png"
                     alt="TITLE"
-                    style={{ width: '473px', height: '150px', objectFit: 'cover' }}
+                    style={{ width: 'auto', height: '240px', position: 'absolute', top: '45%', zIndex: 3 }}
                 />
-
-
                 <img
-                    src="https://static.igem.wiki/teams/5376/viruse2.png"
-                    alt="Right Image"
-                    style={{ maxWidth: '200px', height: 'auto' }}
+                    src="https://static.igem.wiki/teams/5376/viruse3.png"
+                    alt="Left Image"
+                    style={{ position:'absolute',maxWidth: '250px',left:'150px',top:'270px', height: 'auto' }}
                 />
+                <img
+                    src="https://static.igem.wiki/teams/5376/viruse4.png"
+                    alt="Left Image"
+                    style={{  position:'absolute',maxWidth: '220px',right:'150px',top:'150px', height: 'auto' }}
+                />
+                <img
+                    src="https://static.igem.wiki/teams/5376/bl2-1.png"
+                    alt="Left Image"
+                    style={{  position:'absolute',width: '200%',
+                    right:`${-scrollY * 1.5-20}px`,top:'530px', height: 'auto' ,transform: 'rotate(0deg)',zIndex: 0}}
+                />
+                <img
+                    src="https://static.igem.wiki/teams/5376/bl1.png"
+                    alt="Left Image"
+                    style={{  position:'absolute',width: '150%',
+                    right:`${-scrollY * 1.5}px`,top:'500px', height: 'auto' ,transform: 'rotate(0deg)',zIndex: 0}}
+                />
+
             </div>
+
             <div style={styles.container}>
                 <aside style={styles.sidebar}>
                     <ul style={{ listStyle: 'none', padding: 0 }}>

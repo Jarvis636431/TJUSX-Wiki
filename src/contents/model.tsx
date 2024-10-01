@@ -1,6 +1,7 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
 import BackToTopButton from '../components/BackButton.tsx';
+import { useState, useEffect } from 'react';
 // 使用内联样式
 const styles = {
     container: {
@@ -14,7 +15,7 @@ const styles = {
     sidebar: {
         //使用position: sticky;实现侧边栏滚动到顶端固定，必须设置top/bottom等四边属性之一，属性值就是滚动的极限距离，而且父组件不可以设置未overflow:hidden/auto
         top: '70px',
-        height: '420px',
+        height: '280px',
         marginRight: '10px',
         marginLeft: '10px',
         width: '350px',
@@ -74,30 +75,53 @@ const styles = {
 };
 
 export function Model(): JSX.Element {
-
+    const [scrollY, setScrollY] = useState(0);
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+        
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <main style={{ backgroundColor: '#FFF8F0', minHeight: '100vh' }}>
-            <div style={{ "backgroundImage": "url('https://static.igem.wiki/teams/5376/background.png')", backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', justifyContent: 'center', padding: '20px', position: 'relative' }}>
+            <div style={{ overflow: 'hidden',backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', justifyContent: 'center', padding: '20px', position: 'relative' }}>
                 <img
                     src="https://static.igem.wiki/teams/5376/logo1-2.png"
                     alt="Left Image"
-                    style={{ maxWidth: '750px', height: 'auto', zIndex: 0 }}
+                    style={{ maxWidth: '760px', height: 'auto', zIndex: 1 }}
                 />
                 <img
                     src="https://static.igem.wiki/teams/5376/model/modellogo.png"
                     alt="TITLE"
-                    style={{ maxWidth: '750px', height: 'auto', position: 'absolute', top: '45%', zIndex: 1 }}
+                    style={{ maxWidth: '750px', height: 'auto', position: 'absolute', top: '45%', zIndex: 3 }}
                 />
                 <img
                     src="https://static.igem.wiki/teams/5376/viruse3.png"
                     alt="Left Image"
-                    style={{ position:'absolute',maxWidth: '220px',left:'100px',top:'120px', height: 'auto' }}
+                    style={{ position:'absolute',maxWidth: '250px',left:'150px',top:'270px', height: 'auto' }}
                 />
                 <img
                     src="https://static.igem.wiki/teams/5376/viruse4.png"
                     alt="Left Image"
-                    style={{  position:'absolute',maxWidth: '220px',right:'80px',top:'200px', height: 'auto' }}
+                    style={{  position:'absolute',maxWidth: '220px',right:'150px',top:'150px', height: 'auto' }}
                 />
+                <img
+                    src="https://static.igem.wiki/teams/5376/bl2-1.png"
+                    alt="Left Image"
+                    style={{  position:'absolute',width: '200%',
+                    right:`${-scrollY * 1.5-20}px`,top:'530px', height: 'auto' ,transform: 'rotate(0deg)',zIndex: 0}}
+                />
+                <img
+                    src="https://static.igem.wiki/teams/5376/bl1.png"
+                    alt="Left Image"
+                    style={{  position:'absolute',width: '150%',
+                    right:`${-scrollY * 1.5}px`,top:'500px', height: 'auto' ,transform: 'rotate(0deg)',zIndex: 0}}
+                />
+
             </div>
             <div style={styles.container}>
                 <aside style={styles.sidebar}>
