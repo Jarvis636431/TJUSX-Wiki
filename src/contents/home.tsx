@@ -165,9 +165,6 @@ export function Home() {
                      style={{margin: 'x 0', maxWidth: '100%', height: 'auto'}}/>
                 <img src="https://static.igem.wiki/teams/5376/home/group-5.png" alt="Image 5"
                      style={{margin: ' 0', maxWidth: '100%', height: 'auto'}}/>
-
-                //放置GIF
-
                 <div style={{position: 'relative', display: 'inline-block'}}>
                     <img src="https://static.igem.wiki/teams/5376/home/group6.png" alt="Image 6"
                          style={{margin: '0', maxWidth: '100%', height: 'auto'}}/>
@@ -193,10 +190,10 @@ export function Home() {
                     <div
                         style={{
                             position: 'absolute',
-                            top: '50%', // 调整位置
-                            left: '25%', // 调整位置
-                            width: '10%',
-                            height: '10%',
+                            top: '36%', // 调整位置
+                            left: '30%', // 调整位置
+                            width: '120px',
+                            height: '120px',
                             cursor: 'pointer',
                             background: 'transparent',
                         }}
@@ -207,10 +204,10 @@ export function Home() {
                     <div
                         style={{
                             position: 'absolute',
-                            top: '40%', // 调整位置
-                            left: '55%', // 调整位置
-                            width: '10%',
-                            height: '10%',
+                            top: '32%', // 调整位置
+                            left: '51%', // 调整位置
+                            width: '120px',
+                            height: '120px',
                             cursor: 'pointer',
                             background: 'transparent',
                         }}
@@ -221,10 +218,10 @@ export function Home() {
                     <div
                         style={{
                             position: 'absolute',
-                            top: '65%', // 调整位置
-                            left: '60%', // 调整位置
-                            width: '10%',
-                            height: '10%',
+                            top: '55%', // 调整位置
+                            left: '48.5%', // 调整位置
+                            width: '120px',
+                            height: '120px',
                             cursor: 'pointer',
                             background: 'transparent',
                         }}
@@ -262,28 +259,28 @@ export function Home() {
                     <div
                         style={{
                             position: 'absolute',
-                            top: '20%', // 调整位置
-                            left: '10%', // 调整位置
-                            width: '15%',
-                            height: '15%',
+                            top: '12%', // 调整位置
+                            left: '37%', // 调整位置
+                            width: '120px',
+                            height: '120px',
                             cursor: 'pointer',
                             background: 'transparent',
                         }}
-                        onClick={() => handleClick('https://static.igem.wiki/teams/5376/home/gif/7-2-1.gif')} // 替换为你对应的GIF路径
+                        onClick={() => handleClick('https://static.igem.wiki/teams/5376/home/gif/7-2-1.gif')}
                     />
 
                     {/* 第二个可点击区域（右侧方块） */}
                     <div
                         style={{
                             position: 'absolute',
-                            top: '20%', // 调整位置
-                            right: '10%', // 调整位置
-                            width: '15%',
-                            height: '15%',
+                            top: '12%', // 调整位置
+                            right: '30.5%', // 调整位置
+                            width: '120px',
+                            height: '120px',
                             cursor: 'pointer',
                             background: 'transparent',
                         }}
-                        onClick={() => handleClick('https://static.igem.wiki/teams/5376/home/gif/7-2-2.gif')} // 替换为你对应的GIF路径
+                        onClick={() => handleClick('https://static.igem.wiki/teams/5376/home/gif/7-2-2.gif')}
                     />
 
                     {/* 弹出并播放的 GIF */}
