@@ -5,6 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import Pages from "../pages.ts";
 
+
 export function Navbar() {
   const pages = Pages.map((item, pageIndex) => {
     if ("folder" in item && item.folder) {
@@ -45,13 +46,14 @@ export function Navbar() {
       <Container>
         <BootstrapNavbar.Brand>
           <img
-            src="https://static.igem.wiki/teams/5376/home/homelogo.png" // 图片路径
-            width="94"
-            height="60"
-            className="d-inline-block align-top"
-            alt="React Bootstrap logo"
+              src="https://static.igem.wiki/teams/5376/home/homelogo.png" // 图片路径
+              width="94"
+              height="60"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
           />
         </BootstrapNavbar.Brand>
+
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="left-aligned">{pages}</Nav>
@@ -60,4 +62,4 @@ export function Navbar() {
     </BootstrapNavbar>
   );
 }
-//TODO:修改样式
+//TODO:修改弹出框样式

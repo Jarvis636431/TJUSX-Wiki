@@ -1,6 +1,8 @@
 import { Link, Element } from 'react-scroll';
 import BackToTopButton from '../components/BackButton.tsx';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
+import QuizQuestion from "../components/QuizQuestion.tsx";
+
 // 使用内联样式
 const styles = {
     container: {
@@ -523,6 +525,9 @@ export function HumanPractices(): JSX.Element {
                            public participation and stimulated more people's interest in probiotics and
                             learning by setting up a reward mechanism.
                         </p>
+                        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
+                            <QuizQuestion></QuizQuestion>
+                        </div>
                         <h3 style={styles.partheading}>Microscopic Observation</h3>
                         <ImageWithCaption
                             src={'https://static.igem.wiki/teams/5376/humanpractices/hp5.jpg'}
