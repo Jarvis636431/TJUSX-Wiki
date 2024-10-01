@@ -63,6 +63,11 @@ export function Home() {
         setIsGifShowing2(false); // 关闭GIF时重置状态
     };
 
+    // 计算图片透明度,新增了渐变效果
+    const calculateOpacity = (scrollY: number, maxScrollY: number) => {
+        return Math.max(0, 1 - scrollY / maxScrollY);
+    };
+
     return (
         <main style={{ backgroundColor: '#fff8f0', height: '9200px', position: 'relative' }}>
             <div style={{
@@ -81,6 +86,7 @@ export function Home() {
                         maxWidth: '100%',
                         height: 'auto',
                         zIndex: 10,
+                        opacity: calculateOpacity(scrollY,maxScrollY),
                     }}
                 />
                 <img
@@ -94,6 +100,7 @@ export function Home() {
                         maxWidth: '100%',
                         height: 'auto',
                         zIndex: 10,
+                        opacity: calculateOpacity(scrollY,maxScrollY),
                     }}
                 />
                 {/*视差滚动部分*/}
@@ -106,6 +113,7 @@ export function Home() {
                         left: `${-scrollY * 0.3}px`,
                         maxWidth: '100%',
                         height: 'auto',
+                        opacity: calculateOpacity(scrollY,maxScrollY),
                     }}
                 />
                 <img
@@ -117,6 +125,7 @@ export function Home() {
                         left: `${scrollY * 0.5 + 70}px`,
                         maxWidth: '100%',
                         height: 'auto',
+                        opacity: calculateOpacity(scrollY,maxScrollY),
                     }}
                 />
                 <img
@@ -128,6 +137,7 @@ export function Home() {
                         left: `${-scrollY * 0.7}px`,
                         maxWidth: '100%',
                         height: 'auto',
+                        opacity: calculateOpacity(scrollY,maxScrollY),
                     }}
                 />
                 <img
@@ -139,6 +149,7 @@ export function Home() {
                         left: `${scrollY * 0.7 + 10}px`,
                         maxWidth: '100%',
                         height: 'auto',
+                        opacity: calculateOpacity(scrollY,maxScrollY),
                     }}
                 />
                 <img
@@ -150,6 +161,7 @@ export function Home() {
                         left: `${scrollY + 520}px`,
                         maxWidth: '70%',
                         height: 'auto',
+                        opacity: calculateOpacity(scrollY,maxScrollY),
                     }}
                 />
                 <img
@@ -161,6 +173,7 @@ export function Home() {
                         left: `${(-scrollY)}px`,
                         maxWidth: '70%',
                         height: 'auto',
+                        opacity: calculateOpacity(scrollY,maxScrollY),
                     }}
                 />
 

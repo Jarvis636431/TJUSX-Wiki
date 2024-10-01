@@ -40,6 +40,7 @@ const QuizQuestion = () => {
                             displaySymbol = option.isCorrect ? '✔️' : '❌';
                         }
                     }
+                    //TODO：完善√与×，选项的图片填充
 
                     return (
                         <li key={index}>
