@@ -13,7 +13,6 @@ import {
     Model,
     Software,
     Implement,
-    Education
 } from "./contents";
 
 interface Base {
