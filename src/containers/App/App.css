@@ -109,3 +109,21 @@ footer a:hover {
   background-color: rgba(255,235,211, 0.4); /* 半透明背景色 */
   transition: background-color 0.3s; /* 背景颜色变化时的过渡效果 */
 }
+.custom-dropdown .dropdown-menu {
+  border: none; /* 去掉边框 */
+  padding: 0; /* 去掉内边距 */
+  background-color: rgba(255,235,211, 0.8); /* 设置背景色 */
+  transform: translateY(7px); /* 向下移动弹出框 */
+}
+.custom-dropdown .dropdown-item {
+  color: #A47A6C; /* 自定义字体颜色 */
+  font-weight: bold;
+  font-size: 20px;
+  transition: background-color 0.3s; /* 添加过渡效果 */
+  background-color: #fff8f0; /* 自定义背景颜色 */
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: rgba(43, 93, 111, 0.1); /* 悬停时改变背景颜色 */
+  color: #A47A6C; /* 悬停时字体颜色 */
+}
