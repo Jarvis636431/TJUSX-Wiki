@@ -69,16 +69,16 @@ footer a:hover {
 }
 /* CSS */
 .back-to-top-button {
-  position: sticky;
+  position: fixed;
   bottom: 250px;
-  left: 8vw;
+  left: 20px;
   z-index: 999; /* 确保按钮位于其他元素之上 */
   background-color: transparent; /* 按钮背景透明 */
   color: white; /* 按钮文字颜色 */
   border: none;
   padding: 10px; /* 内边距 */
-  width: 100px; /* 按钮宽度 */
-  height: 100px; /* 按钮高度 */
+  width: 80px; /* 按钮宽度 */
+  height: 80px; /* 按钮高度 */
   cursor: pointer;
   border-radius: 50%; /* 圆形按钮 */
   outline: none;
