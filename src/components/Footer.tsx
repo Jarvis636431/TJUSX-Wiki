@@ -49,7 +49,7 @@ export function Footer(): JSX.Element {
   }, []);
 
   return (
-      <footer style={styles.footer}>
+      <footer  id='footer' style={styles.footer}>
         {/* 右上角的图片 */}
         <div style={styles.topRightImage}>
           <img
