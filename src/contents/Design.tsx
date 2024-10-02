@@ -159,7 +159,7 @@ export function Design(): JSX.Element {
                         </p>
                         <br />
                         <ImageWithCaption
-                            src={'https://static.igem.wiki/teams/5376/design/design1.png'}
+                            src={'https://static.igem.wiki/teams/5376/design/design1-1.png'}
                             caption={'Figure 1 Flowchart of Wet Lab Experimental Design'}>
                         </ImageWithCaption>
                         <br />

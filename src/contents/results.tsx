@@ -261,7 +261,7 @@ export function Results(): JSX.Element {
                     After inoculation in a conical flask containing 50ml LB and cultivation for 6 hours, we induced it (IPTG=1mM), followed by further cultivation for 18 hours. Finally, the bacterial solution with equal OD (0.1, 0.3, 0.5, 0.7, 1) was biotinylated and incubated with the fermentation broth.
                     </p>
                     <p style={styles.paragraph}>
-                    After incubation, we washed the plates twice with PBS buffer and incubated 200 μ L each in a 3mg/ml coated plate and a non coated plate for 3 hours. Then, we washed the plates twice with PBS buffer and resuspended them in 200 μ L PBS buffer to measure their RFP fluorescence values.
+                    After incubation, we washed the plates twice with PBS buffer and incubated 200 μL each in a 3mg/ml coated plate and a non coated plate for 3 hours. Then, we washed the plates twice with PBS buffer and resuspended them in 200 μ L PBS buffer to measure their RFP fluorescence values.
                     </p>
                     <ImageWithCaption
                         src={'https://static.igem.wiki/teams/5376/result/re7.png'}
@@ -447,7 +447,8 @@ export function Results(): JSX.Element {
                         </p>
                     <ImageWithCaption
                         src={'https://static.igem.wiki/teams/5376/result/re24.png'}
-                        caption={'Figure 24 OD value and red fluorescent protein value of mixed bacterial system'}>
+                        caption={'Figure 24 OD value and red fluorescent protein value of mixed bacterial system'}
+                        customWidth={'90%'}>
                     </ImageWithCaption>
                     <p style={styles.paragraph}>
                     (a) Add Arabic sugar and Nisin (b) Add Arabic sugar, do not add Nisin (c) Do not add Arabic sugar, add and Nisin (d) Add Arabic sugar and Nisin
