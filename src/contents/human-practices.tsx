@@ -131,7 +131,7 @@ export function HumanPractices(): JSX.Element {
             <div style={styles.container}>
                 <aside style={styles.sidebar}>
                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                        {['Public Questionnaire', 'Market Research', 'China gut festival', 'CCiC Conference', 'Dialogue with Experts', 'Dialogues with Doctors', 'Dialogue with Patients','International Symposia','“ProMetab” Database','Education'].map((item, index) => (
+                        {['Public Questionnaire', 'Market Research', 'China gut festival', 'CCiC Conference', 'Dialogue with Experts', 'Dialogue with Doctors', 'Dialogue with Patients','International Symposia','“ProMetab” Database','Education'].map((item, index) => (
                             <li key={index} style={styles.sidebarItem}>
                                 <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                                     <Link
@@ -400,7 +400,7 @@ export function HumanPractices(): JSX.Element {
                         </p>
                     </Element>
                     <Element name="section6" style={styles.section}>
-                        <h2 style={styles.heading}>Dialogues with Doctors</h2>
+                        <h2 style={styles.heading}>Dialogue with Doctors</h2>
                         <br />
                         <h3 style={styles.partheading}>Interview with Dr. Lei Chen: An Insight into the Clinical Diagnosis and Treatment of Parkinson's Disease</h3>
                         <p style={styles.paragraph}>

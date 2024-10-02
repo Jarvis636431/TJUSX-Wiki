@@ -179,7 +179,7 @@ export function Design(): JSX.Element {
                             space<sup>[2]</sup>.
                         </p>
                         <p style={styles.paragraph}>
-                            Since <i>Ec</i>N lacks T7 RNA polymerase, we constructed a T7 RNA polymerase (T7RNP) expression
+                            Since <i>Ec</i>N lacks T7 RNA polymerase, we constructed a T7 RNA polymerase (T7RNAP) expression
                             framework using the Cloning Vector pJUMP27-1A(sfGFP) from the iGEM 2024 Distribution, which
                             has compatible biobrick restriction sites.
                             This expression plasmid has a replication origin of PSC101 and confers resistance to
