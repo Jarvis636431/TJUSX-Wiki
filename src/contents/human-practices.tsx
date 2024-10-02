@@ -1,5 +1,5 @@
 import { Link, Element } from 'react-scroll';
-import BackToTopButton from '../components/BackButton.tsx';
+// import BackToTopButton from '../components/BackButton.tsx';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
 import QuizQuestion from "../components/QuizQuestion.tsx";
 import { useEffect, useState } from 'react';
@@ -152,7 +152,7 @@ export function HumanPractices(): JSX.Element {
                     </ul>
                 </aside>
                 <main style={styles.content}>
-                    <BackToTopButton />
+                    {/*<BackToTopButton />*/}
                     <Element name="section1" style={styles.section}>
                         <h2 style={styles.heading}>Public Questionnaire</h2>
                         <p style={styles.paragraph}>

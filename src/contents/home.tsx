@@ -69,7 +69,7 @@ export function Home() {
     };
 
     return (
-        <main style={{ backgroundColor: '#fff8f0', height: '9200px', position: 'relative' }}>
+        <main style={{ backgroundColor: '#fff8f0', height: '9000px'}}>
             <div style={{
                 position: 'relative',
                 height: '100vh',
