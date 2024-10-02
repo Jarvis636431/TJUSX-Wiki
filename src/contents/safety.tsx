@@ -1,6 +1,6 @@
 import { Link, Element } from 'react-scroll';
 import ImageWithCaption from "../components/ImageWithCaption.tsx";
-import BackToTopButton from '../components/BackButton.tsx';
+// import BackToTopButton from '../components/BackButton.tsx';
 import { useEffect, useState } from 'react';
 // 使用内联样式
 const styles = {
@@ -148,7 +148,7 @@ export function Safety(): JSX.Element {
                     </ul>
                 </aside>
                 <main style={styles.content}>
-                    <BackToTopButton />
+                    {/*<BackToTopButton />*/}
                     <Element name="section1" style={styles.section}>
                         <h2 style={styles.heading}>Overview</h2>
                         <p style={styles.paragraph}>
