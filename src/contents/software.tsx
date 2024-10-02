@@ -176,7 +176,10 @@ export function Software(): JSX.Element {
                             tool for subsequent analysis, or organization of query data.
                         </p>
                         <p style={styles.paragraph}>
-                            The address of the database and the software download package can be found at: <a href="https://gitlab.igem.org/2024/software-tools/tjusx" style={{ color: '#955321', fontSize: '24px' }}>Our code repository</a>
+                            The address of the database and the software download package can be found at out GitLab <a href="https://gitlab.igem.org/2024/software-tools/tjusx"><img
+                            src={'https://static.igem.wiki/teams/5376/jump.png'}
+                            width={'270px'}>
+                        </img></a>
                         </p>
                     </Element>
                     <Element name="section2" style={styles.section}>

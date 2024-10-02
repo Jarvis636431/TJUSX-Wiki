@@ -101,12 +101,13 @@ footer a:hover {
 .navbar-transparent {
   color: #c67e38;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   backdrop-filter: blur(5px); /* 添加高斯模糊 */
   position: fixed; /* 固定在顶部 */
   top: 0;
   right:0;
   width: 100%; /* 宽度占满 */
+  justify-content: space-between;
   height: 70px;
   z-index: 1030; /* 确保在内容上方 */
   background-color: rgba(255,235,211, 0.4); /* 半透明背景色 */
@@ -143,6 +144,19 @@ footer a:hover {
 .navbar-transparent .nav-link {
   margin-right: 15px; /* 设置右边距 */
 }
-.navbar-transparent .nav-link {
-  white-space: nowrap; /* 避免换行 */
+
+table.threeLine {
+  width: 100%;
+  border-top: 5px solid rgba(188,140,91);
+  border-bottom: 5px solid rgba(188,140,91);
+}
+table.threeLine th, table.threeLine td {
+  border-bottom: 2px solid rgba(188,140,91);
+  padding: 6px;
+}
+table.threeLine thead tr {
+  border-bottom: 1px solid #000;
+}
+table.threeLine th {
+  padding: 8px;
 }

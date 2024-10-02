@@ -220,7 +220,10 @@ export function Model(): JSX.Element {
                             The feeding relationships of the strains is set through the consumes resource and release resource options of the Microbes module.
                         </p>
                         <p style={styles.paragraph}>
-                            Referring to the official parameter recommendation document, we set parameters in each module of McComedy. Both simulations introduced the Biofilm module: The bacteria grew upwards from a single layer, and the biofilm gradually thickened, simulating to some extent the continued growth and reproduction of the strain after successful adhesion - that is, the formation of the biofilm. The color parameters of bacteria A、B and C are set to red, green, and blue, respectively. The parameters set for each module can be found in our <a href='https://gitlab.igem.org/2024/software-tools/tjusx'>Gitlab</a>.
+                            Referring to the official parameter recommendation document, we set parameters in each module of McComedy. Both simulations introduced the Biofilm module: The bacteria grew upwards from a single layer, and the biofilm gradually thickened, simulating to some extent the continued growth and reproduction of the strain after successful adhesion - that is, the formation of the biofilm. The color parameters of bacteria A、B and C are set to red, green, and blue, respectively. The parameters set for each module can be found in our GitLab:<a href="https://gitlab.igem.org/2024/software-tools/tjusx"><img
+                            src={'https://static.igem.wiki/teams/5376/jump.png'}
+                            width={'270px'}>
+                        </img></a>
                         </p>
                         <p style={styles.paragraph}>
                             After simulation, we can obtain the motion diagrams for two scenarios, Result 1 and Result 2, as follows:
@@ -239,7 +242,10 @@ export function Model(): JSX.Element {
                             Conclusion: With feeding relationships, B and C can still grow well and form biofilm quickly when resources are scarce; Without feeding relationships, B and C grow slowly, and it is even difficult to form a biofilm as a whole. The simulation results verifies that, under the condition of external amino acid deficiency, the combination of strains with feeding relationships grow better in the intestine than the combination of strains without feeding relationships, reflecting the advantage of our Spidey Microbe.
                         </p>
                         <p style={styles.paragraph}>
-                            The simulated data results can also be found in our team’s <a href='https://gitlab.igem.org/2024/software-tools/tjusx'>Gitlab</a>.
+                            The simulated data results can also be found in our team’s GitLab:<a href="https://gitlab.igem.org/2024/software-tools/tjusx"><img
+                            src={'https://static.igem.wiki/teams/5376/jump.png'}
+                            width={'270px'}>
+                        </img></a>.
                         </p>
                     </Element>
                     <Element name="section3" style={styles.section}>
@@ -386,7 +392,10 @@ export function Model(): JSX.Element {
                             customWidth={'50%'}>
                         </ImageWithCaption>
                         <p style={styles.paragraph}>
-                            The code of the model was stored in our <a href='https://gitlab.igem.org/2024/software-tools/tjusx'>Gitlab</a>.
+                            The code of the model was stored in our GitLab:<a href="https://gitlab.igem.org/2024/software-tools/tjusx"><img
+                            src={'https://static.igem.wiki/teams/5376/jump.png'}
+                            width={'270px'}>
+                        </img></a>
                         </p>
                     </Element>
                     <Element name="section7" style={styles.section}>

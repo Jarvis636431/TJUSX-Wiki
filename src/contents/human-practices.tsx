@@ -131,7 +131,7 @@ export function HumanPractices(): JSX.Element {
             <div style={styles.container}>
                 <aside style={styles.sidebar}>
                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                        {['Questionnaire', 'Market Research', 'China gut festival', 'CCiC Conference', 'Dialogue with Experts', 'Dialogues with Doctors', 'RDialogue with Patients','International Symposia','“ProMetab” Database','Education'].map((item, index) => (
+                        {['Public Questionnaire', 'Market Research', 'China gut festival', 'CCiC Conference', 'Dialogue with Experts', 'Dialogues with Doctors', 'Dialogue with Patients','International Symposia','“ProMetab” Database','Education'].map((item, index) => (
                             <li key={index} style={styles.sidebarItem}>
                                 <div style={{ textDecoration: 'none', color: '#c67e38', cursor: 'pointer' }}>
                                     <Link
@@ -496,7 +496,7 @@ export function HumanPractices(): JSX.Element {
                             Meanwhile, for the mixed-bacteria treatment of diseases, we further added the <strong style={{ color: '#c67e38' }}>disease data</strong>, hoping that it could help for the subsequent research.
                         </p>
                         <p style={styles.paragraph}>
-                        In order to verify the effectiveness of this software and database, we analyzed these metabolic networks in depth in wet experiments, and <strong style={{ color: '#c67e38' }}>successfully screened out</strong> those probiotic groups with better therapeutic effects and showed positive interactions in metabolic interactions.
+                        In order to verify the effectiveness of this software and database, we analyzed these metabolic networks in depth in dry experiments, and <strong style={{ color: '#c67e38' }}>successfully screened out</strong> those probiotic groups with better therapeutic effects and showed positive interactions in metabolic interactions.
 
                         </p>
                         <p style={styles.paragraph}>

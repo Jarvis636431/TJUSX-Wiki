@@ -69,7 +69,7 @@ export function Home() {
     };
 
     return (
-        <main style={{ backgroundColor: '#fff8f0', height: '9200px', position: 'relative' }}>
+        <main style={{ display: 'flex', flexDirection: 'column' ,backgroundColor: '#fff8f0'}}>
             <div style={{
                 position: 'relative',
                 height: '100vh',
@@ -180,8 +180,7 @@ export function Home() {
             </div>
 
             <div style={{
-                position: 'absolute',
-                top: '100vh',
+                position: 'relative',
                 left: '50%',
                 transform: 'translateX(-50%)',
                 transition: 'opacity 0.3s ease',

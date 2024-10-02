@@ -147,6 +147,41 @@ export function Members(): JSX.Element {
                         </div>
                     ))}
                 </div>
+                <img
+                    src="https://static.igem.wiki/teams/5376/members/qjj.png"
+                    alt="QJJ"
+                    style={{
+                      width:'100%'
+                    }}
+                />
+                                <img
+                    src="https://static.igem.wiki/teams/5376/members/cyqgl.png"
+                    alt="QJJ"
+                    style={{
+                      width:'100%'
+                    }}
+                />
+                <img
+                    src="https://static.igem.wiki/teams/5376/members/tyt.png"
+                    alt="QJJ"
+                    style={{
+                      width:'100%'
+                    }}
+                />
+                <img
+                    src="https://static.igem.wiki/teams/5376/members/hd.png"
+                    alt="QJJ"
+                    style={{
+                      width:'100%'
+                    }}
+                />
+                <img
+                    src="https://static.igem.wiki/teams/5376/members/wsb.png"
+                    alt="QJJ"
+                    style={{
+                      width:'100%'
+                    }}
+                />
             </div>
         </main>
     );
