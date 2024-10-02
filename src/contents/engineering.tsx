@@ -316,7 +316,7 @@ export function Engineering(): JSX.Element {
                      customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
-                     We will culture the obtained strains in a test tube containing 20 ml of LB for 12 hours, measuring their OD and fluorescence values every 2 hours. For detailed results, please visit the Results page (link).
+                     We will culture the obtained strains in a test tube containing 20 ml of LB for 12 hours, measuring their OD and fluorescence values every 2 hours. For detailed results, please visit the Results page.
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng13.png'}
@@ -358,7 +358,7 @@ export function Engineering(): JSX.Element {
                      caption={''}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
-                     We inoculated the correctly transformed strains into a 30 ml LB culture in a flask and incubated them for 24 hours. Then, we performed biotinylation and sampled the mixture into a Mucin-coated 96-well plate for measurement. For detailed results, please visit the Results page (link).
+                     We inoculated the correctly transformed strains into a 30 ml LB culture in a flask and incubated them for 24 hours. Then, we performed biotinylation and sampled the mixture into a Mucin-coated 96-well plate for measurement. For detailed results, please visit the Results page.
                   </p>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Learn</strong>
@@ -388,14 +388,14 @@ export function Engineering(): JSX.Element {
                   <strong style={{ color: '#c67e38' }}>Test</strong>
                   </p>
                   <p style={styles.paragraph}>
-                     To facilitate measurement, we constructed an RFP expression frame on the pJUMP27-1A(DE3) plasmid, resulting in pJUMP27-1A(DE3-J23111-RFP). For detailed construction processes, please visit the Engineering page (link). We then transformed the constructed pETDuet-1-T7-SA-MBD93 and pETDuet-1-T7-cSA-MBD93 plasmids into EcN, plating them on kanamycin and carbenicillin-resistant media to select for correctly transformed strains.
+                     To facilitate measurement, we constructed an RFP expression frame on the pJUMP27-1A(DE3) plasmid, resulting in pJUMP27-1A(DE3-J23111-RFP). For detailed construction processes, please visit the Engineering page. We then transformed the constructed pETDuet-1-T7-SA-MBD93 and pETDuet-1-T7-cSA-MBD93 plasmids into EcN, plating them on kanamycin and carbenicillin-resistant media to select for correctly transformed strains.
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng15.png'}
                      caption={''}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
-                     We inoculated the correctly transformed strains into 30 ml of LB medium in a conical flask and cultured them for 24 hours. Following this, we performed biotinylation and sampled the cultures to add to a Mucin-coated 96-well plate for measurement. For detailed results, please visit the Results page (link).
+                     We inoculated the correctly transformed strains into 30 ml of LB medium in a conical flask and cultured them for 24 hours. Following this, we performed biotinylation and sampled the cultures to add to a Mucin-coated 96-well plate for measurement. For detailed results, please visit the Results page.
                   </p>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Learn</strong>
