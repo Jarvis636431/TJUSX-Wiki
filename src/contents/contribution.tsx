@@ -200,10 +200,10 @@ export function Contribution(): JSX.Element {
                     In the therapeutic module, we attempted to produce <strong style={{ color: '#c67e38' }}>three therapeutic factors: butyrate, levodopa, and serotonin</strong>. We measured the impact of overexpressing acetyl-CoA acetyltransferase on cell growth to increase butyrate production.
                     </p>
                     <p style={styles.paragraph}>
-                    We determined in EcN whether expressing 4-hydroxyphenylacetate-3-hydroxylase could generate levodopa and measured the impact of this enzyme expression on cell growth in Lactococcus lactis F44. We <strong style={{ color: '#c67e38' }}>emulated drug release curves</strong> to measure the production of levodopa at different times by the bacteria.
+                    We determined in EcN whether expressing 4-hydroxyphenylacetate-3-hydroxylase could generate levodopa and measured the impact of this enzyme expression on cell growth in Lactococcus lactis F44.
                     </p>
                     <p style={styles.paragraph}>
-                    We also attempted the expression of serotonin, constructed a plasmid overexpressing N-acetyltransferase in Lactococcus lactis F44, and tested whether this approach could increase the serotonin production of Lactococcus lactis F44. We also measured the impact of this enzyme expression on cells and the drug release curve.
+                    We also attempted the expression of serotonin, constructed a plasmid overexpressing N-acetyltransferase in Lactococcus lactis F44, and tested whether this approach could increase the serotonin production of Lactococcus lactis F44. 
                     </p>
                     <br />
                     <h3 style={styles.partheading}>Quorum Sensing Module</h3>
