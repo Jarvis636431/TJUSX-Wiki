@@ -205,9 +205,9 @@ export function Results(): JSX.Element {
                     </p>
                     <br />
                     <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/result/re4.png'}
+                        src={'https://static.igem.wiki/teams/5376/result/re4-1.png'}
                         caption={'Figure 4 OD and fluorescence values of negative control and EcN and BL21 (DE3) strains expressing cSA RFP at different times'}
-                        customWidth={'40%'}>
+                        customWidth={'90%'}>
                     </ImageWithCaption>
                     <br />
                     <p style={styles.paragraph}>
