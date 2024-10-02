@@ -366,13 +366,13 @@ export function Parts(): JSX.Element {
                                     <td>New</td>
                                 </tr>
                                 <tr>
-                                    <td><a href='https://parts.igem.org/Part:BBa_K5376025'>BBa_K5376025</a></td>
+                                    <td><a href='https://parts.igem.org/Part:BBa_K5376035'>BBa_K5376025</a></td>
                                     <td>Usp45-3LysM-cSA-mRFP</td>
                                     <td>Surface display of cSA RFP in Lactococcus lactis</td>
                                     <td>New</td>
                                 </tr>
                                 <tr>
-                                    <td><a href='https://parts.igem.org/Part:BBa_K5376026'>BBa_K5376026</a></td>
+                                    <td><a href='https://parts.igem.org/Part:BBa_K5376036'>BBa_K5376026</a></td>
                                     <td>Usp45-3LysM-cSA</td>
                                     <td>Surface display of cSA in Lactococcus lactis</td>
                                     <td>New</td>
