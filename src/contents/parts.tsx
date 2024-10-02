@@ -1,5 +1,6 @@
 import { Link, Element } from 'react-scroll';
 import { useEffect, useState } from 'react';
+import BackToTopButton from '../components/BackButton';
 
 // 使用内联样式
 const styles = {
@@ -87,6 +88,7 @@ export function Parts(): JSX.Element {
     }, []);
     return (
         <main style={{ backgroundColor: '#FFF8F0', minHeight: '100vh' }}>
+            <BackToTopButton />
             <div style={{ overflow: 'hidden', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', justifyContent: 'center', padding: '20px', position: 'relative' }}>
                 <img
                     src="https://static.igem.wiki/teams/5376/logo1-2.png"
@@ -256,13 +258,13 @@ export function Parts(): JSX.Element {
                                     <td>New</td>
                                 </tr>
                                 <tr>
-                                    <td><a href='https://parts.igem.org/Part:BBa_K5376003'>BBa_K5376003</a></td>
+                                    <td><a href='https://parts.igem.org/Part:BBa_K5376002'>BBa_K5376002</a></td>
                                     <td>CSA</td>
                                     <td>Core streptavidin</td>
                                     <td>New</td>
                                 </tr>
                                 <tr>
-                                    <td><a href='https://parts.igem.org/Part:BBa_K5376001'>BBa_K5376001</a></td>
+                                    <td><a href='https://parts.igem.org/Part:BBa_K5376003'>BBa_K5376003</a></td>
                                     <td>mbd93</td>
                                     <td>Intestinal mucus binding protein</td>
                                     <td>New</td>
@@ -298,31 +300,31 @@ export function Parts(): JSX.Element {
                                     <td>New</td>
                                 </tr>
                                 <tr>
-                                    <td><a href='https://parts.igem.org/Part:BBa_K5376013'>BBa_K5376013</a></td>
+                                    <td><a href='https://parts.igem.org/Part:BBa_K5376030'>BBa_K5376030</a></td>
                                     <td>NDSP-MBD93-cSA</td>
                                     <td>The C-terminal is connected to MBD93 (a binding protein for intestinal mucin), which is the core streptavidin</td>
                                     <td>New</td>
                                 </tr>
                                 <tr>
-                                    <td><a href='https://parts.igem.org/Part:BBa_K5376014'>BBa_K5376014</a></td>
+                                    <td><a href='https://parts.igem.org/Part:BBa_K5376031'>BBa_K5376031</a></td>
                                     <td>NDSP-SA-MBD93</td>
                                     <td>MBD93 (a binding protein for intestinal mucin) with streptavidin at the N-terminus</td>
                                     <td>New</td>
                                 </tr>
                                 <tr>
-                                    <td><a href='https://parts.igem.org/Part:BBa_K5376015'>BBa_K5376015</a></td>
+                                    <td><a href='https://parts.igem.org/Part:BBa_K5376032'>BBa_K5376032</a></td>
                                     <td>NDSP-MBD93-SA</td>
                                     <td>The C-terminal is connected to MBD93 (a binding protein for intestinal mucin) of streptavidin</td>
                                     <td>New</td>
                                 </tr>
                                 <tr>
-                                    <td><a href='https://parts.igem.org/Part:BBa_K5376016'>BBa_K5376016</a></td>
+                                    <td><a href='https://parts.igem.org/Part:BBa_K5376033'>BBa_K5376033</a></td>
                                     <td>NDSP-cSA-MBD93</td>
                                     <td>MBD93 (a binding protein for intestinal mucin) with core streptavidin connected to the N-terminus</td>
                                     <td>New</td>
                                 </tr>
                                 <tr>
-                                    <td><a href='https://parts.igem.org/Part:BBa_K5376017'>BBa_K5376017</a></td>
+                                    <td><a href='https://parts.igem.org/Part:BBa_K5376034'>BBa_K5376034</a></td>
                                     <td>cSA-mRFP</td>
                                     <td>Core streptavidin fused with red fluorescent protein at C-terminus</td>
                                     <td>New</td>
