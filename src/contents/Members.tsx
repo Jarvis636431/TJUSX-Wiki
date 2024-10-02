@@ -67,7 +67,7 @@ export function Members(): JSX.Element {
         { src: "https://static.igem.wiki/teams/5376/members/zl.jpg", name: "Zhang Lei" },
         { src: "https://static.igem.wiki/teams/5376/members/zmh.jpg", name: "Zhang Minghao" },
         { src: "https://static.igem.wiki/teams/5376/members/zxl.jpg", name: "Zhang Xianliang" },
-        { src: "https://static.igem.wiki/teams/5376/members/zzh.jpg", name: "name" },
+        { src: "https://static.igem.wiki/teams/5376/members/zzh.jpg", name: "Zhao Zhihao" },
         { src: "https://static.igem.wiki/teams/5376/members/ljw.jpg", name: "Lan Jingwen" },
         { src: "https://static.igem.wiki/teams/5376/members/038926c01bafcfe98768f552b017308f80a06bda-png-518w-1e-1c.png", name: 'Jarvis' },
         // 添加其他22张图片
