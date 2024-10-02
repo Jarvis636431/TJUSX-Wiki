@@ -147,3 +147,18 @@ footer a:hover {
 .navbar-transparent .nav-link {
   white-space: nowrap; /* 避免换行 */
 }
+table.threeLine {
+  width: 100%;
+  border-top: 5px solid rgba(188,140,91);
+  border-bottom: 5px solid rgba(188,140,91);
+}
+table.threeLine th, table.threeLine td {
+  border-bottom: 2px solid rgba(188,140,91);
+  padding: 6px;
+}
+table.threeLine thead tr {
+  border-bottom: 1px solid #000;
+}
+table.threeLine th {
+  padding: 8px;
+}
