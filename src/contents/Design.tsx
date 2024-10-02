@@ -151,7 +151,7 @@ export function Design(): JSX.Element {
                         <h2 style={styles.heading}>Overview</h2>
                         <p style={styles.paragraph}>
                             To provide treatment for Parkinson's disease, we designed the Spidey Microbe consortium,
-                            which consists of three main modules:<strong style={{ color: '#c67e38' }}>adhesion module, quorum Sensing module, therapeutic
+                            which consists of three main modules:<strong style={{ color: '#c67e38' }}>adhesion module, quorum sensing module, therapeutic
                                 module</strong>.
                             Throughout the iterations of our project,
                             we continuously refined the Spidey Microbe consortium following the <strong style={{ color: '#c67e38' }}>DBTL (Design, Build,
@@ -171,11 +171,11 @@ export function Design(): JSX.Element {
                             this ability and improve the controllability of colonization to reduce the risk of bacterial
                             translocation,
                             we designed a self-assembled system based on the <strong style={{ color: '#c67e38' }}>binding of streptavidin and biotin</strong>. We used
-                            <strong style={{ color: '#c67e38' }}>N-hydroxysuccinimide biotin</strong>, a reagent that can be conjugated through primary amines (such
+                            <strong style={{ color: '#c67e38' }}> N-hydroxysuccinimide biotin</strong>, a reagent that can be conjugated through primary amines (such
                             as the N-terminus and side chains of lysine residues in proteins and peptides),
-                            to label the surface of <i>Escherichia coli</i> Nissle 1917 (EcN) cells<sup>[1]</sup>. We constructed an
-                            inducible <strong style={{ color: '#c67e38' }}>fusion protein of streptavidin and gut mucin-binding protein</strong> in EcN, termed
-                            "silk," and used a signal peptide to localize this fusion protein to the extracellular
+                            to label the surface of <i>Escherichia coli</i> Nissle 1917 (<i>Ec</i>N) cells<sup>[1]</sup>. We constructed an
+                            inducible <strong style={{ color: '#c67e38' }}>fusion protein of streptavidin and gut mucin-binding protein</strong> in <i>Ec</i>N, termed
+                            "silk", and used a signal peptide to localize this fusion protein to the extracellular
                             space<sup>[2]</sup>.
                         </p>
                         <p style={styles.paragraph}>
@@ -196,8 +196,8 @@ export function Design(): JSX.Element {
                         <p style={styles.paragraph}>
                             Under induced conditions, "spider silk" is secreted into the extracellular space of EcN,
                             self-assembling on the surface of biotinylated <i>Ec</i>N through streptavidin.
-                            The gut mucin-binding protein at one end of the "spider silk" promotes the colonization of
-                            <i>Ec</i>N on the gut mucus layer(which is rich in mucin).
+                            The gut mucin-binding protein at one end of the "spider silk" promotes the colonization of 
+                            <i> Ec</i>N on the gut mucus layer(which is rich in mucin).
                         </p>
                         <br />
                         <ImageWithCaption
@@ -218,8 +218,8 @@ export function Design(): JSX.Element {
                         <br />
                         <p style={styles.paragraph}>
                             By using <strong style={{ color: '#c67e38' }}>USP45 </strong>to localize the protein to the extracellular space and fusing the <strong style={{ color: '#c67e38' }}>3LysM domain </strong>to the N-terminus of streptavidin, we achieved surface display of streptavidin in <i>Lactococcus lactis</i> F44<sup>[3]</sup>.
-                            Through the interaction between streptavidin and biotin, we can facilitate the aggregation of <i>Lactococcus lactis</i> F44 with biotinylated EcN.
-                            This allows <i>Lactococcus lactis</i> F44 to be anchored in the gut via the “bridge” of EcN, promoting the aggregation of the Spidey Microbe community and enhancing its stability.
+                            Through the interaction between streptavidin and biotin, we can facilitate the aggregation of <i>Lactococcus lactis</i> F44 with biotinylated <i>Ec</i>N.
+                            This allows <i>Lactococcus lactis</i> F44 to be anchored in the gut via the “bridge” of <i>Ec</i>N, promoting the aggregation of the Spidey Microbe community and enhancing its stability.
                         </p>
                         <br />
                         <ImageWithCaption
@@ -245,10 +245,10 @@ export function Design(): JSX.Element {
                         </h3>
                         <br />
                         <p style={styles.paragraph}>
-                            To further expand the capabilities of <i>Ec</i>N and establish it as a module for colonization by intestinal probiotics , we enhanced its butyrate production capacity during subsequent iterations.
+                            To further expand the capabilities of <i>Ec</i>N and establish it as a module for colonization by intestinal probiotics, we enhanced its butyrate production capacity during subsequent iterations.
                             Butyrate, as a short-chain fatty acid, can <strong style={{ color: '#c67e38' }}>reduce inflammatory responses</strong> by improving intestinal mucosal permeability and downregulating the expression of inflammatory factors.
                             It can also  excite  intestinal neurons, accelerate gut motility, promote hormone secretion, and inhibit the proliferation of pathogenic bacteria. Butyrate plays a significant role in maintaining the homeostasis of the intestinal environment and the dynamic balance of the gut microbiota<sup>[4]</sup>.
-                            We enhanced the carbon metabolic flux of acetyl-CoA to butyrate by expressing <strong style={{ color: '#c67e38' }}>acetyl-CoA acetyltransferase (ACAT)</strong>, thereby improving the butyrate synthesis capability of EcN<sup>[5]</sup>.
+                            We enhanced the carbon metabolic flux of acetyl-CoA to butyrate by expressing <strong style={{ color: '#c67e38' }}>acetyl-CoA acetyltransferase (ACAT)</strong>, thereby improving the butyrate synthesis capability of <i>Ec</i>N<sup>[5]</sup>.
                         </p>
                         <br />
                         <ImageWithCaption
@@ -333,9 +333,6 @@ export function Design(): JSX.Element {
                         <p style={styles.paragraph}>
                             In the absence of  both arabinose and nisin, the system enters a paused state, producing only butyrate to alleviate inflammatory responses.
                             Upon the addition of nisin, the system initiates, producing butyrate, serotonin, and levodopa.
-                        </p>
-                        <p style={styles.paragraph}>
-                            When both arabinose and nisin are present, the system switches to produce only levodopa in response to different stages of Parkinson's disease.
                         </p>
                         <p style={styles.paragraph}>
                             When both arabinose and nisin are present, the system switches to produce only levodopa in response to different stages of Parkinson's disease.

@@ -383,8 +383,10 @@ export function Results(): JSX.Element {
                     We first constructed a levodopa production module in EcN for validation. After adding IPTG, the fermentation broth turned purple red within 48 hours, suggesting that it can generate levodopa, which oxidizes and changes color upon contact with air.
                     </p>
                     <ImageWithCaption
-                        src={'https://static.igem.wiki/teams/5376/result/re18.png'}
-                        caption={'Figure 18 Fermentation broth of Escherichia coli Nissle1917 for the production of levodopa'}>
+                        src={'https://static.igem.wiki/teams/5376/result/re18.jpg'}
+                        caption={'Figure 18 Fermentation broth of Escherichia coli Nissle1917 for the production of levodopa'}
+                        customWidth={'40%'}
+                        >
                     </ImageWithCaption>
                     <p style={styles.paragraph}>
                     We constructed this module in Lactococcus lactis F44, and inoculated this strain into a conical flask containing 50ml F44 seed culture medium, fermented for 48 hours, and measured its OD every two hours until the platform stage. We found that the construction of this metabolic pathway has certain growth inhibition on the strain, and under the induction of 50 mg/L nisin, it will have a significant toxic effect on the bacterial cells.

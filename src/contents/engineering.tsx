@@ -225,7 +225,7 @@ export function Engineering(): JSX.Element {
                      In the gel image, a clear and specific band can be seen around 10kDa, but no obvious band is observed around 18.9kDa. It’s speculated that EcN can express MBD93 well, but it is difficult for it to express SA.
                   </p>
                   <p style={styles.paragraph}>
-                     After reviewing the literature, we speculated that due to its aggregation inside the cell,  expression of SA using a strong promoter may be toxic to cells . We planned to replace the promoter with an inducible promoter and construct an RFP tag at the C-terminus of SA for easier detection of its expression.
+                     After reviewing the literature, we speculated that due to its aggregation inside the cell,  expression of SA using a strong promoter may be toxic to cells. We planned to replace the promoter with an inducible promoter and construct an RFP tag at the C-terminus of SA for easier detection of its expression.
                   </p>
                   <h3 style={{ ...styles.partheading, fontSize: '28px' }}>cycle2</h3>
                   <p style={styles.paragraph}>
@@ -251,7 +251,7 @@ export function Engineering(): JSX.Element {
                   <strong style={{ color: '#c67e38' }}>Build</strong>
                   </p>
                   <p style={styles.paragraph}>
-                     In order to make the newly constructed plasmid with T7RNA polymerase compatible with the pETDuet-1-T7-SA-RFP plasmid, we found pJUMP27-1A (sfGFP) with a replication origin of PSC101 and resistance to kanamycin in iGEM 2024 Distribution. This plasmid skeleton is compatible with the pETDuet-1 plasmid skeleton with a replication origin of ori and resistance to ampicillin. We obtained the T7RNA polymerase expression frame from the BL21 (DE3) strain and constructed Biobirck enzyme cleavage sites on both sides. We used EcoRI and SpeI to simultaneously cleave pJUMP27-1A (sfGFP) and T7RNA polymerase expression frame fragments, and connected them using T4 polymerase. In the end,we successfully obtained the pJUMP27-1A (DE3) plasmid expressing T7RNA polymerase.
+                     In order to make the newly constructed plasmid with T7RNA polymerase compatible with the pETDuet-1-T7-SA-RFP plasmid, we found pJUMP27-1A (sfGFP) with a replication origin of PSC101 and resistance to kanamycin in iGEM 2024 Distribution. This plasmid skeleton is compatible with the pETDuet-1 plasmid skeleton with a replication origin of ori and resistance to ampicillin. We obtained the T7RNA polymerase expression frame from the BL21 (DE3) strain and constructed Biobirck enzyme cleavage sites on both sides. We used EcoRI and SpeI to simultaneously cleave pJUMP27-1A (sfGFP) and T7RNA polymerase expression frame fragments, and connected them using T4 polymerase. In the end, we successfully obtained the pJUMP27-1A (DE3) plasmid expressing T7RNA polymerase.
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng9.jpg'}
@@ -273,7 +273,7 @@ export function Engineering(): JSX.Element {
                   <strong style={{ color: '#c67e38' }}>Test</strong>
                   </p>
                   <p style={styles.paragraph}>
-                     We transferred the two strains into a test tube containing 20ml LB, culturing them for 20 hours, and measured their OD and fluorescence values every 2 hours (excitation wavelength 550nm, absorption wavelength 588nm). For detailed results, please visit the Results page .
+                     We transferred the two strains into a test tube containing 20 ml LB, culturing them for 20 hours, and measured their OD and fluorescence values every 2 hours (excitation wavelength 550nm, absorption wavelength 588nm). For detailed results, please visit the Results page.
                   </p>
                   <p style={styles.paragraph}>
                      The results showed that the fluorescence values of the EcN strain expressing SA-RFP were very low both before and after induction, while the BL21 (DE3) strain expressing SA-RFP showed weak fluorescence after induction.
@@ -351,7 +351,7 @@ export function Engineering(): JSX.Element {
                   <strong style={{ color: '#c67e38' }}>Test</strong>
                   </p>
                   <p style={styles.paragraph}>
-                     We first constructed the pETDuet-1-T7-MBD93 plasmid based on the pETDuet-1 vector. Then, we inserted the SA and cSA genes at the C-terminus of MBD93 using seamless cloning.
+                  The constructed pETDuet-1-T7-MBD93-SA plasmid and pETDuet-1-T7-MBD93-cSA plasmid were transformed into EcN with pJUMP27-1A(DE3-J23111-RFP) plasmid, and coated on kanamycin and carbenicillin resistant medium for screening. The strain that got the correct transformation.
                   </p>
                   <ImageWithCaption
                      src={'https://static.igem.wiki/teams/5376/engineering/eng17.png'}
@@ -640,7 +640,7 @@ export function Engineering(): JSX.Element {
                      customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
-                     We will inoculate the correct transformants into conical flasks containing 50ml of Lactococcus lactis F44 seed culture medium and culture for 48 hours. The OD will be measured every 2 hours until the plateau period. Please refer to the Results page for detailed results.
+                     We will inoculate the correct transformants into conical flasks containing 50 ml of Lactococcus lactis F44 seed culture medium and culture for 48 hours. The OD will be measured every 2 hours until the plateau period. Please refer to the Results page for detailed results.
                   </p>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Learn</strong>
@@ -743,7 +743,7 @@ export function Engineering(): JSX.Element {
                      caption={''}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
-                     Subsequently, we inoculated the correct transformants into a culture medium containing 20ml LB and measured their OD and fluorescence values every 6 hours. For detailed results, please refer to the Results page.
+                     Subsequently, we inoculated the correct transformants into a culture medium containing 20 ml LB and measured their OD and fluorescence values every 6 hours. For detailed results, please refer to the Results page.
                   </p>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Learn</strong>
@@ -788,7 +788,7 @@ export function Engineering(): JSX.Element {
                      customWidth={'40%'}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
-                     We will inoculate the correct transformant into a test tube containing 20ml LB and culture it for 26 hours. The OD and fluorescence values will be measured every 2 hours. For detailed results, please refer to the Results page.
+                     We will inoculate the correct transformant into a test tube containing 20 ml LB and culture it for 26 hours. The OD and fluorescence values will be measured every 2 hours. For detailed results, please refer to the Results page.
                   </p>
                   <p style={styles.paragraph}>
                   <strong style={{ color: '#c67e38' }}>Learn</strong>
@@ -841,7 +841,7 @@ export function Engineering(): JSX.Element {
                      caption={''}>
                   </ImageWithCaption>
                   <p style={styles.paragraph}>
-                     We will culture the obtained EcN in a conical flask containing 20ml LB, and culture the obtained Lactococcus lactis F44 in a seed medium containing 20ml F44. When OD=0.6, we will add arabinose and nisin for induction, and we will also set up a blank group (no induction). After 8 hours, we measured their OD separately and mixed EcN with Lactococcus lactis F44 according to the final OD=1.
+                     We will culture the obtained EcN in a conical flask containing 20 ml LB, and culture the obtained Lactococcus lactis F44 in a seed medium containing 20 ml F44. When OD=0.6, we will add arabinose and nisin for induction, and we will also set up a blank group (no induction). After 8 hours, we measured their OD separately and mixed EcN with Lactococcus lactis F44 according to the final OD=1.
                   </p>
                   <p style={styles.paragraph}>
                      We set up four groups:
