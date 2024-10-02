@@ -24,7 +24,8 @@ const QuizQuestion = () => {
                 borderRadius: '10px',
                 textAlign: 'start' ,
                 width: '40%',
-                margin: '0 auto' // Center the component horizontally
+                margin: '0 auto', // Center the component horizontally
+                marginBottom: '30px',
             }}>
             <h2 style={{ color: '#C38073', fontSize: '20px',fontWeight:'bold'}}>{question}</h2>
             <ul style={{ listStyleType: 'none', padding: 0 ,fontWeight:'bold'}}>

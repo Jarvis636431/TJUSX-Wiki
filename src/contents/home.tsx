@@ -17,7 +17,7 @@ export function Home() {
         };
     }, []);
 
-    const maxScrollY = 400; // 触发动画的滚动距离(最大)
+    const maxScrollY = 375; // 触发动画的滚动距离(最大)
 
     //区分状态管理
 
@@ -69,14 +69,14 @@ export function Home() {
     };
 
     return (
-        <main style={{ display: 'flex', flexDirection: 'column' ,backgroundColor: '#fff8f0'}}>
+        <main style={{ backgroundColor: '#fff8f0', height: '9200px', position: 'relative' }}>
             <div style={{
                 position: 'relative',
                 height: '100vh',
                 overflow: 'hidden'
             }}>
                 <img
-                    src="https://static.igem.wiki/teams/5376/titlenew.png"
+                    src="https://static.igem.wiki/teams/5376/spi-d-ey-mi-cro-be.png"
                     alt="Overlay Title"
                     style={{
                         position: 'absolute',
@@ -176,11 +176,11 @@ export function Home() {
                         opacity: calculateOpacity(scrollY,maxScrollY),
                     }}
                 />
-
             </div>
 
             <div style={{
-                position: 'relative',
+                position: 'absolute',
+                top: '100vh',
                 left: '50%',
                 transform: 'translateX(-50%)',
                 transition: 'opacity 0.3s ease',
@@ -192,16 +192,16 @@ export function Home() {
             }}>
                 <img src="https://static.igem.wiki/teams/5376/home/group1.png" alt="Image 1"
                      style={{ margin: ' 0', maxWidth: '100%', height: 'auto' }} />
-                <img src="https://static.igem.wiki/teams/5376/home/gutleft.jpg" alt="Image 2"
+                <img src="https://static.igem.wiki/teams/5376/group2.png" alt="Image 2"
                      style={{ margin: ' 0', maxWidth: '100%', height: 'auto' }} />
                 <img src="https://static.igem.wiki/teams/5376/home/group-3.png" alt="Image 3"
                      style={{ margin: ' 0', maxWidth: '100%', height: 'auto' }} />
-                <img src="https://static.igem.wiki/teams/5376/home/group4.png" alt="Image 4"
+                <img src="https://static.igem.wiki/teams/5376/home/newgroup-4.png" alt="Image 4"
                      style={{ margin: 'x 0', maxWidth: '100%', height: 'auto' }} />
                 <img src="https://static.igem.wiki/teams/5376/home/group-5.png" alt="Image 5"
                      style={{ margin: ' 0', maxWidth: '100%', height: 'auto' }} />
                 <div style={{ position: 'relative', display: 'inline-block' }}>
-                    <img src="https://static.igem.wiki/teams/5376/home/group6.png" alt="Image 6"
+                    <img src="https://static.igem.wiki/teams/5376/home/newgroup-6.png" alt="Image 6"
                          style={{ margin: '0', maxWidth: '100%', height: 'auto' }} />
                     <img src="https://static.igem.wiki/teams/5376/home/gif/gif-6.gif" alt="GIF"
                          style={{
@@ -232,7 +232,7 @@ export function Home() {
                             cursor: 'pointer',
                             background: 'transparent',
                         }}
-                        onClick={() => handleClick1('https://static.igem.wiki/teams/5376/home/gif/7-1-1.gif')} // 替换为你对应的GIF路径
+                        onClick={() => handleClick1('https://static.igem.wiki/teams/5376/home/gif/7-1-3.gif')}
                     />
 
                     {/* 放大镜2的点击区域（右侧上方） */}
@@ -246,7 +246,7 @@ export function Home() {
                             cursor: 'pointer',
                             background: 'transparent',
                         }}
-                        onClick={() => handleClick1('https://static.igem.wiki/teams/5376/home/gif/7-1-2.gif')} // 替换为你对应的GIF路径
+                        onClick={() => handleClick1('https://static.igem.wiki/teams/5376/home/gif/7-1-2.gif')}
                     />
 
                     {/* 放大镜3的点击区域（右侧下方） */}
@@ -260,7 +260,7 @@ export function Home() {
                             cursor: 'pointer',
                             background: 'transparent',
                         }}
-                        onClick={() => handleClick1('https://static.igem.wiki/teams/5376/home/gif/7-1-3.gif')} // 替换为你对应的GIF路径
+                        onClick={() => handleClick1('https://static.igem.wiki/teams/5376/home/gif/7-1-1.gif')}
                     />
 
                     {/* 弹出并播放的 GIF */}

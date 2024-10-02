@@ -69,8 +69,8 @@ footer a:hover {
 }
 /* CSS */
 .back-to-top-button {
-  position: fixed;
-  bottom: 18vw;
+  position: sticky;
+  bottom: 250px;
   left: 8vw;
   z-index: 999; /* 确保按钮位于其他元素之上 */
   background-color: transparent; /* 按钮背景透明 */
@@ -144,19 +144,6 @@ footer a:hover {
 .navbar-transparent .nav-link {
   margin-right: 15px; /* 设置右边距 */
 }
-
-table.threeLine {
-  width: 100%;
-  border-top: 5px solid rgba(188,140,91);
-  border-bottom: 5px solid rgba(188,140,91);
-}
-table.threeLine th, table.threeLine td {
-  border-bottom: 2px solid rgba(188,140,91);
-  padding: 6px;
-}
-table.threeLine thead tr {
-  border-bottom: 1px solid #000;
-}
-table.threeLine th {
-  padding: 8px;
+.navbar-transparent .nav-link {
+  white-space: nowrap; /* 避免换行 */
 }

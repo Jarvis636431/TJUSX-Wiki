@@ -27,7 +27,7 @@ const BackToTopButton = () => {
 
     if (isVisible) {
         return (
-            <button className="back-to-top-button" onClick={scrollToTop} style={{left:'10px',bottom:'250px',position:'fixed'}}>
+            <button className="back-to-top-button" onClick={scrollToTop} >
                 <img src="https://static.igem.wiki/teams/5376/back2top-new.png" alt="Back To Top" style={{width:'100px',height:'auto'}}/>
             </button>
         );
