@@ -166,7 +166,7 @@ export function Description(): JSX.Element {
                             The World Health Organization (WHO) reports that the prevalence of PD has doubled over
                             the past 25 years. As of 2024, approximately <strong style={{ color: '#c67e38' }}>10 million individuals</strong> globally
                             are <strong style={{ color: '#c67e38' }}>living with PD</strong>, including 3 million in China. Projections for 2030 estimate
-                            5 million PD patients in China, with a global increase to <strong style={{ color: '#c67e38' }}>120 to 170 million</strong>
+                            5 million PD patients in China, with a global increase to <strong style={{ color: '#c67e38' }}>120 to 170 million </strong>
                             by 2040. The aging global population will likely lead to a continuous rise
                             in PD incidence, increasing the demand for healthcare resources and
                             exacerbating the burden on the global healthcare system.
@@ -200,10 +200,10 @@ export function Description(): JSX.Element {
                             into three aspects:
                         </p>
                         <p style={styles.paragraph}>
-                            (1) <strong style={{ color: '#c67e38' }}>Inflammatory Process</strong>: In the gastrointestinal intestinal
+                            (1) <strong style={{ color: '#c67e38' }}>Inflammatory Process</strong>: In the intestinal
                             tract affected by Parkinson's, pathogenic bacteria secrete pro-inflammatory
                             chemokines and cytokines, initiating and amplifying immune responses, which
-                            are linked to gastrointestinal intestinal symptoms in over 80% of Parkinson's
+                            are linked to intestinal symptoms in over 80% of Parkinson's
                             patients, such as constipation and intestinal inflammation <sup>[6]</sup>. Additionally
                             , short-chain fatty acids (SCFAs) like butyrate, produced by beneficial gut
                             microbes, modulate the expression of tight junction proteins in the
@@ -279,7 +279,7 @@ export function Description(): JSX.Element {
                         <p style={styles.paragraph}>
                             We designed an interactive and user-friendly search website
                             for ProMetab, capable of supporting queries on six different
-                            entities: strains, metabolites, diseases, and EC number.<a href="https://gitlab.igem.org/2024/software-tools/tjusx"><img
+                            entities: strains, metabolites, diseases, and EC numbers.<a href="https://gitlab.igem.org/2024/software-tools/tjusx"><img
                             src={'https://static.igem.wiki/teams/5376/jump.png'}
                             width={'270px'}>
                         </img></a>
@@ -409,7 +409,7 @@ export function Description(): JSX.Element {
                               to bind to the intestine through engineered EcN,
                                but also enhances the stability between the Spidey
                                 Microbe microbiota. For detailed design, please
-                                 visit the
+                                 visit the Design pages.
                         </p>
                         <br />
 
@@ -438,7 +438,7 @@ export function Description(): JSX.Element {
                         <br />
                         <p style={styles.paragraph}>
                         The biosynthetic pathway of levodopa is mainly based on the production of
-                         L-tyrosine by cells, which can be hydroxylated to <strong style={{ color: '#c67e38' }}>L-tyrosine</strong> by
+                         L-tyrosine by cells, which can be hydroxylated to <strong style={{ color: '#c67e38' }}>levodopa</strong> by
                           3-hydroxyphenylacetate 3-hydroxylase or tyrosinase <sup>[18]</sup>. The gene
                            cluster composed of two genes,<strong style={{ color: '#c67e38' }}> hpaB and hpaC</strong>, can jointly express
                             4-hydroxyphenylacetate-3-hydroxylase. We heterologously expressed
@@ -455,8 +455,8 @@ export function Description(): JSX.Element {
                          caused by levodopa. In order to further cooperate with levodopa
                           treatment for motor symptoms in patients, we constructed a
                            serotonin production element in another strain of Lactobacillus
-                            F44, which enhances serotonin production by overexpressing
-                             <strong style={{ color: '#c67e38' }}>N-acetyltransferase</strong>. This process is also regulated by the
+                            F44, which enhances serotonin production by overexpressing 
+                             <strong style={{ color: '#c67e38' }}> N-acetyltransferase</strong>. This process is also regulated by the
                               nisin induced Pnis promoter to regulate gene expression.
                         </p>
                         <p style={styles.paragraph}>
@@ -511,7 +511,7 @@ export function Description(): JSX.Element {
                           bacteria in the community. In our project, we used
                            three fluorescent proteins from iGEM 2024 Distribution
                            : <strong style={{ color: '#c67e38' }}>TannenRFP</strong> <a href='https://parts.igem.org/Part:BBa_J97003'>(BBa_J97003)</a>, <strong style={{ color: '#c67e38' }}>mTagBFP</strong> <a href='https://parts.igem.org/Part:BBa_K592100'>(BBa_K592100)</a>, and
-                            <strong style={{ color: '#c67e38' }}>SYFP2</strong> <a href='https://parts.igem.org/Part:BBa_K864100'>(BBa_K864100)</a> to measure the Spidey Microbe
+                            <strong style={{ color: '#c67e38' }}> SYFP2</strong> <a href='https://parts.igem.org/Part:BBa_K864100'>(BBa_K864100)</a> to measure the Spidey Microbe
                              microbial community. For detailed design,you can
                               browse the design page (redirect to design page).
                             </p>

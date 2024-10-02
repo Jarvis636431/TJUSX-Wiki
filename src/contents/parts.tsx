@@ -1,5 +1,4 @@
 import { Link, Element } from 'react-scroll';
-import ImageWithCaption from "../components/ImageWithCaption.tsx";
 import { useEffect, useState } from 'react';
 
 // 使用内联样式
